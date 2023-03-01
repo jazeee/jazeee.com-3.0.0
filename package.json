@@ -4,6 +4,33 @@
   "main": "index.js",
   "repository": "git@github.com:jazeee/jazeee.com-3.0.0.git",
   "license": "Apache-2.0",
-  "private": false,
+  "dependencies": {
+    "gatsby": "5.7.0",
+    "gatsby-plugin-image": "3.7.0",
+    "gatsby-plugin-manifest": "5.7.0",
+    "gatsby-plugin-sharp": "5.7.0",
+    "gatsby-source-filesystem": "5.7.0",
+    "gatsby-transformer-sharp": "5.7.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "prettier": "2.8.4"
+  },
+  "keywords": [
+    "jazeee.com"
+  ],
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
   "packageManager": "yarn@3.4.1"
 }
