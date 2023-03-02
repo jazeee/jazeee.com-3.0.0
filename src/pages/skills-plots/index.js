@@ -9,7 +9,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { skills } from "../../data/utils";
-import classNames from "./skills-plots.module.css";
+import * as classNames from "./skills-plots.module.css";
 import { ForwardRefLink } from "../../components/link";
 
 function Loading(props) {

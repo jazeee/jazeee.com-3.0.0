@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./github-project.module.css";
+import * as styles from "./github-project.module.css";
 import Typography from "@mui/material/Typography";
 import { TargetBlankLink } from "../target-blank-link";
 import { GithubIcon } from "../icons/github-icon";

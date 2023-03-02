@@ -1,29 +1,20 @@
 import React from "react";
+import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import { URLS } from "../data/urls";
-import { makeStyles } from "@mui/material/styles";
 import { ForwardRefLink } from "./link";
 import { Location } from "@reach/router";
-import { SECONDARY_COLOR } from "../styles/theme";
+import { SECONDARY_COLOR } from "../theme";
 
-const useStyles = makeStyles({
-  sideBar: {
-    width: 250,
-  },
-  selectedLink: {
-    color: SECONDARY_COLOR,
-  },
-});
 
 export const SideBar = props => {
-  const classes = useStyles();
   const { closeSideBar } = props;
 
   return (
-    <div
-      className={classes.sideBar}
+    <Box
+      width={250}
       role="presentation"
       onClick={closeSideBar}
       onKeyDown={closeSideBar}
@@ -35,7 +26,9 @@ export const SideBar = props => {
               const isCurrentPath = location.pathname === path;
               return (
                 <ListItem
-                  className={isCurrentPath ? classes.selectedLink : undefined}
+                  sx={isCurrentPath ? {
+                    color: SECONDARY_COLOR
+                  }: undefined}
                   key={name}
                   component={ForwardRefLink}
                   button
@@ -48,6 +41,6 @@ export const SideBar = props => {
           </List>
         )}
       </Location>
-    </div>
+    </Box>
   );
 };

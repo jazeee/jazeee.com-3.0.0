@@ -4,7 +4,7 @@ import { SEO } from "../../components/seo";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import styles from "./software-projects.module.css";
+import * as styles from "./software-projects.module.css";
 import { GithubProject } from "../../components/projects/github-project";
 import { Link } from "../../components/link";
 import CircularProgress from "@mui/material/CircularProgress";

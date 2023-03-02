@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "@mui/material/Container";
-import styles from "./publications.module.css";
+import * as styles from "./publications.module.css";
 import { PUBLICATIONS } from "../../data/publications";
 import { Publication } from "../../components/publications/publication";
 import { Layout } from "../../components/layout";

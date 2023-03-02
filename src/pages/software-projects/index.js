@@ -2,7 +2,7 @@ import React from "react";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { SOFTWARE_PROJECTS } from "../../data/software-projects-data";
-import styles from "./software-projects.module.css";
+import * as styles from "./software-projects.module.css";
 import { GithubProject } from "../../components/projects/github-project";
 import { Layout } from "../../components/layout";
 import { SEO } from "../../components/seo";
