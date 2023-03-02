@@ -1,0 +1,13 @@
+.presentation {
+  width: 100%;
+}
+
+.presentation + .presentation {
+  margin-top: 10px;
+}
+
+.media {
+  height: 256px;
+  background-size: contain;
+  background-color: black;
+}

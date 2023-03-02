@@ -1,0 +1,24 @@
+.project {
+  display: flex;
+}
+
+.project + .project {
+  border-top: 1px solid #e6e6e6;
+  margin-top: 10px;
+}
+
+.summary {
+  flex: 6;
+}
+
+.codeLink {
+  flex: 1;
+  text-align: right;
+}
+
+.GithubIcon {
+  font-size: 1rem;
+  color: grey;
+  vertical-align: middle;
+  margin-right: 5px;
+}

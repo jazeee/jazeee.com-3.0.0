@@ -1,0 +1,13 @@
+.publication {
+}
+
+.publication + .publication {
+  border-top: 1px solid #e6e6e6;
+  margin-top: 10px;
+}
+
+.title {
+}
+
+.caption {
+}
