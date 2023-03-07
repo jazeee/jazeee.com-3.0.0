@@ -1,7 +1,7 @@
 import React from "react";
 import * as styles from "./skills.module.css";
 import { skills } from "../../data/utils";
-import { TargetBlankLink } from "../target-blank-link";
+import { ExternalLink } from "../ExternalLink";
 import Typography from "@mui/material/Typography";
 
 const webAppSkillNames = skills
@@ -24,7 +24,7 @@ export const Skills = () => (
           ))}
         </ul>
         <Typography variant="h6">
-          <TargetBlankLink href="http://goo.gl/qWsPm">Resume</TargetBlankLink>
+          <ExternalLink href="http://goo.gl/qWsPm">Resume</ExternalLink>
         </Typography>
       </div>
     </div>

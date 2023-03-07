@@ -8,7 +8,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "@mui/material/Drawer";
 import { Link } from "./Link";
 import { SideBar } from "./SideBar";
-import { TargetBlankLink } from "./target-blank-link";
+import { ExternalLink } from "./ExternalLink";
 import { GithubIcon } from "./icons/github-icon";
 import { LinkedInIcon } from "./icons/linked-in-icon";
 
@@ -46,20 +46,20 @@ export const Header = props => {
               </Link>
             </Typography>
             <Typography variant="h6" sx={{ marginLeft: 1 }}>
-              <TargetBlankLink
+              <ExternalLink
                 color="secondary"
                 href="http://www.linkedin.com/in/jazeee"
               >
                 <LinkedInIcon />
-              </TargetBlankLink>
+              </ExternalLink>
             </Typography>
             <Typography variant="h6" sx={{ marginLeft: 1 }}>
-              <TargetBlankLink
+              <ExternalLink
                 color="secondary"
                 href="https://github.com/jazeee"
               >
                 <GithubIcon />
-              </TargetBlankLink>
+              </ExternalLink>
             </Typography>
           </Toolbar>
         </AppBar>

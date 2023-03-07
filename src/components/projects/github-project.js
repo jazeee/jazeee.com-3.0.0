@@ -1,7 +1,7 @@
 import React from "react";
 import * as styles from "./github-project.module.css";
 import Typography from "@mui/material/Typography";
-import { TargetBlankLink } from "../target-blank-link";
+import { ExternalLink } from "../ExternalLink";
 import { GithubIcon } from "../icons/github-icon";
 
 export const GithubProject = props => {
@@ -9,19 +9,19 @@ export const GithubProject = props => {
   return (
     <div className={styles.project}>
       <Typography className={styles.summary}>
-        <TargetBlankLink color="secondary" href={project.url}>
+        <ExternalLink color="secondary" href={project.url}>
           {project.name}
-        </TargetBlankLink>{" "}
+        </ExternalLink>{" "}
         - {project.description}
       </Typography>
       <Typography className={styles.codeLink}>
-        <TargetBlankLink
+        <ExternalLink
           color="secondary"
           href={`https://github.com/${project.githubFullName}`}
         >
           <GithubIcon className={styles.GithubIcon} />
           Github
-        </TargetBlankLink>
+        </ExternalLink>
       </Typography>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "@mui/material/Link";
 
-export const TargetBlankLink = props => {
+export const ExternalLink = props => {
   const { children, ...otherProps } = props;
   return (
     <Link

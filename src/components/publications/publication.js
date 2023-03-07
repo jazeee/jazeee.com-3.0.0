@@ -1,7 +1,7 @@
 import React from "react";
 import * as styles from "./publication.module.css";
 import Typography from "@mui/material/Typography";
-import { TargetBlankLink } from "../target-blank-link";
+import { ExternalLink } from "../ExternalLink";
 
 export const Publication = props => {
   const { publication } = props;
@@ -9,9 +9,9 @@ export const Publication = props => {
     <div className={styles.publication}>
       <div>
         <Typography variant="h6" className={styles.title}>
-          <TargetBlankLink color="secondary" href={publication.url}>
+          <ExternalLink color="secondary" href={publication.url}>
             {publication.name}
-          </TargetBlankLink>
+          </ExternalLink>
         </Typography>
         <Typography variant="subtitle1" className={styles.caption}>
           {publication.authors}

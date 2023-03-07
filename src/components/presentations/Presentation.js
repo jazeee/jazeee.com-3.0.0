@@ -6,16 +6,16 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { TargetBlankLink } from "../target-blank-link";
+import { ExternalLink } from "../ExternalLink";
 
 export const PresentationDetails = props => {
   const { presentation } = props;
   const { name, location, date, image, links } = presentation;
   return (
     <Card className={styles.presentation}>
-      <TargetBlankLink href={links[0].url}>
+      <ExternalLink href={links[0].url}>
         <CardMedia className={styles.media} title={name} image={image} />
-      </TargetBlankLink>
+      </ExternalLink>
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
           {name}
@@ -29,9 +29,9 @@ export const PresentationDetails = props => {
           const { name, url } = link;
           return (
             <Button key={url} size="small">
-              <TargetBlankLink color="secondary" href={url}>
+              <ExternalLink color="secondary" href={url}>
                 {name}
-              </TargetBlankLink>
+              </ExternalLink>
             </Button>
           );
         })}
