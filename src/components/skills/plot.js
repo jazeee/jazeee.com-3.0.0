@@ -5,7 +5,7 @@ import Plot from "react-plotly.js";
 import { getColor } from "../../utils/colors";
 import { useWindowDimensions } from "../../hooks/window-hooks";
 
-export const SkillsPlot = props => {
+export const SkillsPlot = (props) => {
   const [highlightedSkillName, setHighlightedSkillName] = useState("");
   const { width } = useWindowDimensions();
   const isNarrowWidth = width <= 480;
@@ -90,5 +90,3 @@ export const SkillsPlot = props => {
     />
   );
 };
-
-export default props => <SkillsPlot {...props}></SkillsPlot>;

@@ -1,17 +1,35 @@
 import React from "react";
-import * as styles from "./skills.module.css";
 import { skills } from "../../data/utils";
 import { ExternalLink } from "../ExternalLink";
+import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import codeBackgroundImage from './codeBackground.png';
 
 const webAppSkillNames = skills
   .getDomainSkillNames("Software Engineering")
   .filter((skill, index) => index < 12);
 
 export const Skills = () => (
-  <div className={styles.aboutJaz}>
-    <div className={styles.container}>
-      <div className={styles.skillsHeaderOverlay}>
+  <Box sx={{
+    backgroundImage: `url("${codeBackgroundImage}")`,
+    backgroundColor: 'black',
+    backgroundRepeat: 'repeat-y',
+    position: 'relative',
+  }}>
+    <Box sx={{
+      width: '100%',
+      padding: 3,
+    }}>
+      <Box sx={{
+        border: '2px solid #666',
+        borderRadius: 2,
+        backgroundColor: '#feedca',
+        marginLeft: 'auto',
+        marginRight: 4,
+        padding: 3,
+        minWidth: '250px',
+        width: '50%',
+      }}>
         <Typography variant="h5">Full Stack Web Developer</Typography>
         <Typography variant="subtitle1">
           Primary Developer Skills (Sorted by skill level)
@@ -26,7 +44,7 @@ export const Skills = () => (
         <Typography variant="h6">
           <ExternalLink href="http://goo.gl/qWsPm">Resume</ExternalLink>
         </Typography>
-      </div>
-    </div>
-  </div>
+      </Box>
+    </Box>
+  </Box>
 );

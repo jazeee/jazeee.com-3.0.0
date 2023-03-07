@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import CircularProgress from "@mui/material/CircularProgress";
-import * as styles from "./software-projects.module.css";
 import { GithubProject } from "./github-project";
 import { Link } from "../Link";
 
@@ -57,7 +57,7 @@ export const AllGithubProjects = () => {
       {projects.map(project => {
         return <GithubProject key={project.name} project={project} />;
       })}
-      <Container className={styles.actions}>
+      <Box sx={{ display: 'flex', paddingY: 2, gap: 2 }}>
         <Button
           variant="contained"
           disabled={page <= 1}
@@ -75,7 +75,7 @@ export const AllGithubProjects = () => {
         <Button>
           <Link to="/software-projects">Featured Projects</Link>
         </Button>
-      </Container>
+      </Box>
     </Container>
   );
 };

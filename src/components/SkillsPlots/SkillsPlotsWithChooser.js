@@ -4,9 +4,9 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Typography from "@mui/material/Typography";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { skills } from "../../data/utils";
-import * as classNames from "./skills-plots.module.css";
 import { ForwardRefLink } from "../Link";
 
 const { skillTypes } = skills;
@@ -19,7 +19,7 @@ export const SkillsPlotWithChooser = () => {
   };
   return (
     <Container>
-      <h1>
+      <Typography variant="h3" component="p">
         Skills
         <Button
           aria-controls="simple-menu"
@@ -27,12 +27,15 @@ export const SkillsPlotWithChooser = () => {
           onClick={({ currentTarget }) => setAnchorEl(currentTarget)}
           variant="contained"
           color="primary"
-          className={classNames.skillChooser}
+          sx={{
+            marginLeft: 1,
+            marginBottom: 0.5,
+          }}
         >
           {skillType}
           <ArrowDropDownIcon />
         </Button>
-      </h1>
+      </Typography>
       <Grid container spacing={2}>
         <Menu
           id="plot-chooser"

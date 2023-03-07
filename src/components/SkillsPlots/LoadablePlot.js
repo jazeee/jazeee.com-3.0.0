@@ -12,7 +12,7 @@ function Loading(props) {
 }
 
 // const LoadablePlot = Loadable({
-//   loader: () => import("../../components/skills/plot"),
+//   loader: () => import("../skills/plot"),
 //   render(loaded, props) {
 //     let Component = loaded.SkillsPlot;
 //     return <Component {...props} />;

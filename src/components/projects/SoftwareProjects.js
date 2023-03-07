@@ -1,8 +1,8 @@
 import React from "react";
+import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { SOFTWARE_PROJECTS } from "../../data/software-projects-data";
-import * as styles from "./software-projects.module.css";
 import { GithubProject } from "./github-project";
 import { ForwardRefLink } from "../Link";
 
@@ -12,7 +12,7 @@ export const SoftwareProjects = () => (
     {SOFTWARE_PROJECTS.map(project => {
       return <GithubProject key={project.name} project={project} />;
     })}
-    <Container className={styles.actions}>
+    <Box sx={{ paddingY: 2 }}>
       <Button
         variant="contained"
         component={ForwardRefLink}
@@ -20,6 +20,6 @@ export const SoftwareProjects = () => (
       >
         All Github Projects
       </Button>
-    </Container>
+    </Box>
   </Container>
 );
