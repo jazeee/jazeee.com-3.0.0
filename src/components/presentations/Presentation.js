@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./presentation-details.module.css";
+import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -12,9 +12,13 @@ export const PresentationDetails = props => {
   const { presentation } = props;
   const { name, location, date, image, links } = presentation;
   return (
-    <Card className={styles.presentation}>
+    <Card sx={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
       <ExternalLink href={links[0].url}>
-        <CardMedia className={styles.media} title={name} image={image} />
+        <CardMedia title={name} image={image} sx={{
+          height: 256,
+          backgroundSize: 'contain',
+          backgroundColor: 'black',
+        }}/>
       </ExternalLink>
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
@@ -24,6 +28,7 @@ export const PresentationDetails = props => {
           {location} on {date}
         </Typography>
       </CardContent>
+      <Box flexGrow={1} />
       <CardActions>
         {links.map(link => {
           const { name, url } = link;
