@@ -29,3 +29,7 @@ for (let a = 0; a < namedColors.length / 2; a++) {
 }
 
 export const getColor = index => COLORS[index % COLORS.length];
+
+// Also check `gatsby-config.js`
+export const PRIMARY_COLOR = "#2F2001";
+export const SECONDARY_COLOR = "#0094FF";

@@ -6,7 +6,7 @@ import ListItemText from "@mui/material/ListItemText";
 import { URLS } from "../data/urls";
 import { ForwardRefLink } from "./link";
 import { Location } from "@reach/router";
-import { SECONDARY_COLOR } from "../theme";
+import { SECONDARY_COLOR } from "../utils/colors";
 
 
 export const SideBar = props => {
