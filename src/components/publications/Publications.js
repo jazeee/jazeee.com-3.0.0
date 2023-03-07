@@ -1,4 +1,5 @@
 import React from "react";
+import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { PUBLICATIONS } from "../../data/publications";
 import { Publication } from "../../components/publications/publication";
@@ -6,8 +7,10 @@ import { Publication } from "../../components/publications/publication";
 export const Publications = () => (
   <Container>
     <h1>Publications</h1>
-    {PUBLICATIONS.map(publication => {
-      return <Publication key={publication.name} publication={publication} />;
-    })}
+    <Box display="grid" gap={1}>
+      {PUBLICATIONS.map(publication => {
+        return <Publication key={publication.name} publication={publication} />;
+      })}
+    </Box>
   </Container>
 );

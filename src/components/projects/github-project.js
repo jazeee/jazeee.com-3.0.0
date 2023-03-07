@@ -9,7 +9,11 @@ export const GithubProject = props => {
   const { url, name, description, githubFullName } = project;
   return (
     <Box display="flex" justifyContent="space-between" sx={{
-      borderBottom: `1px solid #e6e6e6`,
+      '& + &': {
+        borderTop: `1px solid #e6e6e6`,
+        marginTop: 1,
+        paddingTop: 1,
+      },
     }}>
       <Typography>
         <ExternalLink color="secondary" href={url}>
