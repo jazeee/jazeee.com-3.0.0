@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import classNames from "./skills.module.css";
 import { skills } from "../../data/utils";
 import Plot from "react-plotly.js";
 import { getColor } from "../../utils/colors";
@@ -67,7 +66,10 @@ export const SkillsPlot = (props) => {
     <Plot
       data={data}
       useResizeHandler={true}
-      className={classNames.plot}
+      styles={{
+        width: '100%',
+        height: '500px',
+      }}
       layout={{
         title: showTitle ? skillType : undefined,
         autosize: true,

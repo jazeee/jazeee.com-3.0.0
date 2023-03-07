@@ -1,28 +1,39 @@
 import React from "react";
-import * as styles from "./github-project.module.css";
+import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { ExternalLink } from "../ExternalLink";
 import { GithubIcon } from "../icons/github-icon";
 
 export const GithubProject = props => {
   const { project } = props;
+  const { url, name, description, githubFullName } = project;
   return (
-    <div className={styles.project}>
-      <Typography className={styles.summary}>
-        <ExternalLink color="secondary" href={project.url}>
-          {project.name}
-        </ExternalLink>{" "}
-        - {project.description}
+    <Box display="flex" justifyContent="space-between" sx={{
+      borderBottom: `1px solid #e6e6e6`,
+    }}>
+      <Typography>
+        <ExternalLink color="secondary" href={url}>
+          {name}
+        </ExternalLink>
+        {description && ` - ${description}`}
       </Typography>
-      <Typography className={styles.codeLink}>
+      <Typography sx={{
+        flex: 1,
+        textAlign: 'right',
+      }}>
         <ExternalLink
           color="secondary"
-          href={`https://github.com/${project.githubFullName}`}
+          href={`https://github.com/${githubFullName}`}
         >
-          <GithubIcon className={styles.GithubIcon} />
+          <GithubIcon sx={{
+            fontSize: '1rem',
+            color: 'grey',
+            verticalAlign: 'middle',
+            marginRight: 0.5,
+          }} />
           Github
         </ExternalLink>
       </Typography>
-    </div>
+    </Box>
   );
 };

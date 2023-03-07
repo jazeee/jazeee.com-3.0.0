@@ -29,7 +29,7 @@ export const AllGithubProjects = () => {
               const { name, description, full_name, html_url } = datum;
               return {
                 name,
-                description: description || "-",
+                description,
                 url: html_url,
                 githubFullName: full_name,
               };
