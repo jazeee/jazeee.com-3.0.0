@@ -8,13 +8,14 @@
     "@emotion/react": "11.10.6",
     "@emotion/styled": "11.10.6",
     "@mui/icons-material": "5.11.11",
-    "@mui/material": "5.11.11",
+    "@mui/material": "5.11.12",
+    "@types/react": "18.0.28",
     "gatsby": "5.7.0",
     "gatsby-plugin-catch-links": "5.7.0",
     "gatsby-plugin-image": "3.7.0",
     "gatsby-plugin-lodash": "6.7.0",
     "gatsby-plugin-manifest": "5.7.0",
-    "gatsby-plugin-material-ui": "next",
+    "gatsby-plugin-material-ui": "4.1.0",
     "gatsby-plugin-sharp": "5.7.0",
     "gatsby-source-filesystem": "5.7.0",
     "gatsby-transformer-sharp": "5.7.0",
@@ -24,6 +25,8 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@types/lodash": "4.14.191",
+    "@types/react-dom": "18.0.11",
     "prettier": "2.8.4"
   },
   "keywords": [
