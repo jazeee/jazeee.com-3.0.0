@@ -9,7 +9,6 @@
     "@emotion/styled": "11.10.6",
     "@mui/icons-material": "5.11.11",
     "@mui/material": "5.11.12",
-    "@types/react": "18.0.28",
     "gatsby": "5.7.0",
     "gatsby-plugin-catch-links": "5.7.0",
     "gatsby-plugin-image": "3.7.0",
@@ -25,6 +24,7 @@
   },
   "devDependencies": {
     "@types/lodash": "4.14.191",
+    "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "prettier": "2.8.4"
   },
@@ -43,5 +43,5 @@
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
-  "packageManager": "yarn@3.4.1"
+  "packageManager": "yarn@4.0.0-rc.40"
 }
