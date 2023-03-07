@@ -4,7 +4,7 @@ export const PRESENTATIONS = [
     location: "Madison WI",
     date: "2013-07-15",
     image:
-      "/images/scientific-instrument-control-and-visualization-2013-256px.png",
+      "/static/images/scientific-instrument-control-and-visualization-2013-256px.png",
     links: [
       {
         name: "Presentation",
@@ -20,7 +20,7 @@ export const PRESENTATIONS = [
     name: "Presenter, Co-Organizer of MadJS Meetup",
     location: "Madison WI",
     date: "2015-10-01 to 2016-09-12",
-    image: "/images/madjs-256px.jpeg",
+    image: "/static/images/madjs-256px.jpeg",
     links: [
       {
         name: "Meet Up",
@@ -32,7 +32,7 @@ export const PRESENTATIONS = [
     name: "MeteorJS (First Presentation)",
     location: "MadJS - Madison WI",
     date: "2015-05-11",
-    image: "/images/meteor-256px.png",
+    image: "/static/images/meteor-256px.png",
     links: [
       {
         name: "Presentation",
@@ -57,7 +57,7 @@ export const PRESENTATIONS = [
     name: "MeteorJS (Second Presentation)",
     location: "Meteor-Raleigh-Durham Meetup - Durham NC",
     date: "2015-08-25",
-    image: "/images/meteor2-256px.png",
+    image: "/static/images/meteor2-256px.png",
     links: [
       {
         name: "Presentation",
@@ -78,7 +78,7 @@ export const PRESENTATIONS = [
     name: "Scientific Instrument Control and Visualization",
     location: "Cary NC",
     date: "2015-12-08",
-    image: "/images/scientific-instrument-control-256px.png",
+    image: "/static/images/scientific-instrument-control-256px.png",
     links: [
       {
         name: "Presentation",
@@ -102,7 +102,7 @@ export const PRESENTATIONS = [
     name: "Scientific Instrument Control and Visualization",
     location: "Madison WI",
     date: "2016-09-12",
-    image: "/images/scientific-instrument-control-2-256px.png",
+    image: "/static/images/scientific-instrument-control-2-256px.png",
     links: [
       {
         name: "Presentation",
@@ -122,7 +122,7 @@ export const PRESENTATIONS = [
     name: "CoffeeScript Tips and Tricks",
     location: "Madison WI",
     date: "2015-12-14",
-    image: "/images/coffeescript-tips-and-tricks-256px.png",
+    image: "/static/images/coffeescript-tips-and-tricks-256px.png",
     links: [
       {
         name: "Presentation",
@@ -142,7 +142,7 @@ export const PRESENTATIONS = [
     name: "Lightning Talk",
     location: "Durham NC",
     date: "2016-06-14",
-    image: "/images/lightning-talk-256px.png",
+    image: "/static/images/lightning-talk-256px.png",
     links: [
       {
         name: "Code",

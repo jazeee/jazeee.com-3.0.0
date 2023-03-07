@@ -2,7 +2,7 @@ import React from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import { PRESENTATIONS } from "../../data/presentations";
-import { PresentationDetails } from "./presentation-details";
+import { PresentationDetails } from "./Presentation";
 
 export const Presentations = () => (
   <Container>
