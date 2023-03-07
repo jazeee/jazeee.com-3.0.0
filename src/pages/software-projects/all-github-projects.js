@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "../../components/Layout";
-import { AllGithubProjects } from "../../components/projects/AllGithubProjects";
-import { Seo } from "../../components/seo";
+import { AllGithubProjects } from "../../components/Projects/AllGithubProjects";
+import { Seo } from "../../components/Seo";
 
 const AllGithubProjectsPage = () => (
   <Layout>

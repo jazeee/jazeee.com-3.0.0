@@ -11,10 +11,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
-    {
-      resolve: "gatsby-plugin-material-ui",
-    },
-    // `gatsby-plugin-lodash`,
     `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,

@@ -1,7 +1,7 @@
 import React from "react";
-import { Presentations } from "../components/presentations/Presentations";
+import { Presentations } from "../components/Presentations/Presentations";
 import { Layout } from "../components/Layout";
-import { Seo } from "../components/seo";
+import { Seo } from "../components/Seo";
 
 const PresentationsPage = () => (
   <Layout>

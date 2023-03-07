@@ -1,13 +1,13 @@
 import React from "react"
 
 import { Layout } from "../components/Layout"
-import { Skills } from "../components/skills/Skills";
-import { Presentations } from "../components/presentations/Presentations";
-import { SoftwareProjects } from "../components/projects/SoftwareProjects";
+import { Skills } from "../components/Skills/Skills";
+import { Presentations } from "../components/Presentations/Presentations";
+import { SoftwareProjects } from "../components/Projects/SoftwareProjects";
 import { SkillsPlotWithChooser } from "../components/SkillsPlots/SkillsPlotsWithChooser";
 import { Publications } from "../components/Publications/Publications";
 
-import { Seo } from "../components/seo"
+import { Seo } from "../components/Seo"
 
 const IndexPage = () => (
   <Layout>

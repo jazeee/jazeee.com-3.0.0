@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "../components/Layout";
-import { Seo } from "../components/seo";
+import { Seo } from "../components/Seo";
 import { SkillsPlots } from "../components/SkillsPlots/SkillsPlots";
 
 const SkillsPlotsPage = () => (

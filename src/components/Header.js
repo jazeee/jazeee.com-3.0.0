@@ -9,10 +9,10 @@ import Drawer from "@mui/material/Drawer";
 import { Link } from "./Link";
 import { SideBar } from "./SideBar";
 import { ExternalLink } from "./ExternalLink";
-import { GithubIcon } from "./icons/GithubIcon";
-import { LinkedInIcon } from "./icons/LinkedInIcon";
+import { GithubIcon } from "./Icons/GithubIcon";
+import { LinkedInIcon } from "./Icons/LinkedInIcon";
 
-import { HideOnScroll } from "./hide-on-scroll";
+import { HideOnScroll } from "./HideOnScroll";
 
 export const Header = props => {
   const [isSideBarOpen, setIsSideBarOpen] = React.useState(false);

@@ -4,7 +4,7 @@ import { PageProps, Link, graphql, HeadFC } from "gatsby"
 
 import { Layout } from "../components/Layout"
 
-import { Seo } from "../components/seo"
+import { Seo } from "../components/Seo"
 
 type DataProps = {
   site: {

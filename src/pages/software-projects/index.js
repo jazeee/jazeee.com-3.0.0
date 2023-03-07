@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "../../components/Layout";
-import { SoftwareProjects } from "../../components/projects/SoftwareProjects";
-import { Seo } from "../../components/seo";
+import { SoftwareProjects } from "../../components/Projects/SoftwareProjects";
+import { Seo } from "../../components/Seo";
 
 const SoftwareProjectsPage = () => (
   <Layout>
