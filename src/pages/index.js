@@ -1,11 +1,11 @@
 import React from "react"
 
 import { Layout } from "../components/layout"
-import { Skills } from "./skills";
-import { SkillsPlotWithChooser } from "./skills-plots";
-import { SoftwareProjects } from "./software-projects";
-import { Presentations } from "./presentations";
-import { Publications } from "./publications";
+import { Skills } from "../components/skills/Skills";
+import { Presentations } from "../components/presentations/Presentations";
+import { SoftwareProjects } from "../components/projects/SoftwareProjects";
+import { SkillsPlotWithChooser } from "../components/SkillsPlots/SkillsPlotsWithChooser";
+import { Publications } from "../components/publications/Publications";
 
 import { Seo } from "../components/seo"
 
