@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { SOFTWARE_PROJECTS } from "../../data/software-projects-data";
-import { GithubProject } from "./github-project";
+import { GithubProject } from "./GithubProject";
 import { ForwardRefLink } from "../Link";
 
 export const SoftwareProjects = () => (

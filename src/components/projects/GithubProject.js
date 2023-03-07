@@ -2,7 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { ExternalLink } from "../ExternalLink";
-import { GithubIcon } from "../icons/github-icon";
+import { GithubIcon } from "../icons/GithubIcon";
 
 export const GithubProject = props => {
   const { project } = props;

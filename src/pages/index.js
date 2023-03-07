@@ -5,7 +5,7 @@ import { Skills } from "../components/skills/Skills";
 import { Presentations } from "../components/presentations/Presentations";
 import { SoftwareProjects } from "../components/projects/SoftwareProjects";
 import { SkillsPlotWithChooser } from "../components/SkillsPlots/SkillsPlotsWithChooser";
-import { Publications } from "../components/publications/Publications";
+import { Publications } from "../components/Publications/Publications";
 
 import { Seo } from "../components/seo"
 

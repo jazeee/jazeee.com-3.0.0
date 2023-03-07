@@ -9,8 +9,8 @@ import Drawer from "@mui/material/Drawer";
 import { Link } from "./Link";
 import { SideBar } from "./SideBar";
 import { ExternalLink } from "./ExternalLink";
-import { GithubIcon } from "./icons/github-icon";
-import { LinkedInIcon } from "./icons/linked-in-icon";
+import { GithubIcon } from "./icons/GithubIcon";
+import { LinkedInIcon } from "./icons/LinkedInIcon";
 
 import { HideOnScroll } from "./hide-on-scroll";
 

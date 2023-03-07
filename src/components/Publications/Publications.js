@@ -2,7 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { PUBLICATIONS } from "../../data/publications";
-import { Publication } from "../../components/publications/publication";
+import { Publication } from "./Publication";
 
 export const Publications = () => (
   <Container>
