@@ -3,7 +3,7 @@ export const SOFTWARE_PROJECTS = [
     name: "This Site",
     url: "http://www.jazeee.com",
     description: "Source code for this site (React, Gatsby, D3.js).",
-    githubFullName: "jazeee/www.jazeee.com-2.0.0",
+    githubFullName: "jazeee/www.jazeee.com-3.0.0",
   },
   {
     name: "Dexcom Android Wall Panel",
