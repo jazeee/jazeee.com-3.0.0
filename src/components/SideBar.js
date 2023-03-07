@@ -4,7 +4,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import { URLS } from "../data/urls";
-import { ForwardRefLink } from "./link";
+import { ForwardRefLink } from "./Link";
 import { Location } from "@reach/router";
 import { SECONDARY_COLOR } from "../utils/colors";
 

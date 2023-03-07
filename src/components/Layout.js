@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
-import { Header } from "./header";
+import { Header } from "./Header";
 import { PRIMARY_COLOR, SECONDARY_COLOR } from "../utils/colors";
 
 export const theme = createTheme({

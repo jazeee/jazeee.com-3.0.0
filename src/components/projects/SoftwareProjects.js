@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import { SOFTWARE_PROJECTS } from "../../data/software-projects-data";
 import * as styles from "./software-projects.module.css";
 import { GithubProject } from "./github-project";
-import { ForwardRefLink } from "../../components/link";
+import { ForwardRefLink } from "../Link";
 
 export const SoftwareProjects = () => (
   <Container>

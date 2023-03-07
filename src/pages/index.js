@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Layout } from "../components/layout"
+import { Layout } from "../components/Layout"
 import { Skills } from "../components/skills/Skills";
 import { Presentations } from "../components/presentations/Presentations";
 import { SoftwareProjects } from "../components/projects/SoftwareProjects";

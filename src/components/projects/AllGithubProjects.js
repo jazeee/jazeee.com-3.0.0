@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import CircularProgress from "@mui/material/CircularProgress";
 import * as styles from "./software-projects.module.css";
 import { GithubProject } from "./github-project";
-import { Link } from "../../components/link";
+import { Link } from "../Link";
 
 export const AllGithubProjects = () => {
   const [projects, setProjects] = useState([]);

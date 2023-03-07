@@ -7,7 +7,7 @@ import MenuItem from "@mui/material/MenuItem";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { skills } from "../../data/utils";
 import * as classNames from "./skills-plots.module.css";
-import { ForwardRefLink } from "../../components/link";
+import { ForwardRefLink } from "../Link";
 
 const { skillTypes } = skills;
 export const SkillsPlotWithChooser = () => {

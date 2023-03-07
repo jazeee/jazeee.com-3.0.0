@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout } from "../../components/layout";
+import { Layout } from "../../components/Layout";
 import { SoftwareProjects } from "../../components/projects/SoftwareProjects";
 import { Seo } from "../../components/seo";
 
