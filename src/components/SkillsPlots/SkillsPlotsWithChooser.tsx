@@ -13,8 +13,8 @@ import { LazyLoadedSkillsPlot } from "./LoadablePlot";
 const { skillTypes } = skills;
 export const SkillsPlotWithChooser = () => {
   const [skillType, setSkillType] = useState(skillTypes[0]);
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const selectItem = newSkillType => {
+  const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
+  const selectItem = (newSkillType: string) => {
     setSkillType(newSkillType);
     setAnchorEl(null);
   };

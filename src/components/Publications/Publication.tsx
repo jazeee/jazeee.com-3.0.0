@@ -2,8 +2,13 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { ExternalLink } from "../ExternalLink";
+import { IPublication } from "data/publications";
 
-export const Publication = props => {
+interface Props {
+  publication: IPublication;
+}
+
+export function Publication(props: Props) {
   const { publication } = props;
   return (
     <Box sx={{

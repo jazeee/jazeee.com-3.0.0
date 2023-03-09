@@ -3374,7 +3374,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/plotly.js@npm:*, @types/plotly.js@npm:^2":
+"@types/plotly.js@npm:*, @types/plotly.js@npm:2":
   version: 2.12.18
   resolution: "@types/plotly.js@npm:2.12.18"
   checksum: 9e0babf1735be2634ea24afd30bbc8cb575850c55d64a5ac55b3634e171129041b9749a3af62bf06c63d6169b5a3069cf9346f7a41b28f78c59d9f8ab7074b02
@@ -3415,7 +3415,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-plotly.js@npm:^2":
+"@types/react-plotly.js@npm:2":
   version: 2.6.0
   resolution: "@types/react-plotly.js@npm:2.6.0"
   dependencies:
@@ -9996,10 +9996,10 @@ __metadata:
     "@mui/icons-material": "npm:5.11.11"
     "@mui/material": "npm:5.11.12"
     "@types/lodash": "npm:4.14.191"
-    "@types/plotly.js": "npm:^2"
+    "@types/plotly.js": "npm:2"
     "@types/react": "npm:18.0.28"
     "@types/react-dom": "npm:18.0.11"
-    "@types/react-plotly.js": "npm:^2"
+    "@types/react-plotly.js": "npm:2"
     gatsby: "npm:5.7.0"
     gatsby-plugin-catch-links: "npm:5.7.0"
     gatsby-plugin-image: "npm:3.7.0"
@@ -10015,6 +10015,7 @@ __metadata:
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     react-plotly.js: "npm:2.6.0"
+    typescript: "npm:4.9.5"
   languageName: unknown
   linkType: soft
 
@@ -15042,6 +15043,26 @@ __metadata:
   version: 0.0.6
   resolution: "typedarray@npm:0.0.6"
   checksum: b0b2ee8d06d5827891346d2db9929fdbd2f719ef5b55afed90f5e48b36fc49df0f8280daf362a05b3d971972e13779011dd501b5a53bd36f938ae88f6b8552cb
+  languageName: node
+  linkType: hard
+
+"typescript@npm:4.9.5":
+  version: 4.9.5
+  resolution: "typescript@npm:4.9.5"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 550217a465c00b1d7ef0e0ddc3a6a0b2ae1fd7c1b9f53cde5a1cfe56aa457c7a43fa83792c1b98b2185d2156d0467c9ad6f6600515ad4f4fc2acee54c4bd320e
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>":
+  version: 4.9.5
+  resolution: "typescript@patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=23ec76"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 09f82f25664c79d5cccc389502175093becf51d691b443c79294303681544a399fb42f8384b535ddeba48cadb64e7d14b42de40d8ade4418bb43174989dd8685
   languageName: node
   linkType: hard
 

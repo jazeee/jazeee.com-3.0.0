@@ -1,7 +1,7 @@
 import React from "react";
-import Link from "@mui/material/Link";
+import Link, { LinkProps } from "@mui/material/Link";
 
-export const ExternalLink = props => {
+export const ExternalLink = (props: LinkProps) => {
   const { children, ...otherProps } = props;
   return (
     <Link

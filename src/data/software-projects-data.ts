@@ -1,4 +1,11 @@
-export const SOFTWARE_PROJECTS = [
+export interface ISoftwareProject {
+  name: string;
+  url: string;
+  description: string;
+  githubFullName: string;
+}
+
+export const SOFTWARE_PROJECTS: ISoftwareProject[] = [
   {
     name: "This Site",
     url: "http://www.jazeee.com",

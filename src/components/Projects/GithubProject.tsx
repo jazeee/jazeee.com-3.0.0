@@ -3,8 +3,13 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { ExternalLink } from "../ExternalLink";
 import { GithubIcon } from "../Icons/GithubIcon";
+import { ISoftwareProject } from "data/software-projects-data";
 
-export const GithubProject = props => {
+interface Props {
+  project: ISoftwareProject;
+}
+
+export function GithubProject(props: Props) {
   const { project } = props;
   const { url, name, description, githubFullName } = project;
   return (

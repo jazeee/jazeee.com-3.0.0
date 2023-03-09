@@ -8,8 +8,11 @@ import { ForwardRefLink } from "./Link";
 import { Location } from "@reach/router";
 import { SECONDARY_COLOR } from "../utils/colors";
 
+interface Props {
+  closeSideBar: () => void;
+}
 
-export const SideBar = props => {
+export function SideBar(props: Props) {
   const { closeSideBar } = props;
 
   return (

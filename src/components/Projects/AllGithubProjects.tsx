@@ -6,9 +6,17 @@ import Typography from "@mui/material/Typography";
 import CircularProgress from "@mui/material/CircularProgress";
 import { GithubProject } from "./GithubProject";
 import { Link } from "../Link";
+import { ISoftwareProject } from "data/software-projects-data";
+
+interface IGithubResponseDatum {
+  name: string;
+  description: string;
+  full_name: string;
+  html_url: string;
+}
 
 export const AllGithubProjects = () => {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState<ISoftwareProject[]>([]);
   const [page, setPage] = useState(1);
   const [status, setStatus] = useState("");
   const [isLoading, setIsLoading] = useState(true);
@@ -25,7 +33,7 @@ export const AllGithubProjects = () => {
         if (response.ok) {
           const githubData = await response.json();
           if (isCurrentRequest) {
-            const projects = githubData.map(datum => {
+            const projects = githubData.map((datum: IGithubResponseDatum): ISoftwareProject => {
               const { name, description, full_name, html_url } = datum;
               return {
                 name,
@@ -47,7 +55,9 @@ export const AllGithubProjects = () => {
       }
     };
     getProjects();
-    return () => (isCurrentRequest = false);
+    return () => {
+      isCurrentRequest = false
+    };
   }, [setProjects, setIsLoading, page, setStatus]);
   return (
     <Container>

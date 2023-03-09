@@ -1,4 +1,17 @@
-export const PRESENTATIONS = [
+interface IPresentationLink {
+  name: string;
+  url: string;
+}
+
+export interface IPresentation {
+  name: string;
+  location: string;
+  date: string;
+  image: string;
+  links: IPresentationLink[];
+}
+
+export const PRESENTATIONS: IPresentation[] = [
   {
     name: "Instrument Control via Web Interfaces at Web Design Meetup",
     location: "Madison WI",

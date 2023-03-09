@@ -7,8 +7,13 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { ExternalLink } from "../ExternalLink";
+import { IPresentation } from "data/presentations";
 
-export const PresentationDetails = props => {
+interface Props {
+  presentation: IPresentation;
+}
+
+export const PresentationDetails = (props: Props) => {
   const { presentation } = props;
   const { name, location, date, image, links } = presentation;
   return (
@@ -30,7 +35,7 @@ export const PresentationDetails = props => {
       </CardContent>
       <Box flexGrow={1} />
       <CardActions>
-        {links.map(link => {
+        {links.map((link) => {
           const { name, url } = link;
           return (
             <Button key={url} size="small">

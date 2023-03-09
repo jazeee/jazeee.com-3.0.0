@@ -3,7 +3,6 @@ import { skills } from "../../data/utils";
 import { ExternalLink } from "../ExternalLink";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import codeBackgroundImage from './codeBackground.png';
 
 const webAppSkillNames = skills
   .getDomainSkills("Software Engineering")
@@ -12,7 +11,7 @@ const webAppSkillNames = skills
 
 export const Skills = () => (
   <Box sx={{
-    backgroundImage: `url("${codeBackgroundImage}")`,
+    backgroundImage: `url('/static/images/codeBackground.png')`,
     backgroundColor: 'black',
     backgroundRepeat: 'repeat-y',
     position: 'relative',

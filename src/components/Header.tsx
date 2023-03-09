@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
@@ -14,17 +14,21 @@ import { LinkedInIcon } from "./Icons/LinkedInIcon";
 
 import { HideOnScroll } from "./HideOnScroll";
 
-export const Header = props => {
-  const [isSideBarOpen, setIsSideBarOpen] = React.useState(false);
+interface Props {
+  siteTitle: string;
+}
+
+export function Header(props: Props) {
+  const [sideBarIsOpen, setSideBarIsOpen] = useState(false);
   const { siteTitle } = props;
   return (
     <Box flexGrow={1}>
       <Drawer
         anchor="left"
-        open={isSideBarOpen}
-        onClose={() => setIsSideBarOpen(false)}
+        open={sideBarIsOpen}
+        onClose={() => setSideBarIsOpen(false)}
       >
-        <SideBar closeSideBar={() => setIsSideBarOpen(false)} />
+        <SideBar closeSideBar={() => {setSideBarIsOpen(false)}} />
       </Drawer>
       <HideOnScroll>
         <AppBar>
@@ -36,7 +40,7 @@ export const Header = props => {
               aria-label="Menu"
               aria-controls="simple-menu"
               aria-haspopup="true"
-              onClick={() => setIsSideBarOpen(true)}
+              onClick={() => setSideBarIsOpen(true)}
             >
               <MenuIcon />
             </IconButton>

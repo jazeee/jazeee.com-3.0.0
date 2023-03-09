@@ -1,4 +1,12 @@
-export const PUBLICATIONS = [
+export interface IPublication {
+  name: string;
+  date: string;
+  media: string;
+  authors: string;
+  url: string;
+}
+
+export const PUBLICATIONS: IPublication[] = [
   {
     name:
       "Correction for illumination non-uniformity during the synthesis of arrays of oligomers",
