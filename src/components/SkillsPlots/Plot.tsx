@@ -2,19 +2,19 @@ import React, { useState } from "react";
 import { skills, START_YEAR } from "../../data/utils";
 import Plot from "react-plotly.js";
 import { getMarkerProps } from "../../utils/colors";
-import { useWindowDimensions } from "../../hooks/window-hooks";
+import { useWindowDimensions } from "../../hooks/useWindowDimensions";
 import { Data } from "plotly.js";
 
 export interface ISkillsPlotProps {
   skillType: string;
-  showTitle?: boolean;
+  titleIsVisible?: boolean;
 }
 
 export function SkillsPlot(props: ISkillsPlotProps) {
   const [highlightedSkillName, setHighlightedSkillName] = useState("");
   const { width } = useWindowDimensions();
   const screenIsWide = width >= 480;
-  const { skillType = "Language", showTitle = true } = props;
+  const { skillType = "Language", titleIsVisible = true } = props;
   const subSkills = skills.getSkillData(skillType, {
     minimumYearToInclude: 2000,
   });
@@ -71,7 +71,7 @@ export function SkillsPlot(props: ISkillsPlotProps) {
         height: '500px',
       }}
       layout={{
-        title: showTitle ? skillType : undefined,
+        title: titleIsVisible ? skillType : undefined,
         autosize: true,
         xaxis: {
           title: "Year",

@@ -69,7 +69,7 @@ export const SkillsPlotWithChooser = () => {
       </Grid>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={12} md={12}>
-          <LazyLoadedSkillsPlot showTitle={false} skillType={skillType} />
+          <LazyLoadedSkillsPlot titleIsVisible={false} skillType={skillType} />
         </Grid>
       </Grid>
     </Container>
