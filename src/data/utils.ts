@@ -1,18 +1,34 @@
-import { SKILL_DATA } from "./skill-data";
+import { ISkillDatum, SKILL_DATA } from "./skillsData";
 import { pickBy, keys, sortBy, find } from "lodash";
-import { getColor } from "../utils/colors";
+
+export const START_YEAR = 2014;
+
+interface ISkillDatumWithScore extends ISkillDatum {
+  name: string;
+  score: number;
+}
+interface IGetSkillDataOptions {
+  minimumYearToInclude?: number;
+}
 
 export class Skills {
+  data: ISkillDatumWithScore[];
+  latestYear: number;
+  skillTypes: string[];
+  skillDomains: string[];
+  skillNames: string[];
+  skillIndex: Record<string, number>;
+
   constructor() {
     this.data = [];
-    let latestYear = 2015;
+    let latestYear = START_YEAR;
     for (let name in SKILL_DATA) {
-      const skill = { name, ...SKILL_DATA[name] };
+      const datum = SKILL_DATA[name];
+      const skill = { name, ...datum, score: this.getSkillScore(datum) };
       this.data.push(skill);
       latestYear = Object.keys(skill.experience)
         .map(year => +year)
         .reduce((memo, year) => Math.max(memo, year), latestYear);
-      skill.score = this.getSkillScore(skill);
     }
     this.latestYear = latestYear;
     this.skillTypes = Object.values(SKILL_DATA).map(
@@ -38,22 +54,21 @@ export class Skills {
     );
     this.skillNames = Object.keys(SKILL_DATA).sort();
     this.skillIndex = {};
-    this.skillColors = {};
     this.skillNames.forEach((skillName, index) => {
-      this.skillColors[skillName] = getColor(index);
       this.skillIndex[skillName] = index;
     });
   }
 
-  getSkillData = (skillType, options = {}) => {
+  getSkillData = (skillType: string, options: IGetSkillDataOptions = {}) => {
     const { minimumYearToInclude } = options;
     let skillData = SKILL_DATA;
     if (minimumYearToInclude) {
       skillData = Object.keys(skillData).reduce((accum, skill) => {
         const skillDatum = skillData[skill];
         const { experience } = skillDatum;
-        const filteredExperience = {};
+        const filteredExperience: Record<number, number> = {};
         Object.keys(experience)
+          .map(Number)
           .filter(year => year >= minimumYearToInclude)
           .forEach(year => (filteredExperience[year] = experience[year]));
         accum[skill] = {
@@ -61,7 +76,7 @@ export class Skills {
           experience: filteredExperience,
         };
         return accum;
-      }, {});
+      }, {} as Record<string, ISkillDatum>);
     }
     if (skillType != null) {
       skillData = pickBy(skillData, function(skill) {
@@ -71,37 +86,26 @@ export class Skills {
     return skillData;
   };
 
-  getSkillNames = skillType => {
-    let skillNames = keys(this.getSkillData(skillType));
-    skillNames = sortBy(skillNames, skillName => {
-      let skill = find(this.data, function(datum) {
-        return datum.name === skillName;
-      });
-      return this.getSkillScore(skill);
-    });
-    return skillNames.reverse();
-  };
-
-  getSkillYearScore = (year, skillLevel, scoreWeight) => {
+  getSkillYearScore = (year: number, skillLevel: number, scoreWeight: number | undefined) => {
     if (scoreWeight == null) {
       scoreWeight = 1;
     }
     return (
-      Math.max(0.5, year - (this.latestYear - 6)) * skillLevel * scoreWeight
+      Math.max(0.5, year - (this.latestYear - 3)) * skillLevel * scoreWeight
     );
   };
 
-  getSkillScore = skill => {
+  getSkillScore = (skill: ISkillDatum) => {
     let score = 0;
     const { experience } = skill;
     for (let year in experience) {
       const skillLevel = experience[year];
-      score += this.getSkillYearScore(year, skillLevel, skill.scoreWeight);
+      score += this.getSkillYearScore(Number(year), skillLevel, skill.scoreWeight);
     }
     return score;
   };
 
-  getDomainSkills = skillDomain => {
+  getDomainSkills = (skillDomain: string) => {
     let skills = this.data.filter(skill => {
       return skill.domains.includes(skillDomain);
     });
@@ -109,7 +113,7 @@ export class Skills {
     return skills.reverse();
   };
 
-  getSkills = skillType => {
+  getSkills = (skillType: string) => {
     const skills = [];
     let index = 0;
     for (let skillName in SKILL_DATA) {
@@ -131,10 +135,6 @@ export class Skills {
       }
     }
     return skills;
-  };
-
-  getDomainSkillNames = skillDomain => {
-    return this.getDomainSkills(skillDomain).map(({ name }) => name);
   };
 }
 

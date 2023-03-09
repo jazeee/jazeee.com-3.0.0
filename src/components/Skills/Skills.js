@@ -6,8 +6,9 @@ import Typography from "@mui/material/Typography";
 import codeBackgroundImage from './codeBackground.png';
 
 const webAppSkillNames = skills
-  .getDomainSkillNames("Software Engineering")
-  .filter((skill, index) => index < 12);
+  .getDomainSkills("Software Engineering")
+  .filter((__skill, index) => index < 12)
+  .map((skill) => skill.name);
 
 export const Skills = () => (
   <Box sx={{

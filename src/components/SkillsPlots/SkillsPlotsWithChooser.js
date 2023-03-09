@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { skills } from "../../data/utils";
 import { ForwardRefLink } from "../Link";
+import { LazyLoadedSkillsPlot } from "./LoadablePlot";
 
 const { skillTypes } = skills;
 export const SkillsPlotWithChooser = () => {
@@ -68,7 +69,7 @@ export const SkillsPlotWithChooser = () => {
       </Grid>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={12} md={12}>
-          {/* <LoadablePlot showTitle={false} skillType={skillType} /> */}
+          <LazyLoadedSkillsPlot showTitle={false} skillType={skillType} />
         </Grid>
       </Grid>
     </Container>

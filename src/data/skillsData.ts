@@ -1,4 +1,12 @@
-const SKILL_DATA_WITH_GAPS = {
+export interface ISkillDatum {
+  type: string;
+  experience: Record<number, number>;
+  domains: string[];
+  scoreWeight?: number;
+  isCurrentSkill?: boolean;
+}
+
+const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
   "JavaScript/ES6+": {
     type: "Language",
     experience: {
@@ -104,7 +112,7 @@ const SKILL_DATA_WITH_GAPS = {
       2023: 90,
     },
     domains: ["WebApp", "Software Engineering"],
-    scoreWeight: 2,
+    scoreWeight: 3,
     isCurrentSkill: true,
   },
   "AngularJS 1.5": {
@@ -158,6 +166,7 @@ const SKILL_DATA_WITH_GAPS = {
       2023: 90,
     },
     domains: ["WebApp", "Software Engineering"],
+    scoreWeight: 3,
     isCurrentSkill: true,
   },
   "D3.js": {
@@ -199,8 +208,8 @@ const SKILL_DATA_WITH_GAPS = {
       2013: 60,
       2014: 100,
       2016: 100,
-      2018: 0,
-      2021: 0,
+      2018: 20,
+      2021: 10,
       2022: 40,
       2023: 50,
     },
@@ -208,7 +217,7 @@ const SKILL_DATA_WITH_GAPS = {
     scoreWeight: 1,
     isCurrentSkill: true,
   },
-  "HTML/CSS/Sass/Less": {
+  "HTML/CSS/SASS": {
     type: "Language",
     experience: {
       2005: 0,
@@ -229,7 +238,7 @@ const SKILL_DATA_WITH_GAPS = {
       2023: 90,
     },
     domains: ["WebApp", "Software Engineering"],
-    scoreWeight: 2,
+    scoreWeight: 2.5,
     isCurrentSkill: true,
   },
   Java: {
@@ -254,7 +263,7 @@ const SKILL_DATA_WITH_GAPS = {
       2023: 30,
     },
     domains: ["WebApp", "Server", "Android", "Software Engineering"],
-    scoreWeight: 2,
+    scoreWeight: 1,
     isCurrentSkill: true,
   },
   "ReST/WebSockets": {
@@ -280,6 +289,7 @@ const SKILL_DATA_WITH_GAPS = {
       2023: 90,
     },
     domains: ["WebApp", "Server", "Software Engineering"],
+    scoreWeight: 2,
     isCurrentSkill: true,
   },
   Spring: {
@@ -462,7 +472,7 @@ const SKILL_DATA_WITH_GAPS = {
       2023: 90,
     },
     domains: ["Server", "Linux", "Software Engineering"],
-    skillWeight: 3.0,
+    scoreWeight: 1.0,
     isCurrentSkill: true,
   },
   Windows: {
@@ -510,7 +520,7 @@ const SKILL_DATA_WITH_GAPS = {
       2023: 90,
     },
     domains: ["Process", "Software Engineering"],
-    skillWeight: 3.0,
+    scoreWeight: 2.0,
     isCurrentSkill: true,
   },
   "subversion (svn)": {
@@ -635,12 +645,12 @@ const SKILL_DATA_WITH_GAPS = {
   },
 };
 
-export const SKILL_DATA = {};
+export const SKILL_DATA: Record<string, ISkillDatum> = {};
 Object.keys(SKILL_DATA_WITH_GAPS).forEach(name => {
   const skillDatum = SKILL_DATA_WITH_GAPS[name];
   let { experience } = skillDatum;
   // Fill in missing holes in data
-  const years = Object.keys(experience);
+  const years = Object.keys(experience).map(Number);
   const minYear = Math.min(...years);
   const maxYear = Math.max(...years);
   let lastFoundYearIndex = 0;

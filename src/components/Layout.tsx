@@ -23,7 +23,8 @@ export const theme = createTheme({
   },
 });
 
-export const Layout = ({ children }) => {
+export function Layout (props: React.PropsWithChildren) {
+  const { children } = props;
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
