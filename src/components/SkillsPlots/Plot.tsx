@@ -101,6 +101,10 @@ export function SkillsPlot(props: ISkillsPlotProps) {
         return false;
       }}
       onLegendDoubleClick={() => false}
+      config={{
+        displayModeBar: false,
+        scrollZoom: false,
+      }}
     />
   );
 }
