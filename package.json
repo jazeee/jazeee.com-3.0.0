@@ -30,6 +30,15 @@
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "@types/react-plotly.js": "2",
+    "@typescript-eslint/eslint-plugin": "5.18.0",
+    "@typescript-eslint/parser": "5.18.0",
+    "eslint": "8.12.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.32.2",
     "prettier": "2.8.4",
     "typescript": "4.9.5"
   },
@@ -44,6 +53,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lint": "eslint",
+    "lint:all": "eslint src/**/*.{ts,tsx}",
     "tscheck": "tsc --noEmit"
   },
   "bugs": {

@@ -1,17 +1,18 @@
-import React, { useState } from "react";
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Typography from "@mui/material/Typography";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import { skills } from "../../data/utils";
-import { ForwardRefLink } from "../Link";
-import { LazyLoadedSkillsPlot } from "./LoadablePlot";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Typography from '@mui/material/Typography';
+import React, { useState } from 'react';
+
+import { LazyLoadedSkillsPlot } from './LoadablePlot';
+import { skills } from '../../data/utils';
+import { ForwardRefLink } from '../Link';
 
 const { skillTypes } = skills;
-export const SkillsPlotWithChooser = () => {
+export function SkillsPlotWithChooser() {
   const [skillType, setSkillType] = useState(skillTypes[0]);
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
   const selectItem = (newSkillType: string) => {
@@ -37,36 +38,30 @@ export const SkillsPlotWithChooser = () => {
           <ArrowDropDownIcon />
         </Button>
       </Typography>
-      <Grid container spacing={2}>
-        <Menu
-          id="plot-chooser"
-          anchorEl={anchorEl}
-          keepMounted
-          open={Boolean(anchorEl)}
-          onClose={() => setAnchorEl(null)}
-          anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "center",
-          }}
-          transformOrigin={{
-            vertical: "center",
-            horizontal: "center",
-          }}
-        >
-          {skillTypes.map(skillType => (
-            <MenuItem key={skillType} onClick={() => selectItem(skillType)}>
-              {skillType}
-            </MenuItem>
-          ))}
-          <MenuItem
-            key="Show All Skills"
-            component={ForwardRefLink}
-            to="/skills-plots"
-          >
-            Show All Skills
+      <Menu
+        id="plot-chooser"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={() => setAnchorEl(null)}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'center',
+        }}
+        transformOrigin={{
+          vertical: 'center',
+          horizontal: 'center',
+        }}
+      >
+        {skillTypes.map((menuItemSkillType) => (
+          <MenuItem key={menuItemSkillType} onClick={() => selectItem(menuItemSkillType)}>
+            {menuItemSkillType}
           </MenuItem>
-        </Menu>
-      </Grid>
+        ))}
+        <MenuItem key="Show All Skills" component={ForwardRefLink} to="/skills-plots">
+          Show All Skills
+        </MenuItem>
+      </Menu>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={12} md={12}>
           <LazyLoadedSkillsPlot titleIsVisible={false} skillType={skillType} />
@@ -74,4 +69,4 @@ export const SkillsPlotWithChooser = () => {
       </Grid>
     </Container>
   );
-};
+}

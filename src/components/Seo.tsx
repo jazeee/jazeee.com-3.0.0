@@ -5,12 +5,14 @@
  * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
  */
 
-import React, { ReactElement } from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from 'gatsby';
+import React, { ReactElement } from 'react';
 
 interface Props {
   title: string;
+  // eslint-disable-next-line react/require-default-props
   description?: string;
+  // eslint-disable-next-line react/require-default-props
   children?: ReactElement;
 }
 
@@ -28,10 +30,10 @@ export function Seo(props: Props) {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const metaDescription = description || site.siteMetadata.description;
+  const defaultTitle = site.siteMetadata?.title;
 
   return (
     <>
@@ -46,5 +48,5 @@ export function Seo(props: Props) {
       <meta name="twitter:description" content={metaDescription} />
       {children}
     </>
-  )
+  );
 }

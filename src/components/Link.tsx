@@ -1,8 +1,11 @@
-import React from "react";
-import MuiLink from "@mui/material/Link";
-import { GatsbyLinkProps, Link as GatsbyLink } from "gatsby";
+import MuiLink, { LinkProps } from '@mui/material/Link';
+import { GatsbyLinkProps, Link as GatsbyLink } from 'gatsby';
+import React, { forwardRef } from 'react';
 
-export const Link = React.forwardRef<any, GatsbyLinkProps<undefined>>(function Link(props, ref) {
+export const Link = forwardRef<LinkProps, GatsbyLinkProps<undefined>>(function GatsbyLinkRef(
+  props,
+  ref
+) {
   return <MuiLink component={GatsbyLink} ref={ref} {...props} />;
 });
 
