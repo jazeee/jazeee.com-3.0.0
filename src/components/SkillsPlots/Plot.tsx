@@ -12,13 +12,14 @@ export interface ISkillsPlotProps {
 }
 
 export function SkillsPlot(props: ISkillsPlotProps) {
+  const { skillType = 'Language', titleIsVisible = true } = props;
   const [highlightedSkillName, setHighlightedSkillName] = useState('');
   const { width } = useWindowDimensions();
   const screenIsWide = width >= 480;
-  const { skillType = 'Language', titleIsVisible = true } = props;
   const subSkills = getSkillData(skillType, {
     minimumYearToInclude: 2000,
   });
+
   const subSkillNames = Object.keys(subSkills);
   const data: Data[] = subSkillNames.map((name, index) => {
     const subSkill = subSkills[name];
