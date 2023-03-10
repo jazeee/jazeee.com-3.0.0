@@ -1,13 +1,16 @@
-import React from "react";
-import { Publications } from "../components/Publications/Publications";
-import { Layout } from "../components/Layout";
-import { Seo } from "../components/Seo";
+import React from 'react';
 
-const PublicationsPage = () => (
-  <Layout>
-    <Seo title="Publications" />
-    <Publications />
-  </Layout>
-);
+import { Layout } from '../components/Layout';
+import { Publications } from '../components/Publications/Publications';
+import { Seo } from '../components/Seo';
+
+function PublicationsPage() {
+  return (
+    <Layout>
+      <Seo title="Publications" />
+      <Publications />
+    </Layout>
+  );
+}
 
 export default PublicationsPage;

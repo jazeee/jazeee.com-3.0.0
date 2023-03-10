@@ -1,13 +1,16 @@
-import React from "react";
-import { Presentations } from "../components/Presentations/Presentations";
-import { Layout } from "../components/Layout";
-import { Seo } from "../components/Seo";
+import React from 'react';
 
-const PresentationsPage = () => (
-  <Layout>
-    <Seo title="Presentations" />
-    <Presentations />
-  </Layout>
-);
+import { Layout } from '../components/Layout';
+import { Presentations } from '../components/Presentations/Presentations';
+import { Seo } from '../components/Seo';
+
+function PresentationsPage() {
+  return (
+    <Layout>
+      <Seo title="Presentations" />
+      <Presentations />
+    </Layout>
+  );
+}
 
 export default PresentationsPage;

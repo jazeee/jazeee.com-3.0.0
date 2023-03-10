@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import CircularProgress from "@mui/material/CircularProgress";
-import { GithubProject } from "./GithubProject";
-import { Link } from "../Link";
-import { ISoftwareProject } from "data/software-projects-data";
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import CircularProgress from '@mui/material/CircularProgress';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import React, { useEffect, useState } from 'react';
+
+import { ISoftwareProject } from 'data/software-projects-data';
+
+import { GithubProject } from './GithubProject';
+import { Link } from '../Link';
 
 interface IGithubResponseDatum {
   name: string;
@@ -15,16 +17,16 @@ interface IGithubResponseDatum {
   html_url: string;
 }
 
-export const AllGithubProjects = () => {
+export function AllGithubProjects() {
   const [projects, setProjects] = useState<ISoftwareProject[]>([]);
   const [page, setPage] = useState(1);
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     let isCurrentRequest = true;
     const getProjects = async () => {
       setProjects([]);
-      setStatus("");
+      setStatus('');
       setIsLoading(true);
       try {
         const response = await fetch(
@@ -33,16 +35,16 @@ export const AllGithubProjects = () => {
         if (response.ok) {
           const githubData = await response.json();
           if (isCurrentRequest) {
-            const projects = githubData.map((datum: IGithubResponseDatum): ISoftwareProject => {
-              const { name, description, full_name, html_url } = datum;
+            const newProjects = githubData.map((datum: IGithubResponseDatum): ISoftwareProject => {
+              const { name, description, full_name: url, html_url: githubFullName } = datum;
               return {
                 name,
                 description,
-                url: html_url,
-                githubFullName: full_name,
+                url,
+                githubFullName,
               };
             });
-            setProjects(projects);
+            setProjects(newProjects);
             setIsLoading(false);
           }
         } else {
@@ -50,13 +52,14 @@ export const AllGithubProjects = () => {
         }
       } catch (error) {
         setStatus(`Error retrieving data: ${error}`);
+        // eslint-disable-next-line no-console
         console.log(error);
         setIsLoading(false);
       }
     };
     getProjects();
     return () => {
-      isCurrentRequest = false
+      isCurrentRequest = false;
     };
   }, [setProjects, setIsLoading, page, setStatus]);
   return (
@@ -64,15 +67,11 @@ export const AllGithubProjects = () => {
       <h1>All Github Projects</h1>
       {isLoading && <CircularProgress />}
       {status && <Typography variant="h4">{status}</Typography>}
-      {projects.map(project => {
+      {projects.map((project) => {
         return <GithubProject key={project.name} project={project} />;
       })}
       <Box sx={{ display: 'flex', paddingY: 2, gap: 2 }}>
-        <Button
-          variant="contained"
-          disabled={page <= 1}
-          onClick={() => setPage(page - 1)}
-        >
+        <Button variant="contained" disabled={page <= 1} onClick={() => setPage(page - 1)}>
           Previous Page
         </Button>
         <Button
@@ -88,4 +87,4 @@ export const AllGithubProjects = () => {
       </Box>
     </Container>
   );
-};
+}

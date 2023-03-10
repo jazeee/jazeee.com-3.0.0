@@ -1,10 +1,10 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import CssBaseline from "@mui/material/CssBaseline";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { useStaticQuery, graphql } from 'gatsby';
+import React from 'react';
 
-import { Header } from "./Header";
-import { PRIMARY_COLOR, SECONDARY_COLOR } from "../utils/colors";
+import { Header } from './Header';
+import { PRIMARY_COLOR, SECONDARY_COLOR } from '../utils/colors';
 
 export const theme = createTheme({
   palette: {
@@ -18,12 +18,12 @@ export const theme = createTheme({
       main: '#f00',
     },
     background: {
-      default: "#000",
+      default: '#000',
     },
   },
 });
 
-export function Layout (props: React.PropsWithChildren) {
+export function Layout(props: React.PropsWithChildren) {
   const { children } = props;
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -49,4 +49,4 @@ export function Layout (props: React.PropsWithChildren) {
       </ThemeProvider>
     </>
   );
-};
+}

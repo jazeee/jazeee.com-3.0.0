@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import Drawer from "@mui/material/Drawer";
-import { Link } from "./Link";
-import { SideBar } from "./SideBar";
-import { ExternalLink } from "./ExternalLink";
-import { GithubIcon } from "./Icons/GithubIcon";
-import { LinkedInIcon } from "./Icons/LinkedInIcon";
+import MenuIcon from '@mui/icons-material/Menu';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import React, { useState } from 'react';
 
-import { HideOnScroll } from "./HideOnScroll";
+import { ExternalLink } from './ExternalLink';
+import { HideOnScroll } from './HideOnScroll';
+import { GithubIcon } from './Icons/GithubIcon';
+import { LinkedInIcon } from './Icons/LinkedInIcon';
+import { Link } from './Link';
+import { SideBar } from './SideBar';
 
 interface Props {
   siteTitle: string;
@@ -23,12 +23,12 @@ export function Header(props: Props) {
   const { siteTitle } = props;
   return (
     <Box flexGrow={1}>
-      <Drawer
-        anchor="left"
-        open={sideBarIsOpen}
-        onClose={() => setSideBarIsOpen(false)}
-      >
-        <SideBar closeSideBar={() => {setSideBarIsOpen(false)}} />
+      <Drawer anchor="left" open={sideBarIsOpen} onClose={() => setSideBarIsOpen(false)}>
+        <SideBar
+          closeSideBar={() => {
+            setSideBarIsOpen(false);
+          }}
+        />
       </Drawer>
       <HideOnScroll>
         <AppBar>
@@ -50,18 +50,12 @@ export function Header(props: Props) {
               </Link>
             </Typography>
             <Typography variant="h6" sx={{ marginLeft: 1 }}>
-              <ExternalLink
-                color="secondary"
-                href="http://www.linkedin.com/in/jazeee"
-              >
+              <ExternalLink color="secondary" href="http://www.linkedin.com/in/jazeee">
                 <LinkedInIcon />
               </ExternalLink>
             </Typography>
             <Typography variant="h6" sx={{ marginLeft: 1 }}>
-              <ExternalLink
-                color="secondary"
-                href="https://github.com/jazeee"
-              >
+              <ExternalLink color="secondary" href="https://github.com/jazeee">
                 <GithubIcon />
               </ExternalLink>
             </Typography>
@@ -71,4 +65,4 @@ export function Header(props: Props) {
       <Toolbar />
     </Box>
   );
-};
+}

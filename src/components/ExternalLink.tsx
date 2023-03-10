@@ -1,16 +1,11 @@
-import React from "react";
-import Link, { LinkProps } from "@mui/material/Link";
+import Link, { LinkProps } from '@mui/material/Link';
+import React from 'react';
 
-export const ExternalLink = (props: LinkProps) => {
+export function ExternalLink(props: LinkProps) {
   const { children, ...otherProps } = props;
   return (
-    <Link
-      color="secondary"
-      {...otherProps}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <Link color="secondary" {...otherProps} target="_blank" rel="noopener noreferrer">
       {children}
     </Link>
   );
-};
+}

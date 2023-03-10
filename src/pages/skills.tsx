@@ -1,13 +1,16 @@
-import React from "react";
-import { Layout } from "../components/Layout";
-import { Seo } from "../components/Seo";
-import { Skills } from "../components/Skills/Skills";
+import React from 'react';
 
-const SkillsPage = () => (
-  <Layout>
-    <Seo title="Skills" />
-    <Skills />
-  </Layout>
-);
+import { Layout } from '../components/Layout';
+import { Seo } from '../components/Seo';
+import { Skills } from '../components/Skills/Skills';
+
+function SkillsPage() {
+  return (
+    <Layout>
+      <Seo title="Skills" />
+      <Skills />
+    </Layout>
+  );
+}
 
 export default SkillsPage;

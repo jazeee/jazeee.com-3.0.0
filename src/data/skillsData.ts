@@ -7,8 +7,8 @@ export interface ISkillDatum {
 }
 
 const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
-  "JavaScript/ES6+": {
-    type: "Language",
+  'JavaScript/ES6+': {
+    type: 'Language',
     experience: {
       2005: 0,
       2007: 10,
@@ -27,12 +27,12 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 90,
       2023: 90,
     },
-    domains: ["WebApp", "Server", "Software Engineering"],
+    domains: ['WebApp', 'Server', 'Software Engineering'],
     scoreWeight: 3,
     isCurrentSkill: true,
   },
-  "TypeScript": {
-    type: "Language",
+  TypeScript: {
+    type: 'Language',
     experience: {
       2018: 0,
       2019: 30,
@@ -41,12 +41,12 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 90,
       2023: 90,
     },
-    domains: ["WebApp", "Server", "Software Engineering"],
+    domains: ['WebApp', 'Server', 'Software Engineering'],
     scoreWeight: 3,
     isCurrentSkill: true,
   },
   CoffeeScript: {
-    type: "Language",
+    type: 'Language',
     experience: {
       2012: 0,
       2013: 60,
@@ -56,11 +56,11 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2017: 60,
       2018: 0,
     },
-    domains: ["WebApp", "Server", "Software Engineering"],
+    domains: ['WebApp', 'Server', 'Software Engineering'],
     scoreWeight: 1,
   },
-  "Meteor.js": {
-    type: "Platform",
+  'Meteor.js': {
+    type: 'Platform',
     experience: {
       2013: 0,
       2014: 40,
@@ -72,12 +72,12 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2020: 40,
       2021: 10,
     },
-    domains: ["WebApp", "Server", "Software Engineering"],
+    domains: ['WebApp', 'Server', 'Software Engineering'],
     scoreWeight: 1.5,
     isCurrentSkill: true,
   },
-  "Node.js": {
-    type: "Platform",
+  'Node.js': {
+    type: 'Platform',
     experience: {
       2011: 0,
       2012: 10,
@@ -93,12 +93,12 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 85,
       2023: 85,
     },
-    domains: ["WebApp", "Server", "Software Engineering"],
+    domains: ['WebApp', 'Server', 'Software Engineering'],
     scoreWeight: 2,
     isCurrentSkill: true,
   },
   React: {
-    type: "Platform",
+    type: 'Platform',
     experience: {
       2014: 0,
       2015: 10,
@@ -111,12 +111,12 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 90,
       2023: 90,
     },
-    domains: ["WebApp", "Software Engineering"],
+    domains: ['WebApp', 'Software Engineering'],
     scoreWeight: 3,
     isCurrentSkill: true,
   },
-  "AngularJS 1.5": {
-    type: "Platform",
+  'AngularJS 1.5': {
+    type: 'Platform',
     experience: {
       2012: 0,
       2013: 60,
@@ -125,10 +125,10 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2016: 90,
       2017: 0,
     },
-    domains: ["WebApp", "Software Engineering"],
+    domains: ['WebApp', 'Software Engineering'],
   },
-  "AngularJS N.0": {
-    type: "Platform",
+  'AngularJS N.0': {
+    type: 'Platform',
     experience: {
       2014: 0,
       2015: 10,
@@ -137,10 +137,10 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2018: 10,
       2019: 0,
     },
-    domains: ["WebApp", "Software Engineering"],
+    domains: ['WebApp', 'Software Engineering'],
   },
   Bootstrap: {
-    type: "Platform",
+    type: 'Platform',
     experience: {
       2012: 0,
       2013: 55,
@@ -151,10 +151,10 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2018: 60,
       2019: 30,
     },
-    domains: ["WebApp", "Software Engineering"],
+    domains: ['WebApp', 'Software Engineering'],
   },
-  "Material-UI": {
-    type: "Platform",
+  'Material-UI': {
+    type: 'Platform',
     experience: {
       2016: 0,
       2017: 20,
@@ -165,12 +165,12 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 90,
       2023: 90,
     },
-    domains: ["WebApp", "Software Engineering"],
+    domains: ['WebApp', 'Software Engineering'],
     scoreWeight: 3,
     isCurrentSkill: true,
   },
-  "D3.js": {
-    type: "Platform",
+  'D3.js': {
+    type: 'Platform',
     experience: {
       2012: 0,
       2013: 60,
@@ -182,12 +182,12 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2019: 60,
       2020: 40,
     },
-    domains: ["WebApp", "Software Engineering"],
+    domains: ['WebApp', 'Software Engineering'],
     scoreWeight: 2,
     isCurrentSkill: true,
   },
   JQuery: {
-    type: "Platform",
+    type: 'Platform',
     experience: {
       2010: 0,
       2011: 20,
@@ -199,10 +199,10 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2017: 40,
       2018: 20,
     },
-    domains: ["WebApp"],
+    domains: ['WebApp'],
   },
-  "Jade/Pug": {
-    type: "Language",
+  'Jade/Pug': {
+    type: 'Language',
     experience: {
       2012: 0,
       2013: 60,
@@ -213,12 +213,12 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 40,
       2023: 50,
     },
-    domains: ["WebApp", "Software Engineering"],
+    domains: ['WebApp', 'Software Engineering'],
     scoreWeight: 1,
     isCurrentSkill: true,
   },
-  "HTML/CSS/SASS": {
-    type: "Language",
+  'HTML/CSS/SASS': {
+    type: 'Language',
     experience: {
       2005: 0,
       2006: 10,
@@ -237,12 +237,12 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 90,
       2023: 90,
     },
-    domains: ["WebApp", "Software Engineering"],
+    domains: ['WebApp', 'Software Engineering'],
     scoreWeight: 2.5,
     isCurrentSkill: true,
   },
   Java: {
-    type: "Language",
+    type: 'Language',
     experience: {
       2007: 0,
       2008: 10,
@@ -262,12 +262,12 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 35,
       2023: 30,
     },
-    domains: ["WebApp", "Server", "Android", "Software Engineering"],
+    domains: ['WebApp', 'Server', 'Android', 'Software Engineering'],
     scoreWeight: 1,
     isCurrentSkill: true,
   },
-  "ReST/WebSockets": {
-    type: "Platform",
+  'ReST/WebSockets': {
+    type: 'Platform',
     experience: {
       2006: 0,
       2007: 40,
@@ -288,12 +288,12 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 90,
       2023: 90,
     },
-    domains: ["WebApp", "Server", "Software Engineering"],
+    domains: ['WebApp', 'Server', 'Software Engineering'],
     scoreWeight: 2,
     isCurrentSkill: true,
   },
   Spring: {
-    type: "Platform",
+    type: 'Platform',
     experience: {
       2009: 0,
       2010: 30,
@@ -305,10 +305,10 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2016: 60,
       2017: 0,
     },
-    domains: ["Server", "Software Engineering"],
+    domains: ['Server', 'Software Engineering'],
   },
   Python: {
-    type: "Language",
+    type: 'Language',
     experience: {
       2010: 0,
       2012: 15,
@@ -324,11 +324,11 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 70,
       2023: 75,
     },
-    domains: ["Server", "Software Engineering"],
+    domains: ['Server', 'Software Engineering'],
     isCurrentSkill: true,
   },
-  "c++": {
-    type: "Language",
+  'c++': {
+    type: 'Language',
     experience: {
       1995: 0,
       1996: 10,
@@ -350,10 +350,10 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2020: 40,
       2021: 40,
     },
-    domains: ["Server", "Software Engineering"],
+    domains: ['Server', 'Software Engineering'],
   },
   STL: {
-    type: "Platform",
+    type: 'Platform',
     experience: {
       2002: 0,
       2003: 20,
@@ -369,10 +369,10 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2017: 30,
       2018: 30,
     },
-    domains: ["Server", "Software Engineering"],
+    domains: ['Server', 'Software Engineering'],
   },
-  "VC++": {
-    type: "Language",
+  'VC++': {
+    type: 'Language',
     experience: {
       1995: 0,
       1996: 10,
@@ -388,10 +388,10 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2011: 30,
       2013: 0,
     },
-    domains: ["Windows"],
+    domains: ['Windows'],
   },
   Mongo: {
-    type: "Database",
+    type: 'Database',
     experience: {
       2012: 0,
       2013: 10,
@@ -402,11 +402,11 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2018: 60,
       2019: 60,
     },
-    domains: ["Server", "Software Engineering"],
+    domains: ['Server', 'Software Engineering'],
     isCurrentSkill: true,
   },
   Postgresql: {
-    type: "Database",
+    type: 'Database',
     experience: {
       2010: 0,
       2011: 10,
@@ -422,11 +422,11 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 75,
       2023: 75,
     },
-    domains: ["Server", "Software Engineering"],
+    domains: ['Server', 'Software Engineering'],
     isCurrentSkill: true,
   },
   MySQL: {
-    type: "Database",
+    type: 'Database',
     experience: {
       2006: 0,
       2008: 10,
@@ -444,11 +444,11 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2021: 40,
       2022: 40,
     },
-    domains: ["Server", "Software Engineering"],
+    domains: ['Server', 'Software Engineering'],
     isCurrentSkill: true,
   },
   Linux: {
-    type: "Environment",
+    type: 'Environment',
     experience: {
       1999: 0,
       2000: 10,
@@ -471,12 +471,12 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 90,
       2023: 90,
     },
-    domains: ["Server", "Linux", "Software Engineering"],
+    domains: ['Server', 'Linux', 'Software Engineering'],
     scoreWeight: 1.0,
     isCurrentSkill: true,
   },
   Windows: {
-    type: "Environment",
+    type: 'Environment',
     experience: {
       1992: 0,
       1995: 20,
@@ -500,10 +500,10 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2020: 30,
       2021: 30,
     },
-    domains: ["Windows"],
+    domains: ['Windows'],
   },
   git: {
-    type: "Source Control",
+    type: 'Source Control',
     experience: {
       2011: 0,
       2012: 10,
@@ -519,12 +519,12 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 90,
       2023: 90,
     },
-    domains: ["Process", "Software Engineering"],
+    domains: ['Process', 'Software Engineering'],
     scoreWeight: 2.0,
     isCurrentSkill: true,
   },
-  "subversion (svn)": {
-    type: "Source Control",
+  'subversion (svn)': {
+    type: 'Source Control',
     experience: {
       2006: 0,
       2007: 10,
@@ -538,10 +538,10 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2016: 70,
       2017: 0,
     },
-    domains: ["Process"],
+    domains: ['Process'],
   },
   cvs: {
-    type: "Source Control",
+    type: 'Source Control',
     experience: {
       2003: 0,
       2004: 10,
@@ -550,10 +550,10 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2007: 30,
       2008: 0,
     },
-    domains: ["Process"],
+    domains: ['Process'],
   },
-  "Visual Source Safe": {
-    type: "Source Control",
+  'Visual Source Safe': {
+    type: 'Source Control',
     experience: {
       1997: 0,
       1998: 10,
@@ -565,10 +565,10 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2007: 20,
       2008: 0,
     },
-    domains: ["Process"],
+    domains: ['Process'],
   },
-  "Team Leadership": {
-    type: "Project Management",
+  'Team Leadership': {
+    type: 'Project Management',
     experience: {
       2002: 0,
       2003: 15,
@@ -593,11 +593,11 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 90,
       2023: 90,
     },
-    domains: ["Process"],
+    domains: ['Process'],
     isCurrentSkill: true,
   },
-  "Atlassian, Phabricator, Arcanist": {
-    type: "Project Management",
+  'Atlassian, Phabricator, Arcanist': {
+    type: 'Project Management',
     experience: {
       2007: 0,
       2008: 10,
@@ -617,11 +617,11 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 90,
       2023: 90,
     },
-    domains: ["Process"],
+    domains: ['Process'],
     isCurrentSkill: true,
   },
-  "Agile/Kanban": {
-    type: "Project Management",
+  'Agile/Kanban': {
+    type: 'Project Management',
     experience: {
       2008: 0,
       2009: 10,
@@ -640,15 +640,15 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 70,
       2023: 70,
     },
-    domains: ["Process"],
+    domains: ['Process'],
     isCurrentSkill: true,
   },
 };
 
 export const SKILL_DATA: Record<string, ISkillDatum> = {};
-Object.keys(SKILL_DATA_WITH_GAPS).forEach(name => {
+Object.keys(SKILL_DATA_WITH_GAPS).forEach((name) => {
   const skillDatum = SKILL_DATA_WITH_GAPS[name];
-  let { experience } = skillDatum;
+  const { experience } = skillDatum;
   // Fill in missing holes in data
   const years = Object.keys(experience).map(Number);
   const minYear = Math.min(...years);
@@ -659,14 +659,10 @@ Object.keys(SKILL_DATA_WITH_GAPS).forEach(name => {
       const lastFoundYear = years[lastFoundYearIndex];
       const nextFoundYear = years[lastFoundYearIndex + 1];
       const deltaYears = nextFoundYear - lastFoundYear || 1;
-      const slope =
-        (experience[nextFoundYear] - experience[lastFoundYear]) / deltaYears;
+      const slope = (experience[nextFoundYear] - experience[lastFoundYear]) / deltaYears;
       const nextValue = Math.max(
         0,
-        Math.min(
-          100,
-          experience[lastFoundYear] + slope * (year - lastFoundYear)
-        )
+        Math.min(100, experience[lastFoundYear] + slope * (year - lastFoundYear))
       );
       experience[year] = nextValue;
       // console.log(
