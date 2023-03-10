@@ -38,32 +38,30 @@ export function SkillsPlotWithChooser() {
           <ArrowDropDownIcon />
         </Button>
       </Typography>
-      <Grid container spacing={2}>
-        <Menu
-          id="plot-chooser"
-          anchorEl={anchorEl}
-          keepMounted
-          open={Boolean(anchorEl)}
-          onClose={() => setAnchorEl(null)}
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'center',
-          }}
-          transformOrigin={{
-            vertical: 'center',
-            horizontal: 'center',
-          }}
-        >
-          {skillTypes.map((menuItemSkillType) => (
-            <MenuItem key={menuItemSkillType} onClick={() => selectItem(menuItemSkillType)}>
-              {menuItemSkillType}
-            </MenuItem>
-          ))}
-          <MenuItem key="Show All Skills" component={ForwardRefLink} to="/skills-plots">
-            Show All Skills
+      <Menu
+        id="plot-chooser"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={() => setAnchorEl(null)}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'center',
+        }}
+        transformOrigin={{
+          vertical: 'center',
+          horizontal: 'center',
+        }}
+      >
+        {skillTypes.map((menuItemSkillType) => (
+          <MenuItem key={menuItemSkillType} onClick={() => selectItem(menuItemSkillType)}>
+            {menuItemSkillType}
           </MenuItem>
-        </Menu>
-      </Grid>
+        ))}
+        <MenuItem key="Show All Skills" component={ForwardRefLink} to="/skills-plots">
+          Show All Skills
+        </MenuItem>
+      </Menu>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={12} md={12}>
           <LazyLoadedSkillsPlot titleIsVisible={false} skillType={skillType} />
