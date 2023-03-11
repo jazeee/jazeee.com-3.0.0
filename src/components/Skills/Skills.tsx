@@ -1,9 +1,8 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import React from 'react';
 
 import { skills } from '../../data/utils';
-import { ExternalLink } from '../ExternalLink';
+import { ExternalLink } from '../Links/ExternalLink';
 
 const webAppSkillNames = skills
   .getDomainSkills('Software Engineering')

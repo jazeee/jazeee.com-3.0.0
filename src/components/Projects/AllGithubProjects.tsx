@@ -3,12 +3,12 @@ import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
+import { InternalLink } from 'components/Links';
 import { ISoftwareProject } from 'data/software-projects-data';
 
 import { GithubProject } from './GithubProject';
-import { Link } from '../Link';
 
 interface IGithubResponseDatum {
   name: string;
@@ -82,7 +82,7 @@ export function AllGithubProjects() {
           Next Page
         </Button>
         <Button>
-          <Link to="/software-projects">Featured Projects</Link>
+          <InternalLink to="/software-projects">Featured Projects</InternalLink>
         </Button>
       </Box>
     </Container>

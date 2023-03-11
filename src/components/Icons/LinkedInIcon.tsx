@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 
 import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
-import React from 'react';
+
 // Based on https://materialdesignicons.com/
 
 export function LinkedInIcon(props: SvgIconProps) {

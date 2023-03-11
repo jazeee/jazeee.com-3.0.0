@@ -5,13 +5,12 @@ import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-import { ExternalLink } from './ExternalLink';
 import { HideOnScroll } from './HideOnScroll';
 import { GithubIcon } from './Icons/GithubIcon';
 import { LinkedInIcon } from './Icons/LinkedInIcon';
-import { Link } from './Link';
+import { InternalLink, ExternalLink } from './Links';
 import { SideBar } from './SideBar';
 
 interface Props {
@@ -45,9 +44,7 @@ export function Header(props: Props) {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" sx={{ flexGrow: 1 }}>
-              <Link to="/" color="inherit">
-                {siteTitle}
-              </Link>
+              <InternalLink to="/">{siteTitle}</InternalLink>
             </Typography>
             <Typography variant="h6" sx={{ marginLeft: 1 }}>
               <ExternalLink color="secondary" href="http://www.linkedin.com/in/jazeee">

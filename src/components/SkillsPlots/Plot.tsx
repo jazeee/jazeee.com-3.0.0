@@ -1,5 +1,5 @@
 import { Data } from 'plotly.js';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Plot from 'react-plotly.js';
 
 import { getSkillData, START_YEAR } from '../../data/utils';

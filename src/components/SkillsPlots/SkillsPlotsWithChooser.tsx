@@ -5,16 +5,16 @@ import Grid from '@mui/material/Grid';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import { LazyLoadedSkillsPlot } from './LoadablePlot';
 import { skills } from '../../data/utils';
-import { ForwardRefLink } from '../Link';
+import { BaseLink } from '../Links/Link';
 
 const { skillTypes } = skills;
 export function SkillsPlotWithChooser() {
   const [skillType, setSkillType] = useState(skillTypes[0]);
-  const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const selectItem = (newSkillType: string) => {
     setSkillType(newSkillType);
     setAnchorEl(null);
@@ -58,7 +58,7 @@ export function SkillsPlotWithChooser() {
             {menuItemSkillType}
           </MenuItem>
         ))}
-        <MenuItem key="Show All Skills" component={ForwardRefLink} to="/skills-plots">
+        <MenuItem key="Show All Skills" component={BaseLink} to="/skills-plots">
           Show All Skills
         </MenuItem>
       </Menu>

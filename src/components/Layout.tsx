@@ -1,7 +1,5 @@
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { useStaticQuery, graphql } from 'gatsby';
-import React from 'react';
 
 import { Header } from './Header';
 import { PRIMARY_COLOR, SECONDARY_COLOR } from '../utils/colors';
@@ -25,27 +23,14 @@ export const theme = createTheme({
 
 export function Layout(props: React.PropsWithChildren) {
   const { children } = props;
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
 
   return (
     <>
       <CssBaseline />
       <ThemeProvider theme={theme}>
-        <Header siteTitle={data.site.siteMetadata.title || 'Jaz Singh'} />
+        <Header siteTitle="Jaz Singh" />
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <footer>© {new Date().getFullYear()} Jaz Singh</footer>
       </ThemeProvider>
     </>
   );

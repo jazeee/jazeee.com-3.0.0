@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Layout } from '../../components/Layout';
 import { AllGithubProjects } from '../../components/Projects/AllGithubProjects';
 import { Seo } from '../../components/Seo';

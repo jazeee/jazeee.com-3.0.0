@@ -1,6 +1,6 @@
 import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 
 interface Props {
   children: ReactElement;

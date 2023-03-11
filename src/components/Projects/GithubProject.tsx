@@ -1,11 +1,10 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import React from 'react';
 
 import { ISoftwareProject } from 'data/software-projects-data';
 
-import { ExternalLink } from '../ExternalLink';
 import { GithubIcon } from '../Icons/GithubIcon';
+import { ExternalLink } from '../Links/ExternalLink';
 
 interface Props {
   project: ISoftwareProject;

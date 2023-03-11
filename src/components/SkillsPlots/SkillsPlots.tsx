@@ -1,6 +1,5 @@
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import React from 'react';
 
 import { LazyLoadedSkillsPlot } from './LoadablePlot';
 import { skills } from '../../data/utils';

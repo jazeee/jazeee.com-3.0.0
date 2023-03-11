@@ -1,13 +1,13 @@
-import React from 'react';
+import { lazy, Suspense } from 'react';
 
 import { ISkillsPlotProps } from './Plot';
 
-const SkillsPlot = React.lazy(() => import('./Plot'));
+const SkillsPlot = lazy(() => import('./Plot'));
 
 export function LazyLoadedSkillsPlot(props: ISkillsPlotProps) {
   return (
-    <React.Suspense fallback={<p>Loading...</p>}>
+    <Suspense fallback={<p>Loading...</p>}>
       <SkillsPlot {...props} />
-    </React.Suspense>
+    </Suspense>
   );
 }

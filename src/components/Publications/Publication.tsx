@@ -1,10 +1,9 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import React from 'react';
 
 import { IPublication } from 'data/publications';
 
-import { ExternalLink } from '../ExternalLink';
+import { ExternalLink } from '../Links/ExternalLink';
 
 interface Props {
   publication: IPublication;

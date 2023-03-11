@@ -1,11 +1,10 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import React from 'react';
 
 import { GithubProject } from './GithubProject';
 import { SOFTWARE_PROJECTS } from '../../data/software-projects-data';
-import { ForwardRefLink } from '../Link';
+import { BaseLink } from '../Links/Link';
 
 export function SoftwareProjects() {
   return (
@@ -17,7 +16,7 @@ export function SoftwareProjects() {
       <Box sx={{ paddingY: 2 }}>
         <Button
           variant="contained"
-          component={ForwardRefLink}
+          component={BaseLink}
           to="/software-projects/all-github-projects"
         >
           All Github Projects

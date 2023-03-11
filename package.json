@@ -9,20 +9,15 @@
     "@emotion/styled": "11.10.6",
     "@mui/icons-material": "5.11.11",
     "@mui/material": "5.11.12",
-    "gatsby": "5.7.0",
-    "gatsby-plugin-catch-links": "5.7.0",
-    "gatsby-plugin-image": "3.7.0",
-    "gatsby-plugin-lodash": "6.7.0",
-    "gatsby-plugin-manifest": "5.7.0",
-    "gatsby-plugin-sharp": "5.7.0",
-    "gatsby-source-filesystem": "5.7.0",
-    "gatsby-transformer-sharp": "5.7.0",
-    "install": "0.13.0",
+    "@types/react-helmet-async": "1.0.3",
+    "@types/react-router-dom": "5.3.3",
     "lodash": "4.17.21",
     "plotly.js": "2.18.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-plotly.js": "2.6.0"
+    "react-helmet-async": "1.3.0",
+    "react-plotly.js": "2.6.0",
+    "react-router-dom": "6.8.2"
   },
   "devDependencies": {
     "@types/lodash": "4.14.191",
@@ -40,19 +35,17 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.32.2",
     "prettier": "2.8.4",
+    "react-scripts": "5.0.1",
     "typescript": "4.9.5"
   },
   "keywords": [
     "jazeee.com"
   ],
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
+    "build": "react-scripts build",
+    "test": "DISABLE_ESLINT_PLUGIN=true react-scripts test",
+    "eject": "react-scripts eject",
     "lint": "eslint",
     "lint:all": "eslint src/**/*.{ts,tsx}",
     "tscheck": "tsc --noEmit"
@@ -60,5 +53,17 @@
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
-  "packageManager": "yarn@4.0.0-rc.40"
+  "packageManager": "yarn@4.0.0-rc.40",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
