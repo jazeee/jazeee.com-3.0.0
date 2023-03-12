@@ -64,7 +64,9 @@ export function AllGithubProjects() {
   }, [setProjects, setIsLoading, page, setStatus]);
   return (
     <Container>
-      <h1>All Github Projects</h1>
+      <Typography variant="h1" paragraph>
+        All Github Projects
+      </Typography>
       {isLoading && <CircularProgress />}
       {status && <Typography variant="h4">{status}</Typography>}
       {projects.map((project) => {

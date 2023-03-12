@@ -23,16 +23,11 @@ export function SideBar(props: Props) {
           const isCurrentPath = location.pathname === path;
           return (
             <ListItem
-              sx={
-                isCurrentPath
-                  ? {
-                      color: SECONDARY_COLOR,
-                    }
-                  : undefined
-              }
               key={name}
+              sx={{
+                color: isCurrentPath ? SECONDARY_COLOR : 'inherit',
+              }}
               component={BaseLink}
-              button
               to={path}
             >
               <ListItemText primary={name} />

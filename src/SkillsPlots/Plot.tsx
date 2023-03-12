@@ -1,3 +1,4 @@
+import { useTheme } from '@mui/material';
 import { Data } from 'plotly.js';
 import { useState } from 'react';
 import Plot from 'react-plotly.js';
@@ -6,6 +7,20 @@ import { useWindowDimensions } from '../hooks/useWindowDimensions';
 import { getSkillData, START_YEAR } from '../SkillsData/utils';
 import { getMarkerProps } from '../utils/colors';
 
+const COLORS_BY_MODE = {
+  light: {
+    paperBackgroundColor: '#eee',
+    fontColor: '#222',
+    gridColor: '#aaa',
+    nonHighlightedPlotColor: 'lightgray',
+  },
+  dark: {
+    paperBackgroundColor: '#000',
+    fontColor: '#ddd',
+    gridColor: '#222222c0',
+    nonHighlightedPlotColor: '#666',
+  },
+};
 export interface ISkillsPlotProps {
   skillType: string;
   titleIsVisible?: boolean;
@@ -13,6 +28,8 @@ export interface ISkillsPlotProps {
 
 export function SkillsPlot(props: ISkillsPlotProps) {
   const { skillType = 'Language', titleIsVisible = true } = props;
+  const theme = useTheme();
+  const PLOT_COLORS = COLORS_BY_MODE[theme.palette.mode];
   const [highlightedSkillName, setHighlightedSkillName] = useState('');
   const { width } = useWindowDimensions();
   const screenIsWide = width >= 480;
@@ -46,7 +63,7 @@ export function SkillsPlot(props: ISkillsPlotProps) {
       hoverinfo: 'name',
       marker: {
         ...markerProps,
-        color: thisPlotIsActive ? markerProps.color : 'lightgray',
+        color: thisPlotIsActive ? markerProps.color : PLOT_COLORS.nonHighlightedPlotColor,
         opacity: thisPlotIsActive ? 1 : 0.25,
       },
       line: { shape: 'spline', smoothing: 1 },
@@ -71,14 +88,22 @@ export function SkillsPlot(props: ISkillsPlotProps) {
       }}
       layout={{
         title: titleIsVisible ? skillType : undefined,
+        plot_bgcolor: 'transparent',
+        paper_bgcolor: PLOT_COLORS.paperBackgroundColor,
+        font: {
+          color: PLOT_COLORS.fontColor,
+        },
         autosize: true,
         xaxis: {
           title: 'Year',
           range: [START_YEAR - 0.1, new Date().getFullYear() + 0.1],
+          gridcolor: PLOT_COLORS.gridColor,
         },
         yaxis: {
-          title: 'Relative Skill Level',
+          title: 'Skill Level (relative)',
           showticklabels: false,
+          gridcolor: PLOT_COLORS.gridColor,
+          gridwidth: 2,
         },
         hovermode: 'closest',
         showlegend: screenIsWide,

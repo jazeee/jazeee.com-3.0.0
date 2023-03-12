@@ -1,10 +1,14 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from '@mui/material/AppBar';
+import Button from '@mui/material/Button';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
+
+import { PaletteModeIcon } from 'components/Icons/PaletteModeIcon';
+import { usePaletteModeContext } from 'components/Theme/paletteModeContext';
 
 import { HideOnScroll } from './HideOnScroll';
 import { SideBar } from './SideBar';
@@ -17,16 +21,41 @@ interface Props {
 }
 
 export function Header(props: Props) {
-  const [sideBarIsOpen, setSideBarIsOpen] = useState(false);
   const { siteTitle } = props;
+  const { paletteMode, setPaletteMode } = usePaletteModeContext();
+  const [sideBarIsOpen, setSideBarIsOpen] = useState(false);
   return (
     <>
-      <Drawer anchor="left" open={sideBarIsOpen} onClose={() => setSideBarIsOpen(false)}>
+      <Drawer
+        anchor="left"
+        open={sideBarIsOpen}
+        onClose={() => setSideBarIsOpen(false)}
+        PaperProps={{
+          sx: {
+            justifyContent: 'space-between',
+          },
+        }}
+      >
         <SideBar
           closeSideBar={() => {
             setSideBarIsOpen(false);
           }}
         />
+        <Button
+          aria-label="Toggle Palette Mode"
+          aria-controls="toggle-palette-mode"
+          onClick={() => {
+            setPaletteMode((mode) => (mode === 'dark' ? 'light' : 'dark'));
+          }}
+          variant="contained"
+          sx={{
+            gap: 0.5,
+            color: paletteMode === 'dark' ? '#aaa' : '#cc0',
+          }}
+        >
+          <PaletteModeIcon />
+          Change to {paletteMode === 'dark' ? 'Light Mode' : 'Dark Mode'}
+        </Button>
       </Drawer>
       <HideOnScroll>
         <AppBar>
@@ -42,17 +71,15 @@ export function Header(props: Props) {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" sx={{ flexGrow: 1 }}>
-              <InternalLink to="/" color="inherit" underline="none">
-                {siteTitle}
-              </InternalLink>
-            </Typography>
-            <Typography variant="h6" sx={{ marginLeft: 1 }}>
+            <InternalLink to="/" color="inherit" underline="none" sx={{ flexGrow: 1 }}>
+              {siteTitle}
+            </InternalLink>
+            <Typography sx={{ marginLeft: 1 }}>
               <ExternalLink color="secondary" href="http://www.linkedin.com/in/jazeee">
                 <LinkedInIcon />
               </ExternalLink>
             </Typography>
-            <Typography variant="h6" sx={{ marginLeft: 1 }}>
+            <Typography sx={{ marginLeft: 1 }}>
               <ExternalLink color="secondary" href="https://github.com/jazeee">
                 <GithubIcon />
               </ExternalLink>

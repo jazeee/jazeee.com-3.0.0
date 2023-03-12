@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 
@@ -7,10 +8,12 @@ import { skills } from '../SkillsData/utils';
 export function SkillsPlots() {
   return (
     <Container>
-      <h1>Skill Plots</h1>
+      <Typography variant="h1" paragraph>
+        Skill Plots
+      </Typography>
       <Grid container spacing={2}>
         {skills.skillTypes.map((skillType) => (
-          <Grid item xs={12} sm={12} md={6} key={skillType}>
+          <Grid item xs={12} lg={6} key={skillType}>
             <LazyLoadedSkillsPlot skillType={skillType} />
           </Grid>
         ))}

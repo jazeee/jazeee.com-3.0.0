@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-
 import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
 
 // Based on https://materialdesignicons.com/

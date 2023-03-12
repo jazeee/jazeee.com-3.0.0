@@ -1,5 +1,6 @@
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 import { PRESENTATIONS } from './data';
 import { PresentationDetails } from './Presentation';
@@ -7,7 +8,9 @@ import { PresentationDetails } from './Presentation';
 export function Presentations() {
   return (
     <Container>
-      <h1>Presentations</h1>
+      <Typography variant="h1" paragraph>
+        Presentations
+      </Typography>
       <Grid container spacing={3}>
         {PRESENTATIONS.map((presentation) => {
           const { name, location } = presentation;

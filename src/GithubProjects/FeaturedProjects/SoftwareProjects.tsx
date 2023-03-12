@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
@@ -9,7 +10,9 @@ import { GithubProject } from '../components/GithubProject';
 export function SoftwareProjects() {
   return (
     <Container>
-      <h1>Software Projects</h1>
+      <Typography variant="h1" paragraph>
+        Software Projects
+      </Typography>
       {SOFTWARE_PROJECTS.map((project) => {
         return <GithubProject key={project.name} project={project} />;
       })}
