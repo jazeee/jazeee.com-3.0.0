@@ -1,7 +1,6 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-// @ts-expect-error
 import codeBackgroundImage from './images/codeBackground.png';
 import { ExternalLink } from '../components/Links';
 import { skills } from '../SkillsData/utils';
