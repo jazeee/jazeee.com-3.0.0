@@ -3198,6 +3198,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:18.15.0":
+  version: 18.15.0
+  resolution: "@types/node@npm:18.15.0"
+  checksum: 3d8e41b54a715a4d69fced5ef10af7e41f640d343cac09bcd538d28dc1cfdc9495091a66b0e3eb1292ca4656715e87c2e129ab05130c6c592b67ce641780c804
+  languageName: node
+  linkType: hard
+
 "@types/parse-json@npm:^4.0.0":
   version: 4.0.0
   resolution: "@types/parse-json@npm:4.0.0"
@@ -9215,6 +9222,7 @@ __metadata:
     "@mui/icons-material": "npm:5.11.11"
     "@mui/material": "npm:5.11.12"
     "@types/lodash": "npm:4.14.191"
+    "@types/node": "npm:18.15.0"
     "@types/plotly.js": "npm:2"
     "@types/react": "npm:18.0.28"
     "@types/react-dom": "npm:18.0.11"

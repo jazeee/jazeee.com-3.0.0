@@ -32,6 +32,6 @@ export function getMarkerProps(index: number): Partial<PlotMarker> {
   };
 }
 
-// Also check `gatsby-config.js`
+// Also check `index.html`
 export const PRIMARY_COLOR = '#2F2001';
 export const SECONDARY_COLOR = '#0094FF';

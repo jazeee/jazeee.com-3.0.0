@@ -20,7 +20,8 @@
     "noErrorTruncation": true,
     "allowSyntheticDefaultImports": true,
     "typeRoots": [
-      "src/**/*"
+      "src/**/*",
+      "node_modules/@types"
     ],
     "allowJs": true,
     "resolveJsonModule": true,
@@ -29,10 +30,7 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "./src/**/*",
-    "./gatsby-node.ts",
-    "./gatsby-config.ts",
-    "./plugins/**/*"
+    "./src/**/*"
   ],
   "exclude": ["node_modules"]
 }

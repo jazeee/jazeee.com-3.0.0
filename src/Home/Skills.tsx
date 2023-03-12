@@ -1,6 +1,8 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
+// @ts-expect-error
+import codeBackgroundImage from './images/codeBackground.png';
 import { ExternalLink } from '../components/Links';
 import { skills } from '../SkillsData/utils';
 
@@ -13,7 +15,7 @@ export function Skills() {
   return (
     <Box
       sx={{
-        backgroundImage: `url('/static/images/codeBackground.png')`,
+        backgroundImage: `url('${codeBackgroundImage}')`,
         backgroundColor: 'black',
         backgroundRepeat: 'repeat-y',
         position: 'relative',

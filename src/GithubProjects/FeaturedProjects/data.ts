@@ -4,7 +4,7 @@ export const SOFTWARE_PROJECTS: ISoftwareProject[] = [
   {
     name: 'This Site',
     url: 'http://www.jazeee.com',
-    description: 'Source code for this site (React, Gatsby, D3.js).',
+    description: 'Source code for this site (React, TypeScript, MaterialUI, D3.js).',
     githubFullName: 'jazeee/www.jazeee.com-3.0.0',
   },
   {
