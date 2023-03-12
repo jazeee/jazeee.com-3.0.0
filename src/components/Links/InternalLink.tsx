@@ -3,7 +3,7 @@ import { LinkProps as RouterLinkProps } from 'react-router-dom';
 
 import { BaseLink } from './Link';
 
-type TMuiLinkProps = Pick<LinkProps, 'underline' | 'sx'>;
+type TMuiLinkProps = Pick<LinkProps, 'underline' | 'sx' | 'color'>;
 export interface IInternalLinkProps extends Omit<RouterLinkProps, 'color'>, TMuiLinkProps {}
 
 export function InternalLink(props: IInternalLinkProps) {

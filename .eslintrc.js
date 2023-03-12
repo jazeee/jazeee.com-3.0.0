@@ -71,4 +71,12 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['**/index.ts*'],
+      rules: {
+        'no-restricted-exports': 'off',
+      },
+    },
+  ],
 };
