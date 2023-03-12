@@ -2,23 +2,23 @@
 
 This code is for [jazeee.com](https://jazeee.com)
 
-# Engineering Details
+## Engineering Details
 
-## Development
+### Development
 
 * Install `node` and `yarn`
 * Run `yarn install`
 * Run `yarn start`
 
-## Lint
+### Lint
 
 * Run `yarn lint:all --fix`
 
-## Build
+### Build
 
 * Run `yarn build`
 
-## Generating bundle sizes
+### Generating bundle sizes
 
 * `CI=1 yarn build --stats`
 * Install `webpack-bundle-analyzer`, or run via `npx`
