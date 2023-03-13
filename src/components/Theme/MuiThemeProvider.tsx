@@ -12,7 +12,10 @@ const SECONDARY_COLORS = {
   dark: '#00d0ff',
 };
 const BRIGHTEST_GRAY = '#f0f0f0';
+const BACKGROUND_GRAY = '#e0e0e0';
 const DARKEST_GRAY = '#000';
+const BACKGROUND_BLUE = '#0a1929';
+export const DARKEST_BLUE = '#07101d';
 
 type TPaletteMode = Theme['palette']['mode'];
 
@@ -56,12 +59,12 @@ function getTheme(paletteMode: TPaletteMode) {
         main: '#f00',
       },
       background: {
-        default: modeIsLight ? BRIGHTEST_GRAY : '#0a1929',
+        default: modeIsLight ? BACKGROUND_GRAY : BACKGROUND_BLUE,
         paper: modeIsLight ? BRIGHTEST_GRAY : PRIMARY_COLOR,
       },
       text: {
         primary: modeIsLight ? DARKEST_GRAY : BRIGHTEST_GRAY,
-        secondary: BRIGHTEST_GRAY,
+        secondary: modeIsLight ? DARKEST_GRAY : BRIGHTEST_GRAY,
       },
     },
     components: {
@@ -79,6 +82,15 @@ function getTheme(paletteMode: TPaletteMode) {
           },
           text: {
             color: modeIsLight ? PRIMARY_COLOR : BRIGHTEST_GRAY,
+          },
+        },
+      },
+      MuiContainer: {
+        styleOverrides: {
+          root: {
+            backgroundColor: modeIsLight ? BRIGHTEST_GRAY : DARKEST_BLUE,
+            paddingTop: '16px',
+            paddingBottom: '16px',
           },
         },
       },

@@ -11,6 +11,8 @@ import { Spacer } from 'components/Spacers/Spacer';
 import { IPresentation } from './data';
 import { ExternalLink } from '../components/Links/ExternalLink';
 
+const CARD_BACKGROUND_COLOR = '#333';
+
 interface Props {
   presentation: IPresentation;
 }
@@ -30,7 +32,7 @@ export function PresentationDetails(props: Props) {
       <Spacer
         height={2}
         sx={{
-          backgroundColor: 'black',
+          backgroundColor: CARD_BACKGROUND_COLOR,
         }}
       />
       <CardMedia
@@ -39,13 +41,13 @@ export function PresentationDetails(props: Props) {
         sx={{
           height: 256,
           backgroundSize: 'contain',
-          backgroundColor: 'black',
+          backgroundColor: CARD_BACKGROUND_COLOR,
         }}
       />
       <Spacer
         height={2}
         sx={{
-          backgroundColor: 'black',
+          backgroundColor: CARD_BACKGROUND_COLOR,
         }}
       />
       <CardContent>

@@ -67,7 +67,7 @@ export function AllGithubProjects() {
       <Typography variant="h1" paragraph>
         All Github Projects
       </Typography>
-      {isLoading && <CircularProgress />}
+      {isLoading && <CircularProgress color="secondary" />}
       {status && <Typography variant="h4">{status}</Typography>}
       {projects.map((project) => {
         return <GithubProject key={project.name} project={project} />;

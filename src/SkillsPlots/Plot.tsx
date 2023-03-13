@@ -2,6 +2,7 @@ import { Data } from 'plotly.js';
 import { useState } from 'react';
 import Plot from 'react-plotly.js';
 
+import { DARKEST_BLUE } from 'components/Theme/MuiThemeProvider';
 import { usePaletteModeContext } from 'components/Theme/paletteModeContext';
 
 import { useWindowDimensions } from '../hooks/useWindowDimensions';
@@ -16,7 +17,7 @@ const COLORS_BY_MODE = {
     nonHighlightedPlotColor: 'lightgray',
   },
   dark: {
-    paperBackgroundColor: '#000',
+    paperBackgroundColor: DARKEST_BLUE,
     fontColor: '#ddd',
     gridColor: '#222222c0',
     nonHighlightedPlotColor: '#666',

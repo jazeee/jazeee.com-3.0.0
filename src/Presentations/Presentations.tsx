@@ -11,11 +11,11 @@ export function Presentations() {
       <Typography variant="h1" paragraph>
         Presentations
       </Typography>
-      <Grid container spacing={3}>
+      <Grid container spacing={4}>
         {PRESENTATIONS.map((presentation) => {
           const { name, location } = presentation;
           return (
-            <Grid item xs={12} sm={12} md={6} key={`${name}-${location}`}>
+            <Grid item xs={12} lg={6} key={`${name}-${location}`}>
               <PresentationDetails presentation={presentation} />
             </Grid>
           );
