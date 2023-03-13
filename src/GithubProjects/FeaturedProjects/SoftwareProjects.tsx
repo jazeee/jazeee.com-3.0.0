@@ -1,7 +1,9 @@
-import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+
+import { Spacer } from 'components/Spacers/Spacer';
 
 import { SOFTWARE_PROJECTS } from './data';
 import { BaseLink } from '../../components/Links';
@@ -16,7 +18,8 @@ export function SoftwareProjects() {
       {SOFTWARE_PROJECTS.map((project) => {
         return <GithubProject key={project.name} project={project} />;
       })}
-      <Box sx={{ paddingY: 2 }}>
+      <Spacer height={2} />
+      <Box>
         <Button
           variant="contained"
           component={BaseLink}

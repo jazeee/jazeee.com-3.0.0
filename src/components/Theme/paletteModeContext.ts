@@ -37,9 +37,12 @@ function usePaletteMode() {
     },
     [setPaletteModeState]
   );
+  const paletteModeIsLight = paletteMode === 'light';
   return {
     paletteMode,
     setPaletteMode,
+    paletteModeIsLight,
+    paletteModeIsDark: !paletteModeIsLight,
   };
 }
 

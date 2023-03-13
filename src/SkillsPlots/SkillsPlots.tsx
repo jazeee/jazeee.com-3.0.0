@@ -1,6 +1,6 @@
-import { Typography } from '@mui/material';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 import { LazyLoadedSkillsPlot } from './LoadablePlot';
 import { skills } from '../SkillsData/utils';

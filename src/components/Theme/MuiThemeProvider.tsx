@@ -3,13 +3,26 @@ import { ThemeProvider, createTheme, Theme } from '@mui/material/styles';
 import { ReactNode, useMemo } from 'react';
 
 import { usePaletteModeContext } from './paletteModeContext';
-import { PRIMARY_COLOR, SECONDARY_COLOR } from '../../utils/colors';
+
+// Also check `index.html`
+// export const PRIMARY_COLOR = '#2F2001';
+const PRIMARY_COLOR = '#512f01';
+const SECONDARY_COLORS = {
+  light: '#0086e6',
+  dark: '#00d0ff',
+};
+const BRIGHTEST_GRAY = '#f0f0f0';
+const DARKEST_GRAY = '#000';
 
 type TPaletteMode = Theme['palette']['mode'];
 
 function getTheme(paletteMode: TPaletteMode) {
+  const modeIsLight = paletteMode === 'light';
   const theme = createTheme({
     typography: {
+      allVariants: {
+        color: modeIsLight ? PRIMARY_COLOR : BRIGHTEST_GRAY,
+      },
       h1: {
         fontSize: '2rem',
         fontWeight: 'bold',
@@ -31,19 +44,24 @@ function getTheme(paletteMode: TPaletteMode) {
       },
     },
     palette: {
-      mode: paletteMode,
+      // Setting paletteMode adds color and background overrides that aren't always as expected.
+      // mode: paletteMode,
       primary: {
         main: PRIMARY_COLOR,
       },
       secondary: {
-        main: SECONDARY_COLOR,
+        main: SECONDARY_COLORS[paletteMode],
       },
       error: {
         main: '#f00',
       },
       background: {
-        default: '#222',
-        paper: PRIMARY_COLOR,
+        default: modeIsLight ? BRIGHTEST_GRAY : '#0a1929',
+        paper: modeIsLight ? BRIGHTEST_GRAY : PRIMARY_COLOR,
+      },
+      text: {
+        primary: modeIsLight ? DARKEST_GRAY : BRIGHTEST_GRAY,
+        secondary: BRIGHTEST_GRAY,
       },
     },
     components: {
@@ -54,6 +72,13 @@ function getTheme(paletteMode: TPaletteMode) {
             fontWeight: 'bold',
             fontSize: '0.875rem',
             lineHeight: '1.25rem',
+          },
+          outlined: {
+            color: modeIsLight ? PRIMARY_COLOR : BRIGHTEST_GRAY,
+            backgroundColor: modeIsLight ? 'transparent' : '#ffffff10',
+          },
+          text: {
+            color: modeIsLight ? PRIMARY_COLOR : BRIGHTEST_GRAY,
           },
         },
       },

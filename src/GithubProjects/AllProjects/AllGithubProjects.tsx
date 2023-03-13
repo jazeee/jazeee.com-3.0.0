@@ -73,18 +73,20 @@ export function AllGithubProjects() {
         return <GithubProject key={project.name} project={project} />;
       })}
       <Box sx={{ display: 'flex', paddingY: 2, gap: 2 }}>
-        <Button variant="contained" disabled={page <= 1} onClick={() => setPage(page - 1)}>
-          Previous Page
-        </Button>
+        {page > 1 && (
+          <Button variant="contained" onClick={() => setPage((currentPage) => currentPage - 1)}>
+            Previous Page
+          </Button>
+        )}
         <Button
           variant="contained"
           disabled={projects.length !== 30}
-          onClick={() => setPage(page + 1)}
+          onClick={() => setPage((currentPage) => currentPage + 1)}
         >
           Next Page
         </Button>
-        <Button>
-          <InternalLink to="/software-projects">Featured Projects</InternalLink>
+        <Button variant="outlined" component={InternalLink} to="/software-projects">
+          Featured Projects
         </Button>
       </Box>
     </Container>

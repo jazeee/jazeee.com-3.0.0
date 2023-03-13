@@ -9,5 +9,3 @@ export function PaletteModeIcon(props: SvgIconProps) {
     </SvgIcon>
   );
 }
-
-/* <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1k33q06" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LightModeIcon"></svg> */

@@ -31,8 +31,3 @@ export function getMarkerProps(index: number): Partial<PlotMarker> {
     },
   };
 }
-
-// Also check `index.html`
-// export const PRIMARY_COLOR = '#2F2001';
-export const PRIMARY_COLOR = '#3c2301';
-export const SECONDARY_COLOR = '#0094FF';

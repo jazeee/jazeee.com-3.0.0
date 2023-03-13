@@ -1,7 +1,8 @@
-import { useTheme } from '@mui/material';
 import { Data } from 'plotly.js';
 import { useState } from 'react';
 import Plot from 'react-plotly.js';
+
+import { usePaletteModeContext } from 'components/Theme/paletteModeContext';
 
 import { useWindowDimensions } from '../hooks/useWindowDimensions';
 import { getSkillData, START_YEAR } from '../SkillsData/utils';
@@ -9,9 +10,9 @@ import { getMarkerProps } from '../utils/colors';
 
 const COLORS_BY_MODE = {
   light: {
-    paperBackgroundColor: '#eee',
+    paperBackgroundColor: '#e8e8e8',
     fontColor: '#222',
-    gridColor: '#aaa',
+    gridColor: '#c8c8c8',
     nonHighlightedPlotColor: 'lightgray',
   },
   dark: {
@@ -28,8 +29,8 @@ export interface ISkillsPlotProps {
 
 export function SkillsPlot(props: ISkillsPlotProps) {
   const { skillType = 'Language', titleIsVisible = true } = props;
-  const theme = useTheme();
-  const PLOT_COLORS = COLORS_BY_MODE[theme.palette.mode];
+  const { paletteMode } = usePaletteModeContext();
+  const PLOT_COLORS = COLORS_BY_MODE[paletteMode];
   const [highlightedSkillName, setHighlightedSkillName] = useState('');
   const { width } = useWindowDimensions();
   const screenIsWide = width >= 480;

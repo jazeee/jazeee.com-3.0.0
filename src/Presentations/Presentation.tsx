@@ -6,6 +6,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
+import { Spacer } from 'components/Spacers/Spacer';
+
 import { IPresentation } from './data';
 import { ExternalLink } from '../components/Links/ExternalLink';
 
@@ -25,19 +27,29 @@ export function PresentationDetails(props: Props) {
         flexDirection: 'column',
       }}
     >
-      <ExternalLink href={links[0].url}>
-        <CardMedia
-          title={name}
-          image={image}
-          sx={{
-            height: 256,
-            backgroundSize: 'contain',
-            backgroundColor: 'black',
-          }}
-        />
-      </ExternalLink>
+      <Spacer
+        height={2}
+        sx={{
+          backgroundColor: 'black',
+        }}
+      />
+      <CardMedia
+        title={name}
+        image={image}
+        sx={{
+          height: 256,
+          backgroundSize: 'contain',
+          backgroundColor: 'black',
+        }}
+      />
+      <Spacer
+        height={2}
+        sx={{
+          backgroundColor: 'black',
+        }}
+      />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="h2">
+        <Typography gutterBottom variant="h5" color="textSecondary" component="p">
           {name}
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">

@@ -46,11 +46,13 @@ export function Header(props: Props) {
           aria-controls="toggle-palette-mode"
           onClick={() => {
             setPaletteMode((mode) => (mode === 'dark' ? 'light' : 'dark'));
+            setSideBarIsOpen(false);
           }}
           variant="contained"
           sx={{
             gap: 0.5,
             color: paletteMode === 'dark' ? '#aaa' : '#cc0',
+            borderRadius: 0,
           }}
         >
           <PaletteModeIcon />
@@ -58,7 +60,11 @@ export function Header(props: Props) {
         </Button>
       </Drawer>
       <HideOnScroll>
-        <AppBar>
+        <AppBar
+          sx={{
+            backgroundImage: 'unset',
+          }}
+        >
           <Toolbar>
             <IconButton
               edge="start"
