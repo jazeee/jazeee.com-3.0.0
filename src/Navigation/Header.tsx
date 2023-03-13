@@ -1,13 +1,15 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import Tooltip from '@mui/material/Tooltip';
 import { useState } from 'react';
 
-import { PaletteModeIcon } from 'components/Icons/PaletteModeIcon';
+import { DarkModeIcon } from 'components/Icons/DarkModeIcon';
+import { LightModeIcon } from 'components/Icons/LightModeIcon';
 import { usePaletteModeContext } from 'components/Theme/paletteModeContext';
 
 import { HideOnScroll } from './HideOnScroll';
@@ -16,14 +18,18 @@ import { GithubIcon } from '../components/Icons/GithubIcon';
 import { LinkedInIcon } from '../components/Icons/LinkedInIcon';
 import { InternalLink, ExternalLink } from '../components/Links';
 
+const DARK_MODE_COLOR = '#aaa';
+const LIGHT_MODE_COLOR = '#cc0';
+
 interface Props {
   siteTitle: string;
 }
 
 export function Header(props: Props) {
   const { siteTitle } = props;
-  const { paletteMode, setPaletteMode } = usePaletteModeContext();
+  const { paletteModeIsDark, togglePaletteMode } = usePaletteModeContext();
   const [sideBarIsOpen, setSideBarIsOpen] = useState(false);
+  const PaletteModeIcon = paletteModeIsDark ? DarkModeIcon : LightModeIcon;
   return (
     <>
       <Drawer
@@ -45,18 +51,18 @@ export function Header(props: Props) {
           aria-label="Toggle Palette Mode"
           aria-controls="toggle-palette-mode"
           onClick={() => {
-            setPaletteMode((mode) => (mode === 'dark' ? 'light' : 'dark'));
+            togglePaletteMode();
             setSideBarIsOpen(false);
           }}
           variant="contained"
           sx={{
             gap: 0.5,
-            color: paletteMode === 'dark' ? '#aaa' : '#cc0',
+            color: paletteModeIsDark ? DARK_MODE_COLOR : LIGHT_MODE_COLOR,
             borderRadius: 0,
           }}
         >
           <PaletteModeIcon />
-          Change to {paletteMode === 'dark' ? 'Light Mode' : 'Dark Mode'}
+          Change to {paletteModeIsDark ? 'Light Mode' : 'Dark Mode'}
         </Button>
       </Drawer>
       <HideOnScroll>
@@ -66,30 +72,41 @@ export function Header(props: Props) {
           }}
         >
           <Toolbar>
-            <IconButton
-              edge="start"
-              sx={{ marginRight: 2 }}
-              color="inherit"
-              aria-label="Menu"
-              aria-controls="simple-menu"
-              aria-haspopup="true"
-              onClick={() => setSideBarIsOpen(true)}
-            >
-              <MenuIcon />
-            </IconButton>
-            <InternalLink to="/" color="inherit" underline="none" sx={{ flexGrow: 1 }}>
+            <Tooltip title="Open Navigation menu" placement="bottom-end">
+              <IconButton
+                edge="start"
+                sx={{ marginRight: 2 }}
+                color="inherit"
+                aria-label="Menu"
+                aria-controls="simple-menu"
+                aria-haspopup="true"
+                onClick={() => setSideBarIsOpen(true)}
+              >
+                <MenuIcon />
+              </IconButton>
+            </Tooltip>
+            <InternalLink to="/" color="inherit" underline="none">
               {siteTitle}
             </InternalLink>
-            <Typography sx={{ marginLeft: 1 }}>
+            <Box flexGrow={1} />
+            <Box display="flex" gap={1} alignItems="center">
+              <Tooltip title="Toggle Palette Mode" placement="bottom-start">
+                <IconButton
+                  sx={{ color: paletteModeIsDark ? DARK_MODE_COLOR : LIGHT_MODE_COLOR, padding: 0 }}
+                  aria-label="Toggle Palette Mode"
+                  aria-controls="toggle-palette-mode"
+                  onClick={() => togglePaletteMode()}
+                >
+                  <PaletteModeIcon />
+                </IconButton>
+              </Tooltip>
               <ExternalLink color="secondary" href="http://www.linkedin.com/in/jazeee">
-                <LinkedInIcon />
+                <LinkedInIcon sx={{ verticalAlign: 'middle' }} />
               </ExternalLink>
-            </Typography>
-            <Typography sx={{ marginLeft: 1 }}>
               <ExternalLink color="secondary" href="https://github.com/jazeee">
-                <GithubIcon />
+                <GithubIcon sx={{ verticalAlign: 'middle' }} />
               </ExternalLink>
-            </Typography>
+            </Box>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
