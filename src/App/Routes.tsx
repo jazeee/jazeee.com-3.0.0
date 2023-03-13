@@ -15,6 +15,7 @@ export function AppRoutes() {
     <Suspense fallback={<PageLoadingIndicator />}>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        {/* Also - update sitemap.txt */}
         <Route path="/skills-plots" element={<SkillsPlotsPage />} />
         <Route path="/presentations" element={<PresentationsPage />} />
         <Route path="/publications" element={<PublicationsPage />} />
