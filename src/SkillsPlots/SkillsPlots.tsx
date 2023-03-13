@@ -7,13 +7,13 @@ import { skills } from '../SkillsData/utils';
 
 export function SkillsPlots() {
   return (
-    <Container>
+    <Container maxWidth="lg">
       <Typography variant="h1" paragraph>
         Skill Plots
       </Typography>
       <Grid container spacing={2}>
         {skills.skillTypes.map((skillType) => (
-          <Grid item xs={12} lg={6} key={skillType}>
+          <Grid item xs={12} key={skillType}>
             <LazyLoadedSkillsPlot skillType={skillType} />
           </Grid>
         ))}

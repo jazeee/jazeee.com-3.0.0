@@ -42,14 +42,11 @@ export function SkillsPlot(props: ISkillsPlotProps) {
   const subSkillNames = Object.keys(subSkills);
   const data: Data[] = subSkillNames.map((name, index) => {
     const subSkill = subSkills[name];
-    const { scoreWeight = 1.0, isCurrentSkill } = subSkill;
-    const subSkillExperience: Record<number, number> = subSkill.experience;
+    const { experience } = subSkill;
+    const subSkillExperience: Record<number, number> = experience;
     const xValues = Object.keys(subSkillExperience).map(Number);
-    const yValues = Object.values(subSkillExperience).map((value, subSkillIndex) => {
-      const distanceToCurrent = xValues.length - subSkillIndex;
-      const currentMultiplier = 1 + 16 / (distanceToCurrent + 6);
-      const multiplier = scoreWeight * (isCurrentSkill ? currentMultiplier : 1);
-      return value * multiplier;
+    const yValues = Object.values(subSkillExperience).map((value) => {
+      return value;
     });
     const markerProps = getMarkerProps(index);
     const anyPlotIsHighlighted = Boolean(highlightedSkillName);
@@ -68,7 +65,7 @@ export function SkillsPlot(props: ISkillsPlotProps) {
         color: thisPlotIsActive ? markerProps.color : PLOT_COLORS.nonHighlightedPlotColor,
         opacity: thisPlotIsActive ? 1 : 0.25,
       },
-      line: { shape: 'spline', smoothing: 1 },
+      line: { shape: 'spline', smoothing: 0.6 },
     };
     return datum;
   });
@@ -103,7 +100,7 @@ export function SkillsPlot(props: ISkillsPlotProps) {
         },
         yaxis: {
           title: 'Skill Level (relative)',
-          showticklabels: false,
+          range: [-5, 105],
           gridcolor: PLOT_COLORS.gridColor,
           gridwidth: 2,
         },

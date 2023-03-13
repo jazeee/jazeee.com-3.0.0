@@ -2,7 +2,7 @@ import { pickBy, sortBy } from 'lodash';
 
 import { ISkillDatum, SKILL_DATA } from './skillsData';
 
-export const START_YEAR = 2014;
+export const START_YEAR = 2013;
 
 interface ISkillDatumWithScore extends ISkillDatum {
   skillName?: string;
@@ -62,7 +62,7 @@ export class Skills {
     let latestYear = START_YEAR;
     Object.keys(SKILL_DATA).forEach((name) => {
       const datum = SKILL_DATA[name];
-      const skill = { name, ...datum, score: this.getSkillScore(datum) };
+      const skill: ISkillDatumWithScore = { name, ...datum, score: this.getSkillScore(datum) };
       this.data.push(skill);
       latestYear = Object.keys(skill.experience)
         .map((year) => +year)
@@ -93,24 +93,24 @@ export class Skills {
     });
   }
 
-  getSkillYearScore = (year: number, skillLevel: number, scoreWeight: number | undefined) => {
+  getRecentSkillYearScore = (year: number, skillLevel: number, scoreWeight: number | undefined) => {
     return Math.max(0.5, year - (this.latestYear - 3)) * skillLevel * (scoreWeight ?? 1);
   };
 
   getSkillScore = (skill: ISkillDatum) => {
     let score = 0;
-    const { experience } = skill;
+    const { experience, scoreWeight } = skill;
     Object.keys(experience).forEach((key) => {
       const year = Number(key);
       const skillLevel = experience[year];
-      score += this.getSkillYearScore(year, skillLevel, skill.scoreWeight);
+      score += this.getRecentSkillYearScore(year, skillLevel, scoreWeight);
     });
     return score;
   };
 
   getDomainSkills = (skillDomain: string) => {
     let skills = this.data.filter((skill) => {
-      return skill.domains.includes(skillDomain);
+      return skill.isCurrentSkill && skill.domains.includes(skillDomain);
     });
     skills = sortBy(skills, this.getSkillScore);
     return skills.reverse();
