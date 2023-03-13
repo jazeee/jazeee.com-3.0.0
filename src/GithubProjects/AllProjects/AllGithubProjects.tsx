@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { useEffect, useState } from 'react';
 
-import { InternalLink } from 'components/Links';
+import { BaseLink } from 'components/Links';
 import { ISoftwareProject } from 'GithubProjects/types';
 
 import { GithubProject } from '../components/GithubProject';
@@ -85,7 +85,7 @@ export function AllGithubProjects() {
         >
           Next Page
         </Button>
-        <Button variant="outlined" component={InternalLink} to="/software-projects">
+        <Button variant="outlined" component={BaseLink} to="/software-projects">
           Featured Projects
         </Button>
       </Box>
