@@ -18,7 +18,7 @@ export function Publication(props: Props) {
         },
       }}
     >
-      <Typography variant="h6">
+      <Typography variant="h6" component="p">
         <ExternalLink color="secondary" to={publication.url}>
           {publication.name}
         </ExternalLink>

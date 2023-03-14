@@ -104,6 +104,7 @@ export function Header(props: Props) {
                 color="secondary"
                 to="http://www.linkedin.com/in/jazeee"
                 openInNewTabIsVisible={false}
+                aria-label="LinkedIn Profile"
               >
                 <LinkedInIcon sx={{ verticalAlign: 'middle' }} />
               </ExternalLink>
@@ -111,6 +112,7 @@ export function Header(props: Props) {
                 color="secondary"
                 to="https://github.com/jazeee"
                 openInNewTabIsVisible={false}
+                aria-label="Github Repository"
               >
                 <GithubIcon sx={{ verticalAlign: 'middle' }} />
               </ExternalLink>

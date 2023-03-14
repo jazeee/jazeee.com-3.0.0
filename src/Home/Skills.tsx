@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Unstable_Grid2/Grid2';
 
 import { Spacer } from 'components/Spacers/Spacer';
 import { SIDE_BAR_URLS } from 'Navigation/siteBarItems';
@@ -51,16 +52,18 @@ export function Skills() {
             ))}
           </Box>
           <Spacer height={1} />
-          <Typography variant="body1" display="flex" gap={1}>
+          <Grid container spacing={1}>
             {SIDE_BAR_URLS.map((item) => {
               const { name, path } = item;
               return (
-                <ExternalLink key={path} to={path}>
-                  {name}
-                </ExternalLink>
+                <Grid key={path}>
+                  <Typography variant="body1">
+                    <ExternalLink to={path}>{name}</ExternalLink>
+                  </Typography>
+                </Grid>
               );
             })}
-          </Typography>
+          </Grid>
         </Box>
       </Box>
     </Box>
