@@ -3,8 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 interface Props {
   title: string;
-  // eslint-disable-next-line react/require-default-props
-  description?: string;
+  description: string;
   // eslint-disable-next-line react/require-default-props
   children?: ReactElement;
 }
@@ -12,20 +11,19 @@ interface Props {
 export function Seo(props: Props) {
   const { description, title, children } = props;
 
-  const metaDescription = description || '';
-  const defaultTitle = '';
+  const titleWithSiteName = `${title} - Jaz Singh`;
 
   return (
     <Helmet>
-      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
-      <meta name="description" content={metaDescription} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={metaDescription} />
+      <title>{titleWithSiteName}</title>
+      <meta name="description" content={description} />
+      <meta property="og:title" content={titleWithSiteName} />
+      <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content="Jaz Singh" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:title" content={titleWithSiteName} />
+      <meta name="twitter:description" content={description} />
       {children}
     </Helmet>
   );
