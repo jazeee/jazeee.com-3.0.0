@@ -3,7 +3,7 @@ export interface ISkillDatum {
   experience: Record<number, number>;
   domains: string[];
   scoreWeight?: number;
-  isCurrentSkill?: boolean;
+  skillIsCurrent?: boolean;
 }
 
 const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
@@ -29,7 +29,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
     },
     domains: ['WebApp', 'Server', 'Software Engineering'],
     scoreWeight: 3,
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   TypeScript: {
     type: 'Language',
@@ -43,7 +43,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
     },
     domains: ['WebApp', 'Server', 'Software Engineering'],
     scoreWeight: 5,
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   'Meteor.js': {
     type: 'Platform',
@@ -60,7 +60,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
     },
     domains: ['WebApp', 'Server', 'Software Engineering'],
     scoreWeight: 1.5,
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   'Node.js': {
     type: 'Platform',
@@ -81,7 +81,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
     },
     domains: ['WebApp', 'Server', 'Software Engineering'],
     scoreWeight: 2,
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   React: {
     type: 'Platform',
@@ -99,7 +99,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
     },
     domains: ['WebApp', 'Software Engineering'],
     scoreWeight: 5,
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   'AngularJS 1.5': {
     type: 'Platform',
@@ -162,7 +162,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
     },
     domains: ['WebApp', 'Software Engineering'],
     scoreWeight: 5,
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   'D3.js': {
     type: 'Platform',
@@ -180,7 +180,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
     },
     domains: ['WebApp', 'Software Engineering'],
     scoreWeight: 2,
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   JQuery: {
     type: 'Platform',
@@ -220,7 +220,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
     },
     domains: ['WebApp', 'Software Engineering'],
     scoreWeight: 2,
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   Java: {
     type: 'Language',
@@ -245,7 +245,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
     },
     domains: ['WebApp', 'Server', 'Android', 'Software Engineering'],
     scoreWeight: 1,
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   'Jade/Pug': {
     type: 'Language',
@@ -262,7 +262,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
     },
     domains: ['WebApp', 'Software Engineering'],
     scoreWeight: 1,
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   CoffeeScript: {
     type: 'Language',
@@ -302,7 +302,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
     },
     domains: ['WebApp', 'Server', 'Software Engineering'],
     scoreWeight: 1,
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   Spring: {
     type: 'Platform',
@@ -337,7 +337,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2023: 65,
     },
     domains: ['Server', 'Software Engineering'],
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   'c++': {
     type: 'Language',
@@ -415,7 +415,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2019: 60,
     },
     domains: ['Server', 'Software Engineering'],
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   Postgresql: {
     type: 'Database',
@@ -435,7 +435,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2023: 75,
     },
     domains: ['Server', 'Software Engineering'],
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   MySQL: {
     type: 'Database',
@@ -457,7 +457,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2022: 40,
     },
     domains: ['Server', 'Software Engineering'],
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   Linux: {
     type: 'Environment',
@@ -485,7 +485,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
     },
     domains: ['Server', 'Linux', 'Software Engineering'],
     scoreWeight: 2,
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   Windows: {
     type: 'Environment',
@@ -533,7 +533,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
     },
     domains: ['Process', 'Software Engineering'],
     scoreWeight: 3.0,
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   'subversion (svn)': {
     type: 'Source Control',
@@ -606,7 +606,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2023: 100,
     },
     domains: ['Process'],
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   'Atlassian, Phabricator, Arcanist': {
     type: 'Project Management',
@@ -630,7 +630,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2023: 90,
     },
     domains: ['Process'],
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
   'Agile/Kanban': {
     type: 'Project Management',
@@ -653,7 +653,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2023: 65,
     },
     domains: ['Process'],
-    isCurrentSkill: true,
+    skillIsCurrent: true,
   },
 };
 

@@ -110,7 +110,7 @@ export class Skills {
 
   getDomainSkills = (skillDomain: string) => {
     let skills = this.data.filter((skill) => {
-      return skill.isCurrentSkill && skill.domains.includes(skillDomain);
+      return skill.skillIsCurrent && skill.domains.includes(skillDomain);
     });
     skills = sortBy(skills, this.getSkillScore);
     return skills.reverse();
