@@ -1,5 +1,5 @@
+import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { LazyLoadedSkillsPlot } from './LoadablePlot';
@@ -11,13 +11,13 @@ export function SkillsPlots() {
       <Typography variant="h1" paragraph>
         Skill Plots
       </Typography>
-      <Grid container spacing={2}>
+      <Box display="flex" flexDirection="column" gap={2}>
         {skills.skillTypes.map((skillType) => (
-          <Grid item xs={12} key={skillType}>
+          <Box key={skillType}>
             <LazyLoadedSkillsPlot skillType={skillType} />
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     </Container>
   );
 }

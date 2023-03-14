@@ -34,7 +34,7 @@ export function SkillsPlot(props: ISkillsPlotProps) {
   const PLOT_COLORS = COLORS_BY_MODE[paletteMode];
   const [highlightedSkillName, setHighlightedSkillName] = useState('');
   const { width } = useWindowDimensions();
-  const screenIsWide = width >= 480;
+  const screenIsWide = width >= 600;
   const subSkills = getSkillData(skillType, {
     minimumYearToInclude: 2000,
   });
@@ -83,10 +83,13 @@ export function SkillsPlot(props: ISkillsPlotProps) {
       useResizeHandler
       style={{
         width: '100%',
-        height: '500px',
+        height: screenIsWide ? '480px' : '320px',
       }}
       layout={{
         title: titleIsVisible ? skillType : undefined,
+        titlefont: {
+          size: 24,
+        },
         plot_bgcolor: 'transparent',
         paper_bgcolor: PLOT_COLORS.paperBackgroundColor,
         font: {
