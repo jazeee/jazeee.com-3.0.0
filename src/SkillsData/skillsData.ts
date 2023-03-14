@@ -3,7 +3,7 @@ export interface ISkillDatum {
   experience: Record<number, number>;
   domains: string[];
   scoreWeight?: number;
-  skillIsCurrent?: boolean;
+  skillIsCurrent: boolean;
 }
 
 const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
@@ -117,6 +117,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2023: 0,
     },
     domains: ['WebApp', 'Software Engineering'],
+    skillIsCurrent: false,
   },
   'AngularJS N.0': {
     type: 'Platform',
@@ -129,6 +130,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2019: 0,
     },
     domains: ['WebApp', 'Software Engineering'],
+    skillIsCurrent: false,
   },
   Bootstrap: {
     type: 'Platform',
@@ -147,6 +149,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2023: 20,
     },
     domains: ['WebApp', 'Software Engineering'],
+    skillIsCurrent: false,
   },
   'Material-UI': {
     type: 'Platform',
@@ -197,6 +200,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2023: 20,
     },
     domains: ['WebApp'],
+    skillIsCurrent: false,
   },
   'HTML/CSS/SASS': {
     type: 'Language',
@@ -277,6 +281,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
     },
     domains: ['WebApp', 'Server', 'Software Engineering'],
     scoreWeight: 1,
+    skillIsCurrent: false,
   },
   'ReST/WebSockets': {
     type: 'Platform',
@@ -318,6 +323,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2017: 0,
     },
     domains: ['Server', 'Software Engineering'],
+    skillIsCurrent: false,
   },
   Python: {
     type: 'Language',
@@ -360,9 +366,10 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2018: 50,
       2019: 50,
       2020: 40,
-      2021: 40,
+      2021: 30,
     },
     domains: ['Server', 'Software Engineering'],
+    skillIsCurrent: false,
   },
   STL: {
     type: 'Platform',
@@ -382,6 +389,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2018: 30,
     },
     domains: ['Server', 'Software Engineering'],
+    skillIsCurrent: false,
   },
   'VC++': {
     type: 'Language',
@@ -401,6 +409,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2013: 0,
     },
     domains: ['Windows'],
+    skillIsCurrent: false,
   },
   Mongo: {
     type: 'Database',
@@ -513,6 +522,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2021: 30,
     },
     domains: ['Windows'],
+    skillIsCurrent: false,
   },
   git: {
     type: 'Source Control',
@@ -551,6 +561,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2017: 0,
     },
     domains: ['Process'],
+    skillIsCurrent: false,
   },
   cvs: {
     type: 'Source Control',
@@ -563,6 +574,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2008: 0,
     },
     domains: ['Process'],
+    skillIsCurrent: false,
   },
   'Visual Source Safe': {
     type: 'Source Control',
@@ -578,6 +590,7 @@ const SKILL_DATA_WITH_GAPS: Record<string, ISkillDatum> = {
       2008: 0,
     },
     domains: ['Process'],
+    skillIsCurrent: false,
   },
   'Team Leadership': {
     type: 'Project Management',
