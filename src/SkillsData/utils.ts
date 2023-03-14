@@ -36,7 +36,7 @@ export function getSkillData(skillType: string, options: IGetSkillDataOptions = 
       };
     }, {} as Record<string, ISkillDatum>);
   }
-  if (skillType != null) {
+  if (skillType) {
     skillData = pickBy(skillData, (skill) => {
       return skill.type === skillType;
     });
