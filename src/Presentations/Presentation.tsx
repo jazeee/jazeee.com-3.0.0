@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import { Spacer } from 'components/Spacers/Spacer';
 
 import { IPresentation } from './data';
-import { ExternalLink } from '../components/Links/ExternalLink';
+import { ExternalLink } from '../components/Links';
 
 const CARD_BACKGROUND_COLOR = '#333';
 
@@ -66,7 +66,7 @@ export function PresentationDetails(props: Props) {
         {links.map((link) => {
           const { name: urlName, url } = link;
           return (
-            <ExternalLink key={url} color="secondary" href={url}>
+            <ExternalLink key={url} color="secondary" to={url}>
               {urlName}
             </ExternalLink>
           );

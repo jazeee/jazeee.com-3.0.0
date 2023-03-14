@@ -55,7 +55,7 @@ export function Skills() {
             {SIDE_BAR_URLS.map((item) => {
               const { name, path } = item;
               return (
-                <ExternalLink key={path} href={path}>
+                <ExternalLink key={path} to={path}>
                   {name}
                 </ExternalLink>
               );

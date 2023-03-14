@@ -26,7 +26,7 @@ export function GithubProject(props: Props) {
       }}
     >
       <Typography>
-        <ExternalLink color="secondary" href={url}>
+        <ExternalLink color="secondary" to={url}>
           {name}
         </ExternalLink>
       </Typography>
@@ -42,7 +42,7 @@ export function GithubProject(props: Props) {
           textAlign: 'right',
         }}
       >
-        <ExternalLink color="secondary" href={`https://github.com/${githubFullName}`}>
+        <ExternalLink color="secondary" to={`https://github.com/${githubFullName}`}>
           <GithubIcon
             sx={{
               fontSize: '1rem',

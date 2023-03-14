@@ -3,7 +3,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import { useLocation } from 'react-router-dom';
 
 import { ISideBarLink } from './siteBarItems';
-import { BaseLink, ExternalLinkRef } from '../components/Links';
+import { BaseLink, ExternalLink } from '../components/Links';
 
 interface Props {
   sideBarItem: ISideBarLink;
@@ -15,7 +15,7 @@ export function SideBarListItem(props: Props) {
   const { name, path } = sideBarItem;
   const pathIsCurrentLocation = location.pathname === path;
   const pathIsExternal = path.startsWith('http');
-  const LinkComponent = pathIsExternal ? ExternalLinkRef : BaseLink;
+  const LinkComponent = pathIsExternal ? ExternalLink : BaseLink;
 
   return (
     <ListItem

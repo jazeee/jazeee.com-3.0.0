@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 import { IPublication } from './data';
-import { ExternalLink } from '../components/Links/ExternalLink';
+import { ExternalLink } from '../components/Links';
 
 interface Props {
   publication: IPublication;
@@ -19,7 +19,7 @@ export function Publication(props: Props) {
       }}
     >
       <Typography variant="h6">
-        <ExternalLink color="secondary" href={publication.url}>
+        <ExternalLink color="secondary" to={publication.url}>
           {publication.name}
         </ExternalLink>
       </Typography>

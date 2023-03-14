@@ -102,14 +102,14 @@ export function Header(props: Props) {
               </Tooltip>
               <ExternalLink
                 color="secondary"
-                href="http://www.linkedin.com/in/jazeee"
+                to="http://www.linkedin.com/in/jazeee"
                 openInNewTabIsVisible={false}
               >
                 <LinkedInIcon sx={{ verticalAlign: 'middle' }} />
               </ExternalLink>
               <ExternalLink
                 color="secondary"
-                href="https://github.com/jazeee"
+                to="https://github.com/jazeee"
                 openInNewTabIsVisible={false}
               >
                 <GithubIcon sx={{ verticalAlign: 'middle' }} />
