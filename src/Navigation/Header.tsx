@@ -100,10 +100,18 @@ export function Header(props: Props) {
                   <PaletteModeIcon />
                 </IconButton>
               </Tooltip>
-              <ExternalLink color="secondary" href="http://www.linkedin.com/in/jazeee">
+              <ExternalLink
+                color="secondary"
+                href="http://www.linkedin.com/in/jazeee"
+                openInNewTabIsVisible={false}
+              >
                 <LinkedInIcon sx={{ verticalAlign: 'middle' }} />
               </ExternalLink>
-              <ExternalLink color="secondary" href="https://github.com/jazeee">
+              <ExternalLink
+                color="secondary"
+                href="https://github.com/jazeee"
+                openInNewTabIsVisible={false}
+              >
                 <GithubIcon sx={{ verticalAlign: 'middle' }} />
               </ExternalLink>
             </Box>

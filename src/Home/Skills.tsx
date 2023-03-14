@@ -1,6 +1,9 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
+import { Spacer } from 'components/Spacers/Spacer';
+import { SIDE_BAR_URLS } from 'Navigation/siteBarItems';
+
 import codeBackgroundImage from './images/codeBackground.png';
 import { ExternalLink } from '../components/Links';
 import { skills } from '../SkillsData/utils';
@@ -47,8 +50,16 @@ export function Skills() {
               <Typography key={skillName}>{skillName}</Typography>
             ))}
           </Box>
-          <Typography variant="h6">
-            <ExternalLink href="http://goo.gl/qWsPm">Resume</ExternalLink>
+          <Spacer height={1} />
+          <Typography variant="body1" display="flex" gap={1}>
+            {SIDE_BAR_URLS.map((item) => {
+              const { name, path } = item;
+              return (
+                <ExternalLink key={path} href={path}>
+                  {name}
+                </ExternalLink>
+              );
+            })}
           </Typography>
         </Box>
       </Box>

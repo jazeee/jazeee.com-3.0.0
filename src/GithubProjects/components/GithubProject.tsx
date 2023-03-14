@@ -16,6 +16,7 @@ export function GithubProject(props: Props) {
     <Box
       display="flex"
       justifyContent="space-between"
+      gap={1}
       sx={{
         '& + &': {
           borderTop: `1px solid #e6e6e6`,
@@ -28,11 +29,16 @@ export function GithubProject(props: Props) {
         <ExternalLink color="secondary" href={url}>
           {name}
         </ExternalLink>
-        {description && ` - ${description}`}
       </Typography>
       <Typography
         sx={{
           flex: 1,
+        }}
+      >
+        {description && `- ${description}`}
+      </Typography>
+      <Typography
+        sx={{
           textAlign: 'right',
         }}
       >

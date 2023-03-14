@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -59,15 +58,17 @@ export function PresentationDetails(props: Props) {
         </Typography>
       </CardContent>
       <Box flexGrow={1} />
-      <CardActions>
+      <CardActions
+        sx={{
+          gap: 1,
+        }}
+      >
         {links.map((link) => {
           const { name: urlName, url } = link;
           return (
-            <Button key={url} size="small">
-              <ExternalLink color="secondary" href={url}>
-                {urlName}
-              </ExternalLink>
-            </Button>
+            <ExternalLink key={url} color="secondary" href={url}>
+              {urlName}
+            </ExternalLink>
           );
         })}
       </CardActions>

@@ -94,6 +94,11 @@ function getTheme(paletteMode: TPaletteMode) {
           },
         },
       },
+      MuiLink: {
+        defaultProps: {
+          underline: 'hover',
+        },
+      },
     },
   });
   return theme;
