@@ -1,6 +1,6 @@
 export interface ISoftwareProject {
   name: string;
-  url: string;
+  url?: string;
   description: string;
-  githubFullName: string;
+  githubUrl: string;
 }

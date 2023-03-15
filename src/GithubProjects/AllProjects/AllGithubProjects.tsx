@@ -36,12 +36,11 @@ export function AllGithubProjects() {
           const githubData = await response.json();
           if (isCurrentRequest) {
             const newProjects = githubData.map((datum: IGithubResponseDatum): ISoftwareProject => {
-              const { name, description, full_name: url, html_url: githubFullName } = datum;
+              const { name, description, html_url: githubUrl } = datum;
               return {
                 name,
                 description,
-                url,
-                githubFullName,
+                githubUrl,
               };
             });
             setProjects(newProjects);

@@ -11,7 +11,7 @@ interface Props {
 
 export function GithubProject(props: Props) {
   const { project } = props;
-  const { url, name, description, githubFullName } = project;
+  const { url, name, description, githubUrl } = project;
   return (
     <Grid
       container
@@ -26,18 +26,13 @@ export function GithubProject(props: Props) {
       }}
     >
       <Grid xs={12} md="auto">
-        <Typography>
-          <ExternalLink to={url}>{name}</ExternalLink>
+        <Typography sx={{ fontWeight: 'bold' }}>
+          {url ? <ExternalLink to={url}>{name}</ExternalLink> : name}
+          {description && ':'}
         </Typography>
       </Grid>
       <Grid xs={12} md>
-        <Typography
-          sx={{
-            flex: 1,
-          }}
-        >
-          {description && `${description}`}
-        </Typography>
+        <Typography>{description && `${description}`}</Typography>
       </Grid>
       <Grid xs={12} md="auto">
         <Typography
@@ -48,7 +43,7 @@ export function GithubProject(props: Props) {
             },
           }}
         >
-          <ExternalLink to={`https://github.com/${githubFullName}`}>
+          <ExternalLink to={githubUrl}>
             <GithubIcon
               sx={{
                 fontSize: '1rem',
