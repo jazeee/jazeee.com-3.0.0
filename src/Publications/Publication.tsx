@@ -21,7 +21,9 @@ export function Publication(props: Props) {
       <Typography variant="h6" component="p">
         <ExternalLink to={publication.url}>{publication.name}</ExternalLink>
       </Typography>
-      <Typography variant="subtitle1">{publication.authors}</Typography>
+      <Typography variant="subtitle1" component="p">
+        {publication.authors}
+      </Typography>
       <Typography variant="caption">
         {publication.media} - ({publication.date})
       </Typography>
