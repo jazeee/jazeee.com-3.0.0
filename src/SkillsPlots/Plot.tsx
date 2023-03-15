@@ -48,7 +48,7 @@ export function SkillsPlot(props: ISkillsPlotProps) {
     const yValues = Object.values(subSkillExperience).map((value) => {
       return value;
     });
-    const markerProps = getMarkerProps(index);
+    const markerProps = getMarkerProps(index, screenIsWide);
     const anyPlotIsHighlighted = Boolean(highlightedSkillName);
     const plotIsHighlighted = highlightedSkillName === name;
     const thisPlotIsActive = !anyPlotIsHighlighted || plotIsHighlighted;
@@ -88,9 +88,15 @@ export function SkillsPlot(props: ISkillsPlotProps) {
       layout={{
         title: titleIsVisible ? skillType : undefined,
         titlefont: {
-          size: 24,
+          size: screenIsWide ? 24 : 16,
         },
         plot_bgcolor: 'transparent',
+        margin: {
+          l: 48,
+          r: screenIsWide ? 48 : 0,
+          t: 48,
+          b: 48,
+        },
         paper_bgcolor: PLOT_COLORS.paperBackgroundColor,
         font: {
           color: PLOT_COLORS.fontColor,

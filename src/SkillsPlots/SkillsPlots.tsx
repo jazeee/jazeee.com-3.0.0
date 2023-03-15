@@ -11,7 +11,14 @@ export function SkillsPlots() {
       <Typography variant="h1" paragraph>
         Skill Plots
       </Typography>
-      <Box display="flex" flexDirection="column" gap={2}>
+      <Box
+        display="flex"
+        flexDirection="column"
+        gap={{
+          xs: 2,
+          md: 4,
+        }}
+      >
         {skills.skillTypes.map((skillType) => (
           <Box key={skillType}>
             <LazyLoadedSkillsPlot skillType={skillType} />

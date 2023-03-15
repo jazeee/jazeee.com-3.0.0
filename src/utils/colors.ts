@@ -20,9 +20,9 @@ const MARKER_STYLE_OPTIONS: MarkerSymbol[] = [
   'hexagon',
 ];
 
-export function getMarkerProps(index: number): Partial<PlotMarker> {
+export function getMarkerProps(index: number, screenIsWide: boolean): Partial<PlotMarker> {
   return {
-    size: 8,
+    size: screenIsWide ? 8 : 4,
     color: COLORS[index % COLORS.length],
     symbol: MARKER_STYLE_OPTIONS[index % MARKER_STYLE_OPTIONS.length],
     line: {
