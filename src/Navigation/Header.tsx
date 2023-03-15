@@ -101,18 +101,22 @@ export function Header(props: Props) {
                 </IconButton>
               </Tooltip>
               <ExternalLink
-                color="secondary"
                 to="http://www.linkedin.com/in/jazeee"
                 openInNewTabIsVisible={false}
                 aria-label="LinkedIn Profile"
+                sx={{
+                  color: (theme) => theme.palette.secondary.main,
+                }}
               >
                 <LinkedInIcon sx={{ verticalAlign: 'middle' }} />
               </ExternalLink>
               <ExternalLink
-                color="secondary"
                 to="https://github.com/jazeee"
                 openInNewTabIsVisible={false}
                 aria-label="Github Repository"
+                sx={{
+                  color: (theme) => theme.palette.secondary.main,
+                }}
               >
                 <GithubIcon sx={{ verticalAlign: 'middle' }} />
               </ExternalLink>

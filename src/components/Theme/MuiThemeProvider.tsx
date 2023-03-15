@@ -98,6 +98,11 @@ function getTheme(paletteMode: TPaletteMode) {
         defaultProps: {
           underline: 'hover',
         },
+        styleOverrides: {
+          root: {
+            color: modeIsLight ? '#0068b3' : SECONDARY_COLORS.dark,
+          },
+        },
       },
     },
   });

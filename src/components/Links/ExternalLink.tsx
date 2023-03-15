@@ -12,7 +12,7 @@ export const ExternalLink = forwardRef<HTMLAnchorElement, ExternalLinkProps>(
   function ForwardRefExternalLink(props, ref) {
     const { children, openInNewTabIsVisible, to, ...otherProps } = props;
     return (
-      <Link ref={ref} color="secondary" {...otherProps} href={to} target="_blank" rel="noopener">
+      <Link ref={ref} {...otherProps} href={to} target="_blank" rel="noopener">
         {children}
         {openInNewTabIsVisible && (
           <OpenInNewTabIcon sx={{ marginLeft: 0.5, verticalAlign: 'middle' }} />

@@ -66,7 +66,7 @@ export function PresentationDetails(props: Props) {
         {links.map((link) => {
           const { name: urlName, url } = link;
           return (
-            <ExternalLink key={url} color="secondary" to={url}>
+            <ExternalLink key={url} to={url}>
               {urlName}
             </ExternalLink>
           );
