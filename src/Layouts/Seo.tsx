@@ -1,17 +1,19 @@
 import { ReactElement } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface Props {
+export interface ISeoProps {
   title: string;
   description: string;
-  // eslint-disable-next-line react/require-default-props
+  image?: string;
   children?: ReactElement;
 }
 
-export function Seo(props: Props) {
-  const { description, title, children } = props;
+export function Seo(props: ISeoProps) {
+  const { description, title, image, children } = props;
 
   const titleWithSiteName = `${title} - Jaz Singh`;
+  const imageIsProvided = Boolean(image);
+  const imageWithHost = image?.startsWith('http') ? image : `${window.location.origin}${image}`;
 
   return (
     <Helmet>
@@ -23,8 +25,15 @@ export function Seo(props: Props) {
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content="Jaz Singh" />
       <meta name="twitter:title" content={titleWithSiteName} />
-      <meta name="twitter:description" content={description} />
+      {imageIsProvided && <meta itemProp="image" content={imageWithHost} />}
+      {imageIsProvided && <meta property="og:image" content={imageWithHost} />}
+
       {children}
     </Helmet>
   );
 }
+
+Seo.defaultProps = {
+  image: '',
+  children: null,
+};

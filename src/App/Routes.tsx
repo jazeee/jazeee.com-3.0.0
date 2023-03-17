@@ -8,6 +8,7 @@ const SkillsPlotsPage = lazy(() => import('SkillsPlots'));
 const PresentationsPage = lazy(() => import('Presentations'));
 const PublicationsPage = lazy(() => import('Publications'));
 const GithubProjectRoutes = lazy(() => import('GithubProjects'));
+const PostsRoutes = lazy(() => import('Posts'));
 const NotFoundPage = lazy(() => import('NotFoundPage/404'));
 
 export function AppRoutes() {
@@ -21,6 +22,7 @@ export function AppRoutes() {
         <Route path="/publications" element={<PublicationsPage />} />
         <Route path="/software-projects/*" element={<GithubProjectRoutes />} />
         <Route path="/loading-indicator" element={<PageLoadingIndicator />} />
+        <Route path="/posts/*" element={<PostsRoutes />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Suspense>

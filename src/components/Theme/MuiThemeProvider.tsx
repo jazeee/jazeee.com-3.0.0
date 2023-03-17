@@ -32,6 +32,7 @@ function getTheme(paletteMode: TPaletteMode) {
       },
       h2: {
         fontSize: '1.5rem',
+        fontWeight: 'bold',
       },
       h3: {
         fontSize: '1.25rem',

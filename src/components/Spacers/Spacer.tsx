@@ -7,5 +7,12 @@ interface Props extends BoxProps {
 }
 export function Spacer(props: Props) {
   const { height, sx, ...boxProps } = props;
-  return <Box {...boxProps} sx={mergeSxProps(sx, { padding: height })} />;
+  return (
+    <Box
+      component="span"
+      display="block"
+      {...boxProps}
+      sx={mergeSxProps(sx, { padding: height })}
+    />
+  );
 }
