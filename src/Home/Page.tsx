@@ -1,5 +1,6 @@
 import { Spacer } from 'components/Spacers/Spacer';
 import { SoftwareProjects } from 'GithubProjects/FeaturedProjects/SoftwareProjects';
+import { ContributionMetrics2019To2023Container } from 'Posts/ColorHealth2019/Container';
 import { SkillsPlotsImageContainer } from 'SkillsPlots/ImageContainer';
 
 import { Skills } from './Skills';
@@ -19,6 +20,8 @@ export function HomePage() {
       <Skills />
       <Spacer height={2} />
       <SkillsPlotsImageContainer />
+      <Spacer height={2} />
+      <ContributionMetrics2019To2023Container />
       <Spacer height={2} />
       <SoftwareProjects />
       <Spacer height={2} />

@@ -7,42 +7,11 @@ import { ExternalLink } from 'components/Links';
 import { Spacer } from 'components/Spacers/Spacer';
 import { Layout } from 'Layouts/Layout';
 
-import ColorContributionsObfuscated2019to2023 from './assets/ColorContributionsObfuscated2019-2023.png';
-import colorRepoContributions2019 from './assets/colorRepoContributions2019.png';
-import colorRepoContributions2020 from './assets/colorRepoContributions2020.png';
-import colorRepoContributions2021 from './assets/colorRepoContributions2021.png';
 import colorRepoContributions2022 from './assets/colorRepoContributions2022.png';
-import colorRepoContributions2023 from './assets/colorRepoContributions2023.png';
 import covid19TestingScreenShot from './assets/covid19TestingScreenShot.png';
 import storybookExampleScreenShot from './assets/storybookExampleScreenShot.png';
+import { ContributionMetrics2019To2023 } from './ContributionMetrics2019-2023';
 
-const COLOR_REPO_CONTRIBUTIONS = [
-  {
-    year: 2019,
-    url: 'https://github.com/jazeee?tab=overview&from=2019-12-01&to=2019-12-31',
-    image: colorRepoContributions2019,
-  },
-  {
-    year: 2020,
-    url: 'https://github.com/jazeee?tab=overview&from=2020-12-01&to=2020-12-31',
-    image: colorRepoContributions2020,
-  },
-  {
-    year: 2020,
-    url: 'https://github.com/jazeee?tab=overview&from=2021-12-01&to=2021-12-31',
-    image: colorRepoContributions2021,
-  },
-  {
-    year: 2020,
-    url: 'https://github.com/jazeee?tab=overview&from=2022-12-01&to=2022-12-31',
-    image: colorRepoContributions2022,
-  },
-  {
-    year: 2020,
-    url: 'https://github.com/jazeee?tab=overview&from=2023-01-01&to=2023-02-28',
-    image: colorRepoContributions2023,
-  },
-];
 export function Engineering2019To2023Post() {
   return (
     <Layout
@@ -140,43 +109,7 @@ export function Engineering2019To2023Post() {
           <Typography variant="h2" paragraph color="secondary">
             Contribution Metrics
           </Typography>
-          <Typography paragraph>
-            During the 3.5 years of engineering work, I made over{' '}
-            <ExternalLink to="https://github.com/jazeee?tab=overview&from=2019-10-01&to=2023-03-03">
-              11,000 contributions
-            </ExternalLink>{' '}
-            to the Color repositories. This equates to about 12.5 contributions per work-day, on
-            average, with about a 60% code-review to 40% code contribution split.
-          </Typography>
-          {COLOR_REPO_CONTRIBUTIONS.map((contribution) => {
-            const { image, url, year } = contribution;
-            return (
-              <ExternalLink to={url} key={url} openInNewTabIsVisible={false}>
-                <Image
-                  src={image}
-                  alt={`Color Repo contribution screenshot for ${year}`}
-                  width="100%"
-                />
-                <Spacer height={1} />
-              </ExternalLink>
-            );
-          })}
-          <Typography paragraph>
-            Over the 3.5 years, I merged the second highest number of commits at Color from
-            inception to 2013, affecting over a million lines <sup>*</sup> of code. The highest was
-            a person who had been at Color for 7+ years.
-          </Typography>
-          <Typography paragraph>
-            <sup>*</sup> I added 436K and deleted 596K lines of code. Technically, some of this is
-            related to moving and refactoring code. In addition, a chunk of this is related to third
-            party packages. Direct contributions are probably on the order of 500K-700K lines of
-            code.
-          </Typography>
-          <Image
-            src={ColorContributionsObfuscated2019to2023}
-            alt="Top six contributors to the Color repo 2023"
-            width="100%"
-          />
+          <ContributionMetrics2019To2023 totalCommitsAreVisible />
           <Spacer height={1} />
           <Typography variant="h2" paragraph color="secondary">
             March 2023 - Layoffs
