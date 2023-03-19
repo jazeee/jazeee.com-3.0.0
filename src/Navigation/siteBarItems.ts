@@ -9,6 +9,10 @@ export const SIDE_BAR_PATHS: ISideBarLink[] = [
     path: '/',
   },
   {
+    name: 'Articles',
+    path: '/posts',
+  },
+  {
     name: 'Github Projects',
     path: '/software-projects/all-github-projects',
   },

@@ -1,5 +1,7 @@
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 
 import { ExternalLink, InternalLink } from 'components/Links';
@@ -15,6 +17,12 @@ export function FlakyTestsPost01() {
       description="Part one of a post discussing zero flaky tests in a software engineering team."
     >
       <Container maxWidth="md">
+        <Breadcrumbs aria-label="breadcrumb" separator=">">
+          <InternalLink underline="hover" to="../../">
+            Articles
+          </InternalLink>
+          <Typography color="text.primary">Flaky Tests - Part 1</Typography>
+        </Breadcrumbs>
         <Box
           margin={{
             xs: 0,
@@ -30,6 +38,7 @@ export function FlakyTestsPost01() {
           <Typography variant="subtitle1" component="p">
             2023-03-17
           </Typography>
+          <Divider />
           <Spacer height={1} />
           <Typography paragraph>
             As a software engineer, we all experience tests that sometimes fail. What do we do?

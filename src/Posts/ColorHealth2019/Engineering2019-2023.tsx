@@ -1,9 +1,11 @@
 import Box from '@mui/material/Box';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Container from '@mui/material/Container';
+import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 
 import { Image } from 'components/Image';
-import { ExternalLink } from 'components/Links';
+import { ExternalLink, InternalLink } from 'components/Links';
 import { Spacer } from 'components/Spacers/Spacer';
 import { Layout } from 'Layouts/Layout';
 
@@ -22,15 +24,26 @@ export function Engineering2019To2023Post() {
       }}
     >
       <Container maxWidth="md">
+        <Breadcrumbs aria-label="breadcrumb" separator=">">
+          <InternalLink underline="hover" to="../">
+            Articles
+          </InternalLink>
+          <Typography color="text.primary">Engineering 2019-2023</Typography>
+        </Breadcrumbs>
         <Box
           margin={{
             xs: 0,
             sm: 4,
           }}
         >
-          <Typography variant="h1" paragraph color="secondary">
+          <Typography variant="h1" color="secondary">
             My Engineering Experience at Color Health
           </Typography>
+          <Typography variant="subtitle1" component="p">
+            2023-03-14
+          </Typography>
+          <Divider />
+          <Spacer height={1} />
           <Typography paragraph>
             I started working at <ExternalLink to="https://color.com">Color Health</ExternalLink> as
             a software engineer and front-end technical lead in 2019. When I started, there were

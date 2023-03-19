@@ -1,4 +1,5 @@
 import Box from '@mui/material/Box';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
@@ -18,6 +19,12 @@ export function FlakyTestsPost02() {
       description="Part one of a post discussing zero flaky tests in a software engineering team."
     >
       <Container maxWidth="md">
+        <Breadcrumbs aria-label="breadcrumb" separator=">">
+          <InternalLink underline="hover" to="../../">
+            Articles
+          </InternalLink>
+          <Typography color="text.primary">Flaky Tests - Part 2</Typography>
+        </Breadcrumbs>
         <Box
           margin={{
             xs: 0,
