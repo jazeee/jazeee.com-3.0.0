@@ -33,11 +33,11 @@ export const SIDE_BAR_PATHS: ISideBarLink[] = [
 export const SIDE_BAR_URLS: ISideBarLink[] = [
   {
     name: 'Resume',
-    path: 'http://goo.gl/qWsPm',
+    path: 'https://goo.gl/qWsPm',
   },
   {
     name: 'LinkedIn',
-    path: 'http://www.linkedin.com/in/jazeee',
+    path: 'https://www.linkedin.com/in/jazeee',
   },
   {
     name: 'Github',
@@ -45,6 +45,6 @@ export const SIDE_BAR_URLS: ISideBarLink[] = [
   },
   {
     name: 'Recommendations',
-    path: 'http://www.linkedin.com/in/jazeee/details/recommendations',
+    path: 'https://www.linkedin.com/in/jazeee/details/recommendations',
   },
 ];

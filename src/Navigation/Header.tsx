@@ -101,7 +101,7 @@ export function Header(props: Props) {
                 </IconButton>
               </Tooltip>
               <ExternalLink
-                to="http://www.linkedin.com/in/jazeee"
+                to="https://www.linkedin.com/in/jazeee"
                 openInNewTabIsVisible={false}
                 aria-label="LinkedIn Profile"
                 sx={{
