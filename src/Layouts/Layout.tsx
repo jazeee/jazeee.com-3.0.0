@@ -21,3 +21,8 @@ export function Layout(props: ILayoutProps) {
     </>
   );
 }
+
+Layout.defaultProps = {
+  sx: {},
+  seoProps: {},
+};
