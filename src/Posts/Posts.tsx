@@ -29,9 +29,9 @@ export function PostsPage() {
             </InternalLink>
           </Typography>
           <Typography paragraph>
-            Engineering -{' '}
+            Engineering Experiences -{' '}
             <InternalLink to="./engineering-2019-2023">
-              My Engineering Experience from 2019-2023
+              My Engineering Contributions from 2019-2023
             </InternalLink>
           </Typography>
         </Box>

@@ -1,15 +1,17 @@
 import Box, { BoxProps } from '@mui/material/Box';
+import { ReactNode } from 'react';
 
 import { ISeoProps, Seo } from './Seo';
 
-interface Props {
+export interface ILayoutProps {
   title: string;
   description: string;
   sx?: BoxProps['sx'];
   seoProps?: Partial<ISeoProps>;
+  children: ReactNode;
 }
 
-export function Layout(props: React.PropsWithChildren<Props>) {
+export function Layout(props: ILayoutProps) {
   const { title, description, sx, seoProps, children } = props;
 
   return (
