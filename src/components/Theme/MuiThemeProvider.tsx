@@ -105,6 +105,22 @@ function getTheme(paletteMode: TPaletteMode) {
           },
         },
       },
+      MuiDivider: {
+        styleOverrides: {
+          root: {
+            backgroundColor: SECONDARY_COLORS[paletteMode],
+          },
+        },
+      },
+      MuiTypography: {
+        styleOverrides: {
+          root: {
+            '& a': {
+              textDecoration: 'underline',
+            },
+          },
+        },
+      },
     },
   });
   return theme;
