@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 
 import NotFoundPage from 'NotFoundPage/404';
 
-import { ReactStateManagementPost } from './StateManagementPost';
+import { ReactStateManagementPost } from './StateManagement/StateManagementPost';
 
 export function ReactPostsRoutes() {
   return (

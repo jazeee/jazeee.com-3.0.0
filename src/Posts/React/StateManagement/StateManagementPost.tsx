@@ -7,9 +7,9 @@ import { Spacer } from 'components/Spacers/Spacer';
 import { Span } from 'components/Span';
 import { PostLayout } from 'Posts/components/PostLayout';
 
-import { CodeBlock } from './CodeBlock';
 import { REACT_STATE_CODE_SAMPLES } from './codeSamples';
-import { WarningLine } from './WarningLine';
+import { CodeBlock } from '../../components/CodeBlock';
+import { WarningLine } from '../../components/WarningLine';
 
 const POST_TITLE = 'React State Management';
 
