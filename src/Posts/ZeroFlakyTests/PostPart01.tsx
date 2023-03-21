@@ -26,7 +26,7 @@ export function FlakyTestsPost01() {
         and rerun. Engineers tend to consider test flake as an inevitable - a constant background
         problem that one simply endures.
       </Typography>
-      <Typography variant="h2" paragraph color="secondary">
+      <Typography variant="h2" paragraph>
         Summary
       </Typography>
       <Typography paragraph>
@@ -39,7 +39,7 @@ export function FlakyTestsPost01() {
       <Typography paragraph>We identified a fundamental need to address flaky tests.</Typography>
       <FlakyTestDefinitions />
       <Spacer height={1} />
-      <Typography variant="h2" paragraph color="secondary">
+      <Typography variant="h2" paragraph>
         Why Test Flake Matters
       </Typography>
       <Typography paragraph>
@@ -53,7 +53,7 @@ export function FlakyTestsPost01() {
         even dependent on external systems. These flaky tests are often quite frustrating,
         particularly if they are intermittent.
       </Typography>
-      <Typography variant="h3" paragraph color="secondary">
+      <Typography variant="h3" paragraph>
         Costs and Engineering Churn
       </Typography>
       <Typography paragraph>
@@ -71,7 +71,7 @@ export function FlakyTestsPost01() {
         rerun CI, in the hopes that the failed test is unrelated to their changes, which adds to CI
         execution costs.)
       </Typography>
-      <Typography variant="h3" paragraph color="secondary">
+      <Typography variant="h3" paragraph>
         Reliability
       </Typography>
       <Typography paragraph>
@@ -80,7 +80,7 @@ export function FlakyTestsPost01() {
         become inured to these hidden bugs. Real bugs in code affect product quality, and therefore
         we should address them.
       </Typography>
-      <Typography variant="h2" paragraph color="secondary">
+      <Typography variant="h2" paragraph>
         Strategies for Achieving Reliable Tests
       </Typography>
       <Typography paragraph>

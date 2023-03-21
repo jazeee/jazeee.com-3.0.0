@@ -42,7 +42,7 @@ export function Skills() {
             width: '50%',
           }}
         >
-          <Typography variant="h2" component="h1" paragraph color="secondary">
+          <Typography variant="h2" component="h1" paragraph>
             <b>React/Full Stack Software Engineer</b>
           </Typography>
           <Typography>Primary Developer Skills (Sorted by skill level):</Typography>

@@ -12,7 +12,7 @@ export function PostDefinitionBlock(props: IPostDefinition) {
     <Typography paragraph>
       <Span
         sx={{
-          color: (theme) => theme.palette.secondary.main,
+          color: (theme) => theme.typography.h1.color,
         }}
       >
         <b>{name}</b>

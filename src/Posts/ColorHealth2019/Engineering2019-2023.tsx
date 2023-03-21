@@ -31,7 +31,7 @@ export function Engineering2019To2023Post() {
         software engineer and front-end technical lead in 2019. When I started, there were about 30
         people in the engineering department.
       </Typography>
-      <Typography variant="h2" paragraph color="secondary">
+      <Typography variant="h2" paragraph>
         Background
       </Typography>
       <Typography paragraph>
@@ -41,7 +41,7 @@ export function Engineering2019To2023Post() {
         six months gave me and the team enough time to strengthen the React code patterns and
         concepts.
       </Typography>
-      <Typography variant="h2" paragraph color="secondary">
+      <Typography variant="h2" paragraph>
         COVID-19 and Engineering
       </Typography>
       <Typography paragraph>
@@ -69,7 +69,7 @@ export function Engineering2019To2023Post() {
         we applied the same concepts towards COVID-19 vaccination scheduling and onsite platforms,
         and expanded from there.
       </Typography>
-      <Typography variant="h2" paragraph color="secondary">
+      <Typography variant="h2" paragraph>
         User Interfaces and Infrastructure Team
       </Typography>
       <Typography paragraph>
@@ -92,7 +92,7 @@ export function Engineering2019To2023Post() {
         including planning and rearchitecting the front-end infrastructure to support multiple
         products.
       </Typography>
-      <Typography variant="h3" paragraph color="secondary">
+      <Typography variant="h3" paragraph>
         Team Call Out
       </Typography>
       <Typography paragraph>
@@ -101,12 +101,12 @@ export function Engineering2019To2023Post() {
         with them. It&apos;s not a common scenario to find a well gelled and categorically strong
         team of people.
       </Typography>
-      <Typography variant="h2" paragraph color="secondary">
+      <Typography variant="h2" paragraph>
         Contribution Metrics
       </Typography>
       <ContributionMetrics2019To2023 totalCommitsAreVisible />
       <Spacer height={1} />
-      <Typography variant="h2" paragraph color="secondary">
+      <Typography variant="h2" paragraph>
         March 2023 - Layoffs
       </Typography>
       <Typography paragraph>

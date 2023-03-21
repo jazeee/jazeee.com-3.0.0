@@ -11,6 +11,10 @@ const SECONDARY_COLORS = {
   light: '#0086e6',
   dark: '#00d0ff',
 };
+const TYPOGRAPHY_HEADLINE_COLORS = {
+  light: '#0086e6',
+  dark: '#8ccbd9',
+};
 const BRIGHTEST_GRAY = '#f0f0f0';
 const BACKGROUND_GRAY = '#e0e0e0';
 const DARKEST_GRAY = '#000';
@@ -29,16 +33,20 @@ function getTheme(paletteMode: TPaletteMode) {
       h1: {
         fontSize: '2rem',
         fontWeight: 'bold',
+        color: TYPOGRAPHY_HEADLINE_COLORS[paletteMode],
       },
       h2: {
         fontSize: '1.5rem',
         fontWeight: 'bold',
+        color: TYPOGRAPHY_HEADLINE_COLORS[paletteMode],
       },
       h3: {
         fontSize: '1.25rem',
+        color: TYPOGRAPHY_HEADLINE_COLORS[paletteMode],
       },
       h4: {
         fontSize: '1rem',
+        color: TYPOGRAPHY_HEADLINE_COLORS[paletteMode],
       },
       body1: {
         fontSize: '1rem',
@@ -101,14 +109,15 @@ function getTheme(paletteMode: TPaletteMode) {
         },
         styleOverrides: {
           root: {
-            color: modeIsLight ? '#0068b3' : SECONDARY_COLORS.dark,
+            color: modeIsLight ? '#0068b3' : '#00d0ff',
           },
         },
       },
       MuiDivider: {
         styleOverrides: {
           root: {
-            backgroundColor: SECONDARY_COLORS[paletteMode],
+            backgroundColor: TYPOGRAPHY_HEADLINE_COLORS[paletteMode],
+            borderColor: 'rgba(255, 255, 255, 0)',
           },
         },
       },

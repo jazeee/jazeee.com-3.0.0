@@ -31,7 +31,7 @@ export function FlakyTestsPost02() {
         In this post, I will talk about strategies to achieve fully reliable tests, including across
         integration testing systems, such as Cypress, or Selenium.
       </Typography>
-      <Typography variant="h2" paragraph color="secondary">
+      <Typography variant="h2" paragraph>
         Summary
       </Typography>
       <Typography paragraph>
@@ -42,7 +42,7 @@ export function FlakyTestsPost02() {
       </Typography>
       <FlakyTestDefinitions />
       <Spacer height={1} />
-      <Typography variant="h2" paragraph color="secondary">
+      <Typography variant="h2" paragraph>
         Non-Deterministic Tests
       </Typography>
       <Typography paragraph>
@@ -59,13 +59,13 @@ export function FlakyTestsPost02() {
         edge cases. Unfortunately, by doing this, we are pushing the onus of discovering edge cases
         onto our colleagues.
       </Typography>
-      <Typography variant="h2" paragraph color="secondary">
+      <Typography variant="h2" paragraph>
         Deterministic Test Guidelines
       </Typography>
       <Typography paragraph>
         In order to improve determinism in tests, I recommend the following:
       </Typography>
-      <Typography variant="h3" paragraph color="secondary">
+      <Typography variant="h3" paragraph>
         Monitor and Publicize Test Failures.
       </Typography>
       <Typography paragraph>
@@ -76,7 +76,7 @@ export function FlakyTestsPost02() {
         such as a Slack channel. Consider creating a triage process and notify the code owner as
         quickly as possible. Consider disabling the test until resolved.
       </Typography>
-      <Typography variant="h3" paragraph color="secondary">
+      <Typography variant="h3" paragraph>
         Use a Date/Time Mock Test Utility.
       </Typography>
       <Typography>
@@ -107,7 +107,7 @@ export function FlakyTestsPost02() {
           </ExternalLink>
         </ListItem>
       </List>
-      <Typography variant="h3" paragraph color="secondary">
+      <Typography variant="h3" paragraph>
         Favor Fixed Values Over Random Values.
       </Typography>
       <Typography>Using fixed known values makes your test predictable and repeatable.</Typography>
@@ -133,7 +133,7 @@ export function FlakyTestsPost02() {
           happens to be large enough to overflow.
         </ListItem>
       </List>
-      <Typography variant="h3" paragraph color="secondary">
+      <Typography variant="h3" paragraph>
         Use a Fixed Random Seed.
       </Typography>
       <Typography paragraph>
@@ -144,7 +144,7 @@ export function FlakyTestsPost02() {
         Setting a fixed seed ensures that you can re-execute your test with a repeatable
         environment. This is important when your test fails and you need to debug the issue.
       </Typography>
-      <Typography variant="h3" paragraph color="secondary">
+      <Typography variant="h3" paragraph>
         Test Your Edge Cases.
       </Typography>
       <Typography>
@@ -164,7 +164,7 @@ export function FlakyTestsPost02() {
           depending on year.
         </ListItem>
       </List>
-      <Typography variant="h3" paragraph color="secondary">
+      <Typography variant="h3" paragraph>
         Manage Third Party APIs and Services.
       </Typography>
       <Typography>Reduce or eliminate dependencies on third party services.</Typography>
@@ -182,7 +182,7 @@ export function FlakyTestsPost02() {
           Yes, even things like Auth0 will fail with 503 or 429 errors.
         </ListItem>
       </List>
-      <Typography variant="h3" paragraph color="secondary">
+      <Typography variant="h3" paragraph>
         Cache Package Dependencies.
       </Typography>
       <Typography>Reduce or eliminate dependencies on package services.</Typography>
@@ -199,7 +199,7 @@ export function FlakyTestsPost02() {
           In addition, they may rate limit the CI servers, causing unpredictable flake.
         </ListItem>
       </List>
-      <Typography variant="h3" paragraph color="secondary">
+      <Typography variant="h3" paragraph>
         Order Your Test Data.
       </Typography>
       <Typography>Write tests to handle unordered data. Examples:</Typography>
@@ -218,7 +218,7 @@ export function FlakyTestsPost02() {
           iteration order.{' '}
         </ListItem>
       </List>
-      <Typography variant="h3" paragraph color="secondary">
+      <Typography variant="h3" paragraph>
         Plan for Unpredictable Latency (Integration Testing).
       </Typography>
       <Typography>
@@ -259,7 +259,7 @@ export function FlakyTestsPost02() {
           In React, be aware of <code>useEffect</code>, which can cause unpredictable behavior.
         </ListItem>
       </List>
-      <Typography variant="h2" paragraph color="secondary">
+      <Typography variant="h2" paragraph>
         Case Study
       </Typography>
       <Typography paragraph>
@@ -280,7 +280,7 @@ export function FlakyTestsPost02() {
         should be made to be determinstic, by mocking the date/time for the edge cases. In doing so,
         the 5 PM PST scenario is tested continually, not just after 5 PM.
       </Typography>
-      <Typography variant="h2" paragraph color="secondary">
+      <Typography variant="h2" paragraph>
         Conclusion
       </Typography>
       <Typography paragraph>

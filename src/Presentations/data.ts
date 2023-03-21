@@ -25,7 +25,7 @@ export const PRESENTATIONS: IPresentation[] = [
       },
       {
         name: 'Meet Up',
-        url: 'http://www.meetup.com/madisonwebmeetup/events/124662962/',
+        url: 'https://www.meetup.com/madisonwebmeetup/events/124662962/',
       },
     ],
   },
@@ -81,7 +81,7 @@ export const PRESENTATIONS: IPresentation[] = [
       },
       {
         name: 'Meet Up',
-        url: 'http://www.meetup.com/Meteor-Raleigh-Durham/events/224412562/',
+        url: 'https://www.meetup.com/Meteor-Raleigh-Durham/events/224412562/',
       },
     ],
   },
@@ -101,7 +101,7 @@ export const PRESENTATIONS: IPresentation[] = [
       },
       {
         name: 'Meet Up',
-        url: 'http://www.meetup.com/Triangle-JavaScript/events/226738658/',
+        url: 'https://www.meetup.com/Triangle-JavaScript/events/226738658/',
       },
       {
         name: 'Repeat Event 2016-09-12',
@@ -165,7 +165,7 @@ export const PRESENTATIONS: IPresentation[] = [
       },
       {
         name: 'Meet Up',
-        url: 'http://www.meetup.com/Triangle-JavaScript/events/231335330/',
+        url: 'https://www.meetup.com/Triangle-JavaScript/events/231335330/',
       },
     ],
   },

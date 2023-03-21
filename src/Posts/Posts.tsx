@@ -29,6 +29,10 @@ export function PostsPage() {
             </InternalLink>
           </Typography>
           <Typography paragraph>
+            React Series -{' '}
+            <InternalLink to="./react/state-management">State Management</InternalLink>
+          </Typography>
+          <Typography paragraph>
             Engineering Experiences -{' '}
             <InternalLink to="./engineering-2019-2023">
               My Engineering Contributions from 2019-2023

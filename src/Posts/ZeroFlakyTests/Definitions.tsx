@@ -5,7 +5,7 @@ import { PostDefinitionBlock } from './Definition';
 export function FlakyTestDefinitions() {
   return (
     <>
-      <Typography variant="h3" paragraph color="secondary">
+      <Typography variant="h3" paragraph>
         Definitions
       </Typography>
       <PostDefinitionBlock

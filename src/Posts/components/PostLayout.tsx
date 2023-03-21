@@ -37,9 +37,7 @@ export function PostLayout(props: Props) {
             sm: 4,
           }}
         >
-          <Typography variant="h1" color="secondary">
-            {headlineProps.title}
-          </Typography>
+          <Typography variant="h1">{headlineProps.title}</Typography>
           {headlineProps.subtitle && (
             <Typography variant="subtitle1" component="p">
               {headlineProps.subtitle}
