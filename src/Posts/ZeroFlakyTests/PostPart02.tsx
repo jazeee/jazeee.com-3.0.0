@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 
 import { ExternalLink, InternalLink } from 'components/Links';
 import { Spacer } from 'components/Spacers/Spacer';
+import { Code } from 'Posts/components/Code';
 import { PostLayout } from 'Posts/components/PostLayout';
 
 import { FlakyTestDefinitions } from './Definitions';
@@ -101,9 +102,9 @@ export function FlakyTestsPost02() {
         <ListItem sx={{ display: 'list-item' }}>
           Cypress UI{' '}
           <ExternalLink to="https://docs.cypress.io/api/commands/clock#Function-names">
-            <code>
+            <Code>
               cy.clock(new Date(&apos;2022-04-20T16:20:00-07:00&apos;), [&apos;Date&apos;]);
-            </code>
+            </Code>
           </ExternalLink>
         </ListItem>
       </List>
@@ -126,10 +127,10 @@ export function FlakyTestsPost02() {
           value may be obscure.
         </ListItem>
         <ListItem sx={{ display: 'list-item' }}>
-          This is repeatable <code>multiply(1.0, 2.0);</code>
+          This is repeatable <Code>multiply(1.0, 2.0);</Code>
         </ListItem>
         <ListItem sx={{ display: 'list-item' }}>
-          This could overflow <code>multiply(random1, random2);</code>, if either random value
+          This could overflow <Code>multiply(random1, random2);</Code>, if either random value
           happens to be large enough to overflow.
         </ListItem>
       </List>
@@ -160,7 +161,7 @@ export function FlakyTestsPost02() {
         <ListItem sx={{ display: 'list-item' }}>Month or year boundaries.</ListItem>
         <ListItem sx={{ display: 'list-item' }}>Leap day/second.</ListItem>
         <ListItem sx={{ display: 'list-item' }}>
-          Example: <code>getSecondsInYear(new Date());</code> will return different values,
+          Example: <Code>getSecondsInYear(new Date());</Code> will return different values,
           depending on year.
         </ListItem>
       </List>
@@ -193,7 +194,7 @@ export function FlakyTestsPost02() {
         }}
       >
         <ListItem sx={{ display: 'list-item' }}>
-          <code>npm</code>, <code>pip</code>, <code>Github</code> are not guaranteed to always work.
+          <Code>npm</Code>, <Code>pip</Code>, <Code>Github</Code> are not guaranteed to always work.
         </ListItem>
         <ListItem sx={{ display: 'list-item' }}>
           In addition, they may rate limit the CI servers, causing unpredictable flake.
@@ -211,10 +212,10 @@ export function FlakyTestsPost02() {
       >
         <ListItem sx={{ display: 'list-item' }}>
           For example, the SQL spec does not guarantee ordering of query results without an{' '}
-          <code>ORDER BY</code> clause.{' '}
+          <Code>ORDER BY</Code> clause.{' '}
         </ListItem>
         <ListItem sx={{ display: 'list-item' }}>
-          Similarly, some data structures, such as Java <code>HashMap</code> do not guarantee
+          Similarly, some data structures, such as Java <Code>HashMap</Code> do not guarantee
           iteration order.{' '}
         </ListItem>
       </List>
@@ -239,7 +240,7 @@ export function FlakyTestsPost02() {
         </ListItem>
         <ListItem sx={{ display: 'list-item' }}>
           When writing UI integration tests, do not add arbitrary time based waits, like{' '}
-          <code>cy.wait(200)</code>. This assumes that something will complete within 200
+          <Code>cy.wait(200)</Code>. This assumes that something will complete within 200
           milliseconds, despite being unpredictable.
         </ListItem>
         <ListItem sx={{ display: 'list-item' }}>
@@ -248,15 +249,15 @@ export function FlakyTestsPost02() {
           expectations.
         </ListItem>
         <ListItem sx={{ display: 'list-item' }}>
-          In Cypress, this means <code>cy.intercept(apiPath).as(&apos;api-request&apos;)</code>,
-          then wait for that API to resolve <code>cy.wait(&apos;@api-request&apos;);</code>.
+          In Cypress, this means <Code>cy.intercept(apiPath).as(&apos;api-request&apos;)</Code>,
+          then wait for that API to resolve <Code>cy.wait(&apos;@api-request&apos;);</Code>.
         </ListItem>
         <ListItem sx={{ display: 'list-item' }}>
           Avoid flickering, janky, or non-determinstic UI. Testing frameworks cannot be resilient to
           flake if your code repeatedly removes and adds DOM elements.
         </ListItem>
         <ListItem sx={{ display: 'list-item' }}>
-          In React, be aware of <code>useEffect</code>, which can cause unpredictable behavior.
+          In React, be aware of <Code>useEffect</Code>, which can cause unpredictable behavior.
         </ListItem>
       </List>
       <Typography variant="h2" paragraph>

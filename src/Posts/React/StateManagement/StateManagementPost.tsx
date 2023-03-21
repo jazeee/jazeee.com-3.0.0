@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import { ExternalLink } from 'components/Links';
 import { Spacer } from 'components/Spacers/Spacer';
 import { Span } from 'components/Span';
+import { Code } from 'Posts/components/Code';
 import { PostLayout } from 'Posts/components/PostLayout';
 
 import { REACT_STATE_CODE_SAMPLES } from './codeSamples';
@@ -51,7 +52,7 @@ export function ReactStateManagementPost() {
         In-Memory State Management
       </Typography>
       <Typography paragraph>
-        React provides a hook, <code>useState</code>, to manage reactive in-memory state. You can
+        React provides a hook, <Code>useState</Code>, to manage reactive in-memory state. You can
         compose more complex functionality around this state management.
       </Typography>
       <Typography variant="h3" paragraph>
@@ -64,7 +65,7 @@ export function ReactStateManagementPost() {
       <Spacer height={1} />
       <Typography paragraph>
         A hook that demonstrates updating state. It is important to use this form when updating
-        state based on current state. Note also, I use <code>useCallback</code> to memoize the
+        state based on current state. Note also, I use <Code>useCallback</Code> to memoize the
         functions. See also,{' '}
         <ExternalLink to="https://react.dev/learn/queueing-a-series-of-state-updates">
           queueing state updates
@@ -136,7 +137,7 @@ export function ReactStateManagementPost() {
         <ListItem sx={{ display: 'list-item' }}>
           In any other language, you would not create a global mutable singleton to manage
           application state. This would be like maintaining all state in an object like{' '}
-          <code>window.myApp</code>.
+          <Code>window.myApp</Code>.
         </ListItem>
         <ListItem sx={{ display: 'list-item' }}>
           Actions are identified by string keys. It is very easy to introduce a bug by using the
@@ -181,25 +182,25 @@ export function ReactStateManagementPost() {
         <ExternalLink to="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">
           Web storage API
         </ExternalLink>{' '}
-        - <code>window.localStorage</code> and <code>window.sessionStorage</code> are useful places
+        - <Code>window.localStorage</Code> and <Code>window.sessionStorage</Code> are useful places
         to maintain persistent state.
       </Typography>
       <List>
         <ListItem>
           <WarningLine>
-            <code>window.localStorage</code> state persists in the browser, even after closing the
-            session. Do not store sensitive information in <code>LocalStorage</code>.
+            <Code>window.localStorage</Code> state persists in the browser, even after closing the
+            session. Do not store sensitive information in <Code>LocalStorage</Code>.
           </WarningLine>
         </ListItem>
         <ListItem>
           <Span sx={{ textAlign: 'left' }}>
-            If you use <code>window.localStorage</code>, only use it to persist semi-permanent data
+            If you use <Code>window.localStorage</Code>, only use it to persist semi-permanent data
             that doesn&apos;t include personal information.
           </Span>
         </ListItem>
         <ListItem>
           <Span sx={{ textAlign: 'left' }}>
-            If you use <code>window.sessionStorage</code>, remember that it is cleared when the user
+            If you use <Code>window.sessionStorage</Code>, remember that it is cleared when the user
             closes the browser tab.
           </Span>
         </ListItem>
@@ -209,13 +210,13 @@ export function ReactStateManagementPost() {
       </Typography>
       <Typography paragraph>
         The URL is a great place to maintain some state. For example, the URL can contain properties
-        (aka slugs): <code>/path/values/:id</code> where <code>:id</code> is a slug. Similarly, the
-        URL can contain query parameters: <code>/path?queryParam=5</code>.
+        (aka slugs): <Code>/path/values/:id</Code> where <Code>:id</Code> is a slug. Similarly, the
+        URL can contain query parameters: <Code>/path?queryParam=5</Code>.
       </Typography>
       <Typography paragraph>
         <ExternalLink to="https://reactrouter.com/en/main">React Router</ExternalLink>, provides
-        reactive access to route slugs and query parameters via hooks: <code>useLocation</code> and{' '}
-        <code>useParams</code>.
+        reactive access to route slugs and query parameters via hooks: <Code>useLocation</Code> and{' '}
+        <Code>useParams</Code>.
       </Typography>
       <Typography paragraph>
         Slugs and query parameters can, (and should), be used for state management. For example,
@@ -226,7 +227,7 @@ export function ReactStateManagementPost() {
         Browser Location State
       </Typography>
       <Typography>
-        <code>location.state</code> can transfer information as part of navigating to a new route.
+        <Code>location.state</Code> can transfer information as part of navigating to a new route.
         Note, however, this can introduce bugs, since the state may not exist, or the user may open
         a URL in a new browser.
       </Typography>
@@ -262,7 +263,7 @@ export function ReactStateManagementPost() {
         the job. There are many choices, each with their benefits and constraints. Choose wisely.
       </Typography>
       <Typography paragraph>
-        In my next post, I will cover the dangers of <code>useEffect</code>, along with
+        In my next post, I will cover the dangers of <Code>useEffect</Code>, along with
         recommendations and strategies.
       </Typography>
     </PostLayout>
