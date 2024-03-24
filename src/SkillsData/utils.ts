@@ -2,7 +2,7 @@ import { pickBy, sortBy } from 'lodash';
 
 import { ISkillDatum, SKILL_DATA } from './skillsData';
 
-export const START_YEAR = 2013;
+export const START_YEAR = 2017;
 
 interface ISkillDatumWithScore extends ISkillDatum {
   skillName?: string;
