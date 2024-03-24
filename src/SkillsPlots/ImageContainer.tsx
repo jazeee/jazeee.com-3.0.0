@@ -8,13 +8,13 @@ import { InternalLink } from 'components/Links';
 import { usePaletteModeContext } from 'components/Theme/paletteModeContext';
 
 const desktopSkillsPlotImages = {
-  dark: '/static/images/skillPlotsDarkMode-2023.png',
-  light: '/static/images/skillPlotsLightMode-2023.png',
+  dark: '/static/images/skillPlotsDarkMode-2024.png',
+  light: '/static/images/skillPlotsLightMode-2024.png',
 };
 
 const mobileSkillsPlotImages = {
-  dark: '/static/images/skillPlotsDarkModeMobile-2023.png',
-  light: '/static/images/skillPlotsLightModeMobile-2023.png',
+  dark: '/static/images/skillPlotsDarkModeMobile-2024.png',
+  light: '/static/images/skillPlotsLightModeMobile-2024.png',
 };
 
 export function SkillsPlotsImageContainer() {
