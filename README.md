@@ -23,3 +23,8 @@ This code is for [jazeee.com](https://jazeee.com)
 * `CI=1 yarn build --stats`
 * Install `webpack-bundle-analyzer`, or run via `npx`
 * `webpack-bundle-analyzer build/bundle-stats.json build/ --port 9999`
+
+### Deploying
+
+* `aws s3 sync ./build/ s3://www-2023 --profile ...`
+* Invalidate cloudfront distribution.
