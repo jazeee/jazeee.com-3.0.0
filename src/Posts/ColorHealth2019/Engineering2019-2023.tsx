@@ -65,7 +65,7 @@ export function Engineering2019To2023Post() {
         deploy daily.
         <Spacer height={1} />
         With this, we accomplished building out the user facing workflow and scheduling
-        implementation, along with the intake adming application in that time. Business scaled, and
+        implementation, along with the intake admin application in that time. Business scaled, and
         we applied the same concepts towards COVID-19 vaccination scheduling and onsite platforms,
         and expanded from there.
       </Typography>

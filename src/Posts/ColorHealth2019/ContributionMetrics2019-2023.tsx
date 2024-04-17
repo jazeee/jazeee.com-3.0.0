@@ -1,8 +1,8 @@
+import { Stack } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
 import { Image } from 'components/Image';
 import { ExternalLink } from 'components/Links';
-import { Spacer } from 'components/Spacers/Spacer';
 
 import ColorContributionsObfuscated2019to2023 from './assets/ColorContributionsObfuscated2019-2023.png';
 import colorRepoContributions2019 from './assets/colorRepoContributions2019.png';
@@ -46,8 +46,8 @@ interface Props {
 export function ContributionMetrics2019To2023(props: Props) {
   const { totalCommitsAreVisible } = props;
   return (
-    <>
-      <Typography paragraph>
+    <Stack spacing={1}>
+      <Typography>
         Over the course of about 3.5 years of software engineering at Color Health, I made over{' '}
         <ExternalLink to="https://github.com/jazeee?tab=overview&from=2019-10-01&to=2023-03-03">
           11,000 contributions
@@ -55,21 +55,17 @@ export function ContributionMetrics2019To2023(props: Props) {
         to the Color repositories. This equates to about 12.5 contributions per work-day, on
         average, with about a 60% code-review to 40% code contribution split.
       </Typography>
-      <Typography paragraph>
+      <Typography>
         During that time, I merged the second highest number of commits at Color, affecting over a
         million lines of code <sup>*</sup>.
       </Typography>
-      <Typography paragraph>
+      <Typography>
         <sup>*</sup> <b>Details:</b> I added 436K and deleted 596K lines of code. Technically, some
         of this is related to moving and refactoring code. In addition, a chunk of this is related
         to third party packages. Direct contributions are probably on the order of 500K-700K lines
         of code.
       </Typography>
-      {!totalCommitsAreVisible && (
-        <Typography variant="h2" paragraph>
-          Sample Contributions
-        </Typography>
-      )}
+      {!totalCommitsAreVisible && <Typography variant="h2">Sample Contributions</Typography>}
       {COLOR_REPO_CONTRIBUTIONS.map((contribution) => {
         const { image, url, year, contributionIsHighlighted = false } = contribution;
         if (totalCommitsAreVisible || contributionIsHighlighted) {
@@ -80,7 +76,6 @@ export function ContributionMetrics2019To2023(props: Props) {
                 alt={`Color Repo contribution screenshot for ${year}`}
                 width="100%"
               />
-              <Spacer height={1} />
             </ExternalLink>
           );
         }
@@ -93,6 +88,6 @@ export function ContributionMetrics2019To2023(props: Props) {
           width="100%"
         />
       )}
-    </>
+    </Stack>
   );
 }
