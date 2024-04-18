@@ -3,6 +3,8 @@ import ListItem from '@mui/material/ListItem';
 import Typography from '@mui/material/Typography';
 
 import { ExternalLink } from 'components/Links';
+import { Li } from 'components/Lists/Li';
+import { Ol } from 'components/Lists/Ol';
 import { Spacer } from 'components/Spacers/Spacer';
 import { Span } from 'components/Span';
 import { Code } from 'Posts/components/Code';
@@ -121,36 +123,29 @@ export function ReactStateManagementPost() {
         management system. At one time, it was the defacto-standard, but these days, I don&apos;t
         recommend it.
       </Typography>
-      <List
-        sx={{
-          listStyleType: 'decimal',
-          listStylePosition: 'inside',
-        }}
-      >
-        <ListItem sx={{ display: 'list-item' }}>
-          It is typically implemented as a global mutable singleton.
-        </ListItem>
-        <ListItem sx={{ display: 'list-item' }}>
+      <Ol>
+        <Li>It is typically implemented as a global mutable singleton.</Li>
+        <Li>
           Globally mutable state means any part of the code can change the state, resulting in
           unpredictable, and hard to debug bugs.
-        </ListItem>
-        <ListItem sx={{ display: 'list-item' }}>
+        </Li>
+        <Li>
           In any other language, you would not create a global mutable singleton to manage
           application state. This would be like maintaining all state in an object like{' '}
           <Code>window.myApp</Code>.
-        </ListItem>
-        <ListItem sx={{ display: 'list-item' }}>
+        </Li>
+        <Li>
           Actions are identified by string keys. It is very easy to introduce a bug by using the
           same action name in different places. All action keys must be globally unique. This
           doesn&apos;t scale.
-        </ListItem>
-        <ListItem sx={{ display: 'list-item' }}>
+        </Li>
+        <Li>
           Redux actions execute every reducer in the codebase. This doesn&apos;t scale, and
           applications can become quite slow due to this churn. This can be particularly painful
           when using Redux to maintain form field state, since each typed character can result in a
           lot of lag.
-        </ListItem>
-      </List>
+        </Li>
+      </Ol>
       <Typography variant="h2" paragraph>
         Managing State Outside of RAM
       </Typography>

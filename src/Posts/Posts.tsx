@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import { InternalLink } from 'components/Links';
 import { Layout } from 'Layouts/Layout';
 
+import { THIRD_PARTY_DEPENDENCIES_POST_TITLE } from './Engineering/ThirdPartyDependencies/Post';
 import { BOUNDARY_SPACING_POST_TITLE } from './React/BoundaryMargins/Post';
 
 export function PostsPage() {
@@ -37,6 +38,12 @@ export function PostsPage() {
           <Typography paragraph>
             React Series -{' '}
             <InternalLink to="./react/boundary-spacing">{BOUNDARY_SPACING_POST_TITLE}</InternalLink>
+          </Typography>
+          <Typography paragraph>
+            Engineering Series -{' '}
+            <InternalLink to="./engineering/third-party-dependencies">
+              {THIRD_PARTY_DEPENDENCIES_POST_TITLE}
+            </InternalLink>
           </Typography>
           <Typography paragraph>
             Engineering Experiences -{' '}
