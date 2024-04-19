@@ -13,13 +13,13 @@ export function FlakyTestsPost02() {
   return (
     <PostLayout
       layoutProps={{
-        title: 'Reliabile Testing Guidelines',
+        title: 'Reliable Testing Guidelines',
         description:
           'Part two - improving test reliability to achieve zero flaky tests in a software engineering team.',
       }}
       breadcrumbName="Flaky Tests - Part 2"
       headlineProps={{
-        title: 'Reliabile Testing Guidelines',
+        title: 'Reliable Testing Guidelines',
         subtitle: 'Achieving the insurmountable.',
         date: '2023-03-19',
       }}
