@@ -37,9 +37,8 @@ export function Engineering2019To2023Post() {
       <Typography paragraph>
         Color hired me to help build up the React front-end implementation, and to guide the team
         with React and TypeScript concepts, including function components, hooks, context, etc. This
-        was about six months before the COVID-19 pandemic, and was a bit fortuitious, since those
-        six months gave me and the team enough time to strengthen the React code patterns and
-        concepts.
+        was about six months before the COVID-19 pandemic, and was a bit fortuitous, since those six
+        months gave me and the team enough time to strengthen the React code patterns and concepts.
       </Typography>
       <Typography variant="h2" paragraph>
         COVID-19 and Engineering
@@ -60,7 +59,7 @@ export function Engineering2019To2023Post() {
             }}
           />
         </ExternalLink>
-        Health care doesn&apos;t typically move this quickly, but Color had the engineering
+        Health care does not typically move this quickly, but Color had the engineering
         infrastructure to make this work - specifically, the ability to do frequent iterations and
         deploy daily.
         <Spacer height={1} />
@@ -89,7 +88,7 @@ export function Engineering2019To2023Post() {
         </ExternalLink>
         To support this, we spun up a <em>UX-infra</em> team to work towards a reusable library of
         front-end components and utilities. We also focused on addressing an growing code base,
-        including planning and rearchitecting the front-end infrastructure to support multiple
+        including planning and re-architecting the front-end infrastructure to support multiple
         products.
       </Typography>
       <Typography variant="h3" paragraph>

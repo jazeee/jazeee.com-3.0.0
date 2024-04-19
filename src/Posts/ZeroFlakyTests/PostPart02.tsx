@@ -253,8 +253,8 @@ export function FlakyTestsPost02() {
           then wait for that API to resolve <Code>cy.wait(&apos;@api-request&apos;);</Code>.
         </ListItem>
         <ListItem sx={{ display: 'list-item' }}>
-          Avoid flickering, janky, or non-determinstic UI. Testing frameworks cannot be resilient to
-          flake if your code repeatedly removes and adds DOM elements.
+          Avoid flickering, janky, or non-deterministic UI. Testing frameworks cannot be resilient
+          to flake if your code repeatedly removes and adds DOM elements.
         </ListItem>
         <ListItem sx={{ display: 'list-item' }}>
           In React, be aware of <Code>useEffect</Code>, which can cause unpredictable behavior.
@@ -278,8 +278,8 @@ export function FlakyTestsPost02() {
       <Typography paragraph>
         One could argue that it was great that the tests identified the bug. This comes at the
         expense of blocking the entire team, and is therefore quite expensive. Instead, the tests
-        should be made to be determinstic, by mocking the date/time for the edge cases. In doing so,
-        the 5 PM PST scenario is tested continually, not just after 5 PM.
+        should be made to be deterministic, by mocking the date/time for the edge cases. In doing
+        so, the 5 PM PST scenario is tested continually, not just after 5 PM.
       </Typography>
       <Typography variant="h2" paragraph>
         Conclusion

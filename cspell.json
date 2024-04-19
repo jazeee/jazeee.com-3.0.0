@@ -1,0 +1,27 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+    ],
+    "ignoreWords": [
+      "jazeee",
+      "architecting",
+      "constate",
+      "incrementer",
+      "fontsource",
+      "Formik",
+      "janky",
+      "mockdate",
+      "momentjs",
+      "msedge",
+      "plotly",
+      "roboto",
+      "splittable",
+      "tscheck",
+      "viewport",
+      "viewports"
+    ],
+    "import": []
+}

@@ -136,14 +136,13 @@ export function ReactStateManagementPost() {
         </Li>
         <Li>
           Actions are identified by string keys. It is very easy to introduce a bug by using the
-          same action name in different places. All action keys must be globally unique. This
-          doesn&apos;t scale.
+          same action name in different places. All action keys must be globally unique. This does
+          not scale.
         </Li>
         <Li>
-          Redux actions execute every reducer in the codebase. This doesn&apos;t scale, and
-          applications can become quite slow due to this churn. This can be particularly painful
-          when using Redux to maintain form field state, since each typed character can result in a
-          lot of lag.
+          Redux actions execute every reducer in the codebase. This does not scale, and applications
+          can become quite slow due to this churn. This can be particularly painful when using Redux
+          to maintain form field state, since each typed character can result in a lot of lag.
         </Li>
       </Ol>
       <Typography variant="h2" paragraph>
@@ -190,7 +189,7 @@ export function ReactStateManagementPost() {
         <ListItem>
           <Span sx={{ textAlign: 'left' }}>
             If you use <Code>window.localStorage</Code>, only use it to persist semi-permanent data
-            that doesn&apos;t include personal information.
+            that does not include personal information.
           </Span>
         </ListItem>
         <ListItem>
