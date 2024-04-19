@@ -22,6 +22,7 @@
     "react-router-dom": "6.8.2"
   },
   "devDependencies": {
+    "@playwright/test": "1.43.1",
     "@types/lodash": "4.14.191",
     "@types/node": "18.15.0",
     "@types/plotly.js": "2",
@@ -50,7 +51,7 @@
     "test": "DISABLE_ESLINT_PLUGIN=true react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint",
-    "lint:all": "eslint src/**/*.{ts,tsx}",
+    "lint:all": "eslint src/**/*.{ts,tsx} e2e/**/*.{ts,tsx}",
     "tscheck": "tsc --noEmit"
   },
   "packageManager": "yarn@4.0.0-rc.40",

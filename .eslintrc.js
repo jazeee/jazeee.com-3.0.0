@@ -78,5 +78,11 @@ module.exports = {
         'no-restricted-exports': 'off',
       },
     },
+    {
+      files: ['e2e/**/*', 'playwright.config.ts'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
   ],
 };
