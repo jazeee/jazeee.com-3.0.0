@@ -1,7 +1,7 @@
 import Link, { LinkProps } from '@mui/material/Link';
 import { forwardRef } from 'react';
 
-import { OpenInNewTabIcon } from 'components/Icons/OpenInNewTabIcon';
+import { OpenInNewTabIcon } from 'src/components/Icons/OpenInNewTabIcon';
 
 interface ExternalLinkProps extends Omit<LinkProps, 'href'> {
   openInNewTabIsVisible?: boolean;

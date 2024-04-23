@@ -1,8 +1,8 @@
 import { Stack } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
-import { Code } from 'Posts/components/Code';
-import { PostLayout } from 'Posts/components/PostLayout';
+import { Code } from 'src/Posts/components/Code';
+import { PostLayout } from 'src/Posts/components/PostLayout';
 
 import { BOUNDARY_MARGINS_CODE_SAMPLES } from './codeSamples';
 import { StackOfResponsiveCards } from './ExampleComponents/NoMargin/StackOfResponsiveCards';

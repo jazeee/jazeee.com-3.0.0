@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
 
-import { Span } from 'components/Span';
+import { Span } from 'src/components/Span';
 
 interface IPostDefinition {
   name: string;

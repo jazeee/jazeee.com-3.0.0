@@ -2,10 +2,10 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Typography from '@mui/material/Typography';
 
-import { ExternalLink, InternalLink } from 'components/Links';
-import { Spacer } from 'components/Spacers/Spacer';
-import { Code } from 'Posts/components/Code';
-import { PostLayout } from 'Posts/components/PostLayout';
+import { ExternalLink, InternalLink } from 'src/components/Links';
+import { Spacer } from 'src/components/Spacers/Spacer';
+import { Code } from 'src/Posts/components/Code';
+import { PostLayout } from 'src/Posts/components/PostLayout';
 
 import { FlakyTestDefinitions } from './Definitions';
 

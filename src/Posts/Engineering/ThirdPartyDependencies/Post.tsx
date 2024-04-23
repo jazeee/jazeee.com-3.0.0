@@ -1,10 +1,10 @@
 import { Stack } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
-import { ExternalLink } from 'components/Links';
-import { Ol, Li, Ul } from 'components/Lists';
-import { Code } from 'Posts/components/Code';
-import { PostLayout } from 'Posts/components/PostLayout';
+import { ExternalLink } from 'src/components/Links';
+import { Ol, Li, Ul } from 'src/components/Lists';
+import { Code } from 'src/Posts/components/Code';
+import { PostLayout } from 'src/Posts/components/PostLayout';
 
 import { WarningLine } from '../../components/WarningLine';
 

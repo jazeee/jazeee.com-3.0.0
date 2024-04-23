@@ -3,9 +3,9 @@ import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import { Image } from 'components/Image';
-import { InternalLink } from 'components/Links';
-import { usePaletteModeContext } from 'components/Theme/paletteModeContext';
+import { Image } from 'src/components/Image';
+import { InternalLink } from 'src/components/Links';
+import { usePaletteModeContext } from 'src/components/Theme/paletteModeContext';
 
 const desktopSkillsPlotImages = {
   dark: '/static/images/skillPlotsDarkMode-2024.png',

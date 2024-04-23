@@ -17,24 +17,27 @@ export function getSkillData(skillType: string, options: IGetSkillDataOptions = 
   const { minimumYearToInclude } = options;
   let skillData = SKILL_DATA;
   if (minimumYearToInclude) {
-    skillData = Object.keys(skillData).reduce((accum, skill) => {
-      const skillDatum = skillData[skill];
-      const { experience } = skillDatum;
-      const filteredExperience: Record<number, number> = {};
-      Object.keys(experience)
-        .map(Number)
-        .filter((year) => year >= minimumYearToInclude)
-        .forEach((year) => {
-          filteredExperience[year] = experience[year];
-        });
-      return {
-        ...accum,
-        [skill]: {
-          ...skillDatum,
-          experience: filteredExperience,
-        },
-      };
-    }, {} as Record<string, ISkillDatum>);
+    skillData = Object.keys(skillData).reduce(
+      (accum, skill) => {
+        const skillDatum = skillData[skill];
+        const { experience } = skillDatum;
+        const filteredExperience: Record<number, number> = {};
+        Object.keys(experience)
+          .map(Number)
+          .filter((year) => year >= minimumYearToInclude)
+          .forEach((year) => {
+            filteredExperience[year] = experience[year];
+          });
+        return {
+          ...accum,
+          [skill]: {
+            ...skillDatum,
+            experience: filteredExperience,
+          },
+        };
+      },
+      {} as Record<string, ISkillDatum>
+    );
   }
   if (skillType) {
     skillData = pickBy(skillData, (skill) => {

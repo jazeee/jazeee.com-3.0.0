@@ -6,21 +6,21 @@ This code is for [jazeee.com](https://jazeee.com)
 
 ### Development
 
-* Install `node` and `yarn`
-* Run `yarn install`
-* Run `yarn start`
+* Install `node`
+* Run `npm install`
+* Run `npm run dev`
 
 ### Lint
 
-* Run `yarn lint:all --fix`
+* Run `npm run lint:all --fix`
 
 ### Build
 
-* Run `yarn build`
+* Run `npm run build`
 
 ### Generating bundle sizes
 
-* `CI=1 yarn build --stats`
+* `CI=1 npm run build --stats`
 * Install `webpack-bundle-analyzer`, or run via `npx`
 * `webpack-bundle-analyzer build/bundle-stats.json build/ --port 9999`
 

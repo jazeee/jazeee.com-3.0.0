@@ -1,5 +1,5 @@
-import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider, createTheme, Theme } from '@mui/material/styles';
+import { CssBaseline } from '@mui/material';
+import { createTheme, ThemeProvider, type Theme } from '@mui/material/styles';
 import { ReactNode, useMemo } from 'react';
 
 import { usePaletteModeContext } from './paletteModeContext';

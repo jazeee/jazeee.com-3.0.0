@@ -3,13 +3,13 @@ import { Routes, Route } from 'react-router-dom';
 
 import { PageLoadingIndicator } from './PageLoadingIndicator';
 
-const HomePage = lazy(() => import('Home'));
-const SkillsPlotsPage = lazy(() => import('SkillsPlots'));
-const PresentationsPage = lazy(() => import('Presentations'));
-const PublicationsPage = lazy(() => import('Publications'));
-const GithubProjectRoutes = lazy(() => import('GithubProjects'));
-const PostsRoutes = lazy(() => import('Posts'));
-const NotFoundPage = lazy(() => import('NotFoundPage/404'));
+const HomePage = lazy(() => import('src/Home'));
+const SkillsPlotsPage = lazy(() => import('src/SkillsPlots'));
+const PresentationsPage = lazy(() => import('src/Presentations'));
+const PublicationsPage = lazy(() => import('src/Publications'));
+const GithubProjectRoutes = lazy(() => import('src/GithubProjects'));
+const PostsRoutes = lazy(() => import('src/Posts'));
+const NotFoundPage = lazy(() => import('src/NotFoundPage/404'));
 
 export function AppRoutes() {
   return (

@@ -1,18 +1,16 @@
-import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter } from 'react-router-dom';
+import { lazy } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
 
-import { PaletteModeContext } from 'components/Theme/paletteModeContext';
+import { AppProviders } from './Providers';
 
-import { AppContent } from './AppContent';
+const AppContent = lazy(async () => import('./AppContent'));
 
 export function App() {
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <PaletteModeContext>
-          <AppContent />
-        </PaletteModeContext>
-      </BrowserRouter>
-    </HelmetProvider>
+    <ErrorBoundary fallback={<div>Something went wrong</div>}>
+      <AppProviders>
+        <AppContent />
+      </AppProviders>
+    </ErrorBoundary>
   );
 }

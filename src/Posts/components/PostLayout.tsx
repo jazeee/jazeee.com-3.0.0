@@ -5,9 +5,9 @@ import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import { ReactNode } from 'react';
 
-import { InternalLink } from 'components/Links';
-import { Spacer } from 'components/Spacers/Spacer';
-import { ILayoutProps, Layout } from 'Layouts/Layout';
+import { InternalLink } from 'src/components/Links';
+import { Spacer } from 'src/components/Spacers/Spacer';
+import { ILayoutProps, Layout } from 'src/Layouts/Layout';
 
 interface Props {
   layoutProps: Omit<ILayoutProps, 'children'>;

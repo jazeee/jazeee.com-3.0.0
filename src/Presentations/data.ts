@@ -10,7 +10,7 @@ export interface IPresentation {
   image: string;
   links: IPresentationLink[];
 }
-const STATIC_IMAGES_PATH = `${process.env.PUBLIC_URL}/static/images`;
+const STATIC_IMAGES_PATH = `/static/images`;
 
 export const PRESENTATIONS: IPresentation[] = [
   {

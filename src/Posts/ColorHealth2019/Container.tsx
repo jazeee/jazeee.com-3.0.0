@@ -2,8 +2,8 @@ import { Stack } from '@mui/material';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-import { Image } from 'components/Image';
-import { ExternalLink, InternalLink } from 'components/Links';
+import { Image } from 'src/components/Image';
+import { ExternalLink, InternalLink } from 'src/components/Links';
 
 import clipboardHealthRepoContributions2023 from './assets/clipboardHealthRepoContributions2023.png';
 import { ContributionMetrics2019To2023 } from './ContributionMetrics2019-2023';

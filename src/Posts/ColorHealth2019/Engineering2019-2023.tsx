@@ -1,9 +1,9 @@
 import Typography from '@mui/material/Typography';
 
-import { Image } from 'components/Image';
-import { ExternalLink } from 'components/Links';
-import { Spacer } from 'components/Spacers/Spacer';
-import { PostLayout } from 'Posts/components/PostLayout';
+import { Image } from 'src/components/Image';
+import { ExternalLink } from 'src/components/Links';
+import { Spacer } from 'src/components/Spacers/Spacer';
+import { PostLayout } from 'src/Posts/components/PostLayout';
 
 import colorRepoContributions2022 from './assets/colorRepoContributions2022.png';
 import covid19TestingScreenShot from './assets/covid19TestingScreenShot.png';

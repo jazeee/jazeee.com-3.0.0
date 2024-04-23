@@ -2,8 +2,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
 
-import { Spacer } from 'components/Spacers/Spacer';
-import { SIDE_BAR_URLS } from 'Navigation/siteBarItems';
+import { Spacer } from 'src/components/Spacers/Spacer';
+import { SIDE_BAR_URLS } from 'src/Navigation/siteBarItems';
 
 import codeBackgroundImage from './images/codeBackground.png';
 import { ExternalLink } from '../components/Links';

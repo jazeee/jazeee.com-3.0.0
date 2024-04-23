@@ -8,9 +8,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import { useState } from 'react';
 
-import { DarkModeIcon } from 'components/Icons/DarkModeIcon';
-import { LightModeIcon } from 'components/Icons/LightModeIcon';
-import { usePaletteModeContext } from 'components/Theme/paletteModeContext';
+import { DarkModeIcon } from 'src/components/Icons/DarkModeIcon';
+import { LightModeIcon } from 'src/components/Icons/LightModeIcon';
+import { usePaletteModeContext } from 'src/components/Theme/paletteModeContext';
 
 import { HideOnScroll } from './HideOnScroll';
 import { SideBar } from './SideBar';
