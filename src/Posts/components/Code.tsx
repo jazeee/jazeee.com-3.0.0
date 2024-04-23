@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 
-import { Span } from 'components/Span';
+import { Span } from 'src/components/Span';
 
 interface Props {
   children: string;

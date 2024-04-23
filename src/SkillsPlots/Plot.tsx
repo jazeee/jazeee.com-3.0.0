@@ -2,8 +2,8 @@ import { Data } from 'plotly.js';
 import { useState } from 'react';
 import Plot from 'react-plotly.js';
 
-import { DARKEST_BLUE } from 'components/Theme/MuiThemeProvider';
-import { usePaletteModeContext } from 'components/Theme/paletteModeContext';
+import { DARKEST_BLUE } from 'src/components/Theme/MuiThemeProvider';
+import { usePaletteModeContext } from 'src/components/Theme/paletteModeContext';
 
 import { useWindowDimensions } from '../hooks/useWindowDimensions';
 import { getSkillData, START_YEAR } from '../SkillsData/utils';

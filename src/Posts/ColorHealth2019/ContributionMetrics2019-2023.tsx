@@ -1,8 +1,8 @@
 import { Stack } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
-import { Image } from 'components/Image';
-import { ExternalLink } from 'components/Links';
+import { Image } from 'src/components/Image';
+import { ExternalLink } from 'src/components/Links';
 
 import ColorContributionsObfuscated2019to2023 from './assets/ColorContributionsObfuscated2019-2023.png';
 import colorRepoContributions2019 from './assets/colorRepoContributions2019.png';

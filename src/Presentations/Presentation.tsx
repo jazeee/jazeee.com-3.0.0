@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-import { Spacer } from 'components/Spacers/Spacer';
+import { Spacer } from 'src/components/Spacers/Spacer';
 
 import { IPresentation } from './data';
 import { ExternalLink } from '../components/Links';

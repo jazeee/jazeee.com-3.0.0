@@ -20,7 +20,8 @@ coverage
 # nyc test coverage
 .nyc_output
 
-build
+build/
+dist/
 
 node_modules/
 jspm_packages/

@@ -1,6 +1,6 @@
 import Box, { BoxProps } from '@mui/material/Box';
 
-import { mergeSxProps } from 'components/utils';
+import { mergeSxProps } from 'src/components/utils';
 
 interface Props extends BoxProps {
   height: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 12 | 16;

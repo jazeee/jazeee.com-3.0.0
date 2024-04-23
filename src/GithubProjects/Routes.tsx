@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 
-import NotFoundPage from 'NotFoundPage/404';
+import NotFoundPage from 'src/NotFoundPage/404';
 
 import { AllGithubProjectsPage } from './AllProjects/Page';
 import SoftwareProjectsPage from './FeaturedProjects/Page';

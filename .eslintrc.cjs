@@ -7,7 +7,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        paths: ['src'],
+        paths: [''],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
@@ -79,7 +79,7 @@ module.exports = {
       },
     },
     {
-      files: ['e2e/**/*', 'playwright.config.ts'],
+      files: ['e2e/**/*', 'playwright.config.ts', 'vite.config.ts'],
       rules: {
         'import/no-extraneous-dependencies': 'off',
       },

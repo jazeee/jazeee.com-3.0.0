@@ -1,4 +1,4 @@
-import { ISoftwareProject } from 'GithubProjects/types';
+import { ISoftwareProject } from 'src/GithubProjects/types';
 
 export const SOFTWARE_PROJECTS: ISoftwareProject[] = [
   {

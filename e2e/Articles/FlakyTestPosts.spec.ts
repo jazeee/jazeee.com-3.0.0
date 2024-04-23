@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('Can Open Flaky tests articles', async ({ page }) => {
-  await page.goto('http://localhost:3000');
+  await page.goto('/');
 
   await expect(page).toHaveTitle(/Home - Jaz Singh/);
   await page.getByLabel('Menu').click();

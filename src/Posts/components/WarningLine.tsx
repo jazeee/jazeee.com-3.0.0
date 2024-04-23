@@ -1,7 +1,7 @@
 import WarningSharpIcon from '@mui/icons-material/WarningSharp';
 import { ReactNode } from 'react';
 
-import { Span } from 'components/Span';
+import { Span } from 'src/components/Span';
 
 interface Props {
   children: ReactNode;

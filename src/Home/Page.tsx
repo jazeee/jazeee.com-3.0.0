@@ -1,7 +1,7 @@
-import { Spacer } from 'components/Spacers/Spacer';
-import { SoftwareProjects } from 'GithubProjects/FeaturedProjects/SoftwareProjects';
-import { ContributionMetrics2019AndOnContainer } from 'Posts/ColorHealth2019/Container';
-import { SkillsPlotsImageContainer } from 'SkillsPlots/ImageContainer';
+import { Spacer } from 'src/components/Spacers/Spacer';
+import { SoftwareProjects } from 'src/GithubProjects/FeaturedProjects/SoftwareProjects';
+import { ContributionMetrics2019AndOnContainer } from 'src/Posts/ColorHealth2019/Container';
+import { SkillsPlotsImageContainer } from 'src/SkillsPlots/ImageContainer';
 
 import { Skills } from './Skills';
 import { Layout } from '../Layouts/Layout';

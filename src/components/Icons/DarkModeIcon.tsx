@@ -1,6 +1,6 @@
 import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
 
-import { mergeSxProps } from 'components/utils';
+import { mergeSxProps } from 'src/components/utils';
 
 // Based on https://materialdesignicons.com/
 

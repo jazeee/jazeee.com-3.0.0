@@ -1,8 +1,8 @@
 import Typography from '@mui/material/Typography';
 
-import { ExternalLink, InternalLink } from 'components/Links';
-import { Spacer } from 'components/Spacers/Spacer';
-import { PostLayout } from 'Posts/components/PostLayout';
+import { ExternalLink, InternalLink } from 'src/components/Links';
+import { Spacer } from 'src/components/Spacers/Spacer';
+import { PostLayout } from 'src/Posts/components/PostLayout';
 
 import { FlakyTestDefinitions } from './Definitions';
 

@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 
-import NotFoundPage from 'NotFoundPage/404';
+import NotFoundPage from 'src/NotFoundPage/404';
 
 import { Engineering2019To2023Post } from './ColorHealth2019/Engineering2019-2023';
 import { EngineeringPostsRoutes } from './Engineering/Routes';

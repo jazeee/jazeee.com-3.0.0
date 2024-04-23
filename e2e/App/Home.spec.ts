@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('Navigation', async ({ page }) => {
-  await page.goto('http://localhost:3000');
+  await page.goto('/');
   await expect(page.getByText('React/Full Stack Software')).toBeVisible();
   await expect(page.getByText('Primary Developer Skills (')).toBeVisible();
   await expect(page.getByText('Skills', { exact: true })).toBeVisible();
@@ -27,7 +27,7 @@ test('Navigation', async ({ page }) => {
 });
 
 test('Menu Links', async ({ page }) => {
-  await page.goto('http://localhost:3000');
+  await page.goto('/');
   await page.getByLabel('Menu').click();
   await expect(page.getByRole('link', { name: 'Resume' })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Resume' })).toHaveAttribute(

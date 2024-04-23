@@ -2,13 +2,13 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Typography from '@mui/material/Typography';
 
-import { ExternalLink } from 'components/Links';
-import { Li } from 'components/Lists/Li';
-import { Ol } from 'components/Lists/Ol';
-import { Spacer } from 'components/Spacers/Spacer';
-import { Span } from 'components/Span';
-import { Code } from 'Posts/components/Code';
-import { PostLayout } from 'Posts/components/PostLayout';
+import { ExternalLink } from 'src/components/Links';
+import { Li } from 'src/components/Lists/Li';
+import { Ol } from 'src/components/Lists/Ol';
+import { Spacer } from 'src/components/Spacers/Spacer';
+import { Span } from 'src/components/Span';
+import { Code } from 'src/Posts/components/Code';
+import { PostLayout } from 'src/Posts/components/PostLayout';
 
 import { REACT_STATE_CODE_SAMPLES } from './codeSamples';
 import { CodeBlock } from '../../components/CodeBlock';

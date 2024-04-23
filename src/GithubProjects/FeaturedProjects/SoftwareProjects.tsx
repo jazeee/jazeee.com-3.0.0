@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-import { Spacer } from 'components/Spacers/Spacer';
+import { Spacer } from 'src/components/Spacers/Spacer';
 
 import { SOFTWARE_PROJECTS } from './data';
 import { BaseLink } from '../../components/Links';

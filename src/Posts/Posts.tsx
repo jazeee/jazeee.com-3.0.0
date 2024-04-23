@@ -2,8 +2,8 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-import { InternalLink } from 'components/Links';
-import { Layout } from 'Layouts/Layout';
+import { InternalLink } from 'src/components/Links';
+import { Layout } from 'src/Layouts/Layout';
 
 import { THIRD_PARTY_DEPENDENCIES_POST_TITLE } from './Engineering/ThirdPartyDependencies/Post';
 import { BOUNDARY_SPACING_POST_TITLE } from './React/BoundaryMargins/Post';

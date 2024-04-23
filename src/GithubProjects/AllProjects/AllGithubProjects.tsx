@@ -5,8 +5,8 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { useEffect, useState } from 'react';
 
-import { BaseLink } from 'components/Links';
-import { ISoftwareProject } from 'GithubProjects/types';
+import { BaseLink } from 'src/components/Links';
+import { ISoftwareProject } from 'src/GithubProjects/types';
 
 import { GithubProject } from '../components/GithubProject';
 

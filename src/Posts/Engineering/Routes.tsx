@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import NotFoundPage from 'NotFoundPage/404';
+import NotFoundPage from 'src/NotFoundPage/404';
 
 import { ThirdPartyDependenciesPost } from './ThirdPartyDependencies/Post';
 
